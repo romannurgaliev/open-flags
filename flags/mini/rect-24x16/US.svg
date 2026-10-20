@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16">
+<svg width="24" height="16" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg">
 <title>US</title>
-<path fill="#B31942" fill-rule="evenodd" d="M0 16L0 0L24 0L24 16Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 16L0 2L24 2L24 16Z"/>
-<path fill="#B31942" fill-rule="evenodd" d="M0 16L0 4L24 4L24 16Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 16L0 7L24 7L24 16Z"/>
-<path fill="#B31942" fill-rule="evenodd" d="M0 16L0 9L24 9L24 16Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 16L0 12L24 12L24 16Z"/>
-<path fill="#B31942" fill-rule="evenodd" d="M0 16L0 14L24 14L24 16Z"/>
-<path fill="#0A3161" fill-rule="evenodd" d="M12 9L0 9L0 0L12 0Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M1 2L1 1L2 1L2 2ZM5 2L5 1L6 1L6 2ZM9 2L9 1L10 1L10 2ZM3 4L3 3L4 3L4 4ZM7 4L7 3L8 3L8 4ZM1 6L1 5L2 5L2 6ZM5 6L5 5L6 5L6 6ZM9 6L9 5L10 5L10 6ZM3 8L3 7L4 7L4 8ZM7 8L7 7L8 7L8 8Z"/>
+<path d="M0 16V0H24V16H0Z" fill-rule="evenodd" fill="#B31942"/>
+<path d="M0 16V2H24V16H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 16V4H24V16H0Z" fill-rule="evenodd" fill="#B31942"/>
+<path d="M0 16V7H24V16H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 16V9H24V16H0Z" fill-rule="evenodd" fill="#B31942"/>
+<path d="M0 16V12H24V16H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 16V14H24V16H0Z" fill-rule="evenodd" fill="#B31942"/>
+<path d="M0 9V0H12V9H0Z" fill-rule="evenodd" fill="#0A3161"/>
+<path d="M1 2V1H2V2H1ZM5 2V1H6V2H5ZM9 2V1H10V2H9ZM3 4V3H4V4H3ZM7 4V3H8V4H7ZM1 6V5H2V6H1ZM5 6V5H6V6H5ZM9 6V5H10V6H9ZM3 8V7H4V8H3ZM7 8V7H8V8H7Z" fill-rule="evenodd" fill="#FFFFFF"/>
 </svg>

@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <title>Qatar</title>
-<path fill="#8A1538" fill-rule="evenodd" d="M0 24L0 0L24 0L24 24Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M9 1.714L7 3.429L9 5.143L7 6.857L9 8.571L7 10.286L9 12L7 13.714L9 15.429L7 17.143L9 18.857L7 20.571L9 22.286L7 24L0 24L0 0L7 0Z"/>
+<path d="M0 24V0H24V24H0Z" fill-rule="evenodd" fill="#8A1538"/>
+<path d="M0 0H7L9 1.714L7 3.429L9 5.143L7 6.857L9 8.571L7 10.286L9 12L7 13.714L9 15.429L7 17.143L9 18.857L7 20.571L9 22.286L7 24H0V0Z" fill-rule="evenodd" fill="#FFFFFF"/>
 </svg>

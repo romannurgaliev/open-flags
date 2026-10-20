@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
 <title>New Zealand</title>
-<path fill="#00267F" fill-rule="evenodd" d="M0 8C0 3.582 3.582 0 8 0C12.418 0 16 3.582 16 8C16 12.418 12.418 16 8 16C3.582 16 0 12.418 0 8Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M4 2.586L6.432 0.154C6.939 0.053 7.463 0 8 0L8 1.414L5.414 4L8 6.586L8 8L6.586 8L4 5.414L1.414 8L0 8C0 7.463 0.053 6.939 0.154 6.432L2.586 4L1.68 3.094C2.091 2.566 2.566 2.091 3.094 1.68Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M2 8L2 6L0.252 6C0.976 3.189 3.189 0.976 6 0.252L6 2L8 2L8 6L6 6L6 8Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M3 8L3 5L0.582 5C0.875 4.274 1.272 3.602 1.755 3L3 3L3 1.755C3.602 1.272 4.274 0.875 5 0.582L5 3L8 3L8 5L5 5L5 8Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M11 6L11 4L13 4L13 6Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M11 12L11 10L13 10L13 12Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M9 8L9 6L11 6L11 8Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M12.918 8.014L12.918 6.014L14.918 6.014L14.918 8.014Z"/>
+<path d="M0 8C0 3.582 3.582 0 8 0C12.418 0 16 3.582 16 8C16 12.418 12.418 16 8 16C3.582 16 0 12.418 0 8Z" fill-rule="evenodd" fill="#00267F"/>
+<path d="M4 2.586L6.432 0.154C6.939 0.053 7.463 0 8 0V1.414L5.414 4L8 6.586V8H6.586L4 5.414L1.414 8H0C0 7.463 0.053 6.939 0.154 6.432L2.586 4L1.68 3.094C2.091 2.566 2.566 2.091 3.094 1.68L4 2.586Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M2.00001 8.00001V6.00001H0.252014C0.976014 3.18901 3.18901 0.976014 6.00001 0.252014V2.00001H8.00001V6.00001H6.00001V8.00001H2.00001Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M3 8V5H0.582001C0.875001 4.274 1.272 3.602 1.755 3H3V1.755C3.602 1.272 4.274 0.875001 5 0.582001V3H8V5H5V8H3Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M11 6V4H13V6H11Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M11 12V10H13V12H11Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M9 8V6H11V8H9Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M12.918 8.01401V6.01401H14.918V8.01401H12.918Z" fill-rule="evenodd" fill="#D21034"/>
 </svg>

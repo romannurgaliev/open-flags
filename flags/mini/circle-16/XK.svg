@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
 <title>Kosovo</title>
-<path fill="#244AA5" fill-rule="evenodd" d="M0 8C0 3.582 3.582 0 8 0C12.418 0 16 3.582 16 8C16 12.418 12.418 16 8 16C3.582 16 0 12.418 0 8Z"/>
-<path fill="#D0A650" fill-rule="evenodd" d="M7.616 5.28L10.086 8.18L11.606 8.644L10.808 11.041L9.649 11.879L8.7 11.475L7.526 12.047L7.3 13.171L6.697 13.211L6.306 11.179L4.544 9.344L4.499 8.131L5.719 7.746Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M4 6L4 5L5 5L5 6Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M5 5L5 4L6 4L6 5Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M7 5L7 4L8 4L8 5Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M8 5L8 4L9 4L9 5Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M10 5L10 4L11 4L11 5Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M11 6L11 5L12 5L12 6Z"/>
+<path d="M0 8C0 3.582 3.582 0 8 0C12.418 0 16 3.582 16 8C16 12.418 12.418 16 8 16C3.582 16 0 12.418 0 8Z" fill-rule="evenodd" fill="#244AA5"/>
+<path d="M7.61602 5.28L10.086 8.18L11.606 8.644L10.808 11.041L9.64902 11.879L8.70002 11.475L7.52602 12.047L7.30002 13.171L6.69702 13.211L6.30602 11.179L4.54402 9.344L4.49902 8.131L5.71902 7.746L7.61602 5.28Z" fill-rule="evenodd" fill="#D0A650"/>
+<path d="M4 6V5H5V6H4Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M5 5V4H6V5H5Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M7 5V4H8V5H7Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M8 5V4H9V5H8Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M10 5V4H11V5H10Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M11 6V5H12V6H11Z" fill-rule="evenodd" fill="#FFFFFF"/>
 </svg>

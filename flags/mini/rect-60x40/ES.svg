@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="60" height="40" viewBox="0 0 60 40">
+<svg width="60" height="40" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
 <title>Spain</title>
-<path fill="#AD1519" fill-rule="evenodd" d="M0 40L0 0L60 0L60 40Z"/>
-<path fill="#FABD00" fill-rule="evenodd" d="M0 40L0 10L60 10L60 40Z"/>
-<path fill="#AD1519" fill-rule="evenodd" d="M0 40L0 30L60 30L60 40Z"/>
-<path fill="#AD1519" fill-rule="evenodd" d="M15 16L25 16L25 22.6C25 25.84 21.2 27.4 20 28C18.8 27.4 15 25.84 15 22.6Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M20 22L20 16L25 16L25 22Z"/>
-<path fill="#FABD00" fill-rule="evenodd" d="M20 22L20 28C18.8 27.4 15 25.84 15 22.6L15 22Z"/>
-<path fill="#AD1519" fill-rule="evenodd" d="M15 16L15 12L25 12L25 16Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M12 28L12 16L14 16L14 28Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M26 28L26 16L28 16L28 28Z"/>
+<path d="M0 40V0H60V40H0Z" fill-rule="evenodd" fill="#AD1519"/>
+<path d="M0 40V10H60V40H0Z" fill-rule="evenodd" fill="#FABD00"/>
+<path d="M0 40V30H60V40H0Z" fill-rule="evenodd" fill="#AD1519"/>
+<path d="M15 16H25V22.6C25 25.84 21.2 27.4 20 28C18.8 27.4 15 25.84 15 22.6V16Z" fill-rule="evenodd" fill="#AD1519"/>
+<path d="M20 22V16H25V22H20Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M20 22V28C18.8 27.4 15 25.84 15 22.6V22H20Z" fill-rule="evenodd" fill="#FABD00"/>
+<path d="M15 16V12H25V16H15Z" fill-rule="evenodd" fill="#AD1519"/>
+<path d="M12 28V16H14V28H12Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M26 28V16H28V28H26Z" fill-rule="evenodd" fill="#FFFFFF"/>
 </svg>

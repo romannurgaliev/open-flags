@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
 <title>Mexico</title>
-<path fill="#006644" fill-rule="evenodd" d="M0 600L0 0L600 0L600 600Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M200 600L200 0L600 0L600 600Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M400 600L400 0L600 0L600 600Z"/>
+<path d="M0 600V0H600V600H0Z" fill-rule="evenodd" fill="#006644"/>
+<path d="M200 600V0H600V600H200Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M400 600V0H600V600H400Z" fill-rule="evenodd" fill="#D21034"/>
 </svg>

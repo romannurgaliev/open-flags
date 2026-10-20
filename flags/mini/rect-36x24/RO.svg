@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24">
+<svg width="36" height="24" viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
 <title>Romania</title>
-<path fill="#002B7F" fill-rule="evenodd" d="M0 24L0 0L36 0L36 24Z"/>
-<path fill="#FCD116" fill-rule="evenodd" d="M12 24L12 0L36 0L36 24Z"/>
-<path fill="#CE1126" fill-rule="evenodd" d="M24 24L24 0L36 0L36 24Z"/>
+<path d="M0 24V0H36V24H0Z" fill-rule="evenodd" fill="#002B7F"/>
+<path d="M12 24V0H36V24H12Z" fill-rule="evenodd" fill="#FCD116"/>
+<path d="M24 24V0H36V24H24Z" fill-rule="evenodd" fill="#CE1126"/>
 </svg>

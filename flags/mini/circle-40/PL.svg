@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
 <title>Poland</title>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 20C0 8.954 8.954 0 20 0C31.046 0 40 8.954 40 20C40 31.046 31.046 40 20 40C8.954 40 0 31.046 0 20Z"/>
-<path fill="#D7213E" fill-rule="evenodd" d="M20 40C8.954 40 0 31.046 0 20L40 20C40 31.046 31.046 40 20 40Z"/>
+<path d="M0 20C0 8.954 8.954 0 20 0C31.046 0 40 8.954 40 20C40 31.046 31.046 40 20 40C8.954 40 0 31.046 0 20Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M20 40C8.954 40 0 31.046 0 20H40C40 31.046 31.046 40 20 40Z" fill-rule="evenodd" fill="#D7213E"/>
 </svg>

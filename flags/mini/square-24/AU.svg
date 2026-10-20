@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <title>Australia</title>
-<path fill="#00008B" fill-rule="evenodd" d="M0 24L0 0L24 0L24 24Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M6 4.586L10.586 0L12 0L12 1.414L7.414 6L12 10.586L12 12L10.586 12L6 7.414L1.414 12L0 12L0 10.586L4.586 6L0 1.414L0 0L1.414 0Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M4 12L4 8L0 8L0 4L4 4L4 0L8 0L8 4L12 4L12 8L8 8L8 12Z"/>
-<path fill="#FF0000" fill-rule="evenodd" d="M5 12L5 7L0 7L0 5L5 5L5 0L7 0L7 5L12 5L12 7L7 7L7 12Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M6 14.578L6.694 16.737L8.815 15.934L7.56 17.822L9.51 18.979L7.251 19.176L7.562 21.422L6 19.778L4.438 21.422L4.749 19.176L2.49 18.979L4.44 17.822L3.185 15.934L5.306 16.737Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M17 18L17 16L19 16L19 18Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M14 12L14 10L16 10L16 12Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M17 8L17 6L19 6L19 8Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M20 11L20 9L22 9L22 11Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M19 13L19 12L20 12L20 13Z"/>
+<path d="M0 24V0H24V24H0Z" fill-rule="evenodd" fill="#00008B"/>
+<path d="M6 4.586L10.586 0H12V1.414L7.414 6L12 10.586V12H10.586L6 7.414L1.414 12H0V10.586L4.586 6L0 1.414V0H1.414L6 4.586Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M4 12V8H0V4H4V0H8V4H12V8H8V12H4Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M5 12V7H0V5H5V0H7V5H12V7H7V12H5Z" fill-rule="evenodd" fill="#FF0000"/>
+<path d="M6 14.578L6.694 16.737L8.815 15.934L7.56 17.822L9.51 18.979L7.251 19.176L7.562 21.422L6 19.778L4.438 21.422L4.749 19.176L2.49 18.979L4.44 17.822L3.185 15.934L5.306 16.737L6 14.578Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M17 18V16H19V18H17Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M14 12V10H16V12H14Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M17 8V6H19V8H17Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M20 11V9H22V11H20Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M19 13V12H20V13H19Z" fill-rule="evenodd" fill="#FFFFFF"/>
 </svg>

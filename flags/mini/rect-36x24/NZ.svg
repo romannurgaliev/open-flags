@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24">
+<svg width="36" height="24" viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
 <title>New Zealand</title>
-<path fill="#00267F" fill-rule="evenodd" d="M0 24L0 0L36 0L36 24Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M9 4.798L16.197 0L18 0L18 1.202L10.803 6L18 10.798L18 12L16.197 12L9 7.202L1.803 12L0 12L0 10.798L7.197 6L0 1.202L0 0L1.803 0Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M7 12L7 8L0 8L0 4L7 4L7 0L11 0L11 4L18 4L18 8L11 8L11 12Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M8 12L8 7L0 7L0 5L8 5L8 0L10 0L10 5L18 5L18 7L10 7L10 12Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M26 7L26 5L28 5L28 7Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M26 19L26 17L28 17L28 19Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M21 12L21 10L23 10L23 12Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M30 10L30 8L32 8L32 10Z"/>
+<path d="M0 24V0H36V24H0Z" fill-rule="evenodd" fill="#00267F"/>
+<path d="M9 4.798L16.197 0H18V1.202L10.803 6L18 10.798V12H16.197L9 7.202L1.803 12H0V10.798L7.197 6L0 1.202V0H1.803L9 4.798Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M7 12V8H0V4H7V0H11V4H18V8H11V12H7Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M8 12V7H0V5H8V0H10V5H18V7H10V12H8Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M26 7V5H28V7H26Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M26 19V17H28V19H26Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M21 12V10H23V12H21Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M30 10V8H32V10H30Z" fill-rule="evenodd" fill="#D21034"/>
 </svg>
