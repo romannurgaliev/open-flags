@@ -1,7 +1,7 @@
 {
   "name": "open-flags",
   "version": "0.1.0-pilot",
-  "description": "Флаги стран: оригинальные пропорции, 3:2, 1:1 и миниатюры 16/24/40 с правилами упрощения. Пилот на 25 флагах.",
+  "description": "Country flags in original proportions, 3:2, 1:1, and 16/24/40 px miniatures with documented simplification rules. Pilot of 25 flags.",
   "scripts": {
     "build": "node src/build.mjs",
     "check": "node scripts/check.mjs",

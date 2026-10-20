@@ -12,7 +12,7 @@
     "ru": "Индонезия"
   },
   "classes": [
-    "bicolour-h"
+    "bicolor-h"
   ],
   "ratio": {
     "h": 2,
@@ -33,7 +33,7 @@
     },
     "id-law": {
       "level": 1,
-      "title": "UU No. 24 Tahun 2009, пояснение к ст. 4 (по FOTW пояснение не обязательно)",
+      "title": "UU No. 24 Tahun 2009, explanation to art. 4 (per FOTW the explanation is not binding)",
       "via": "fotw",
       "url": "https://crwflags.com/fotw/flags/id.html",
       "accessed": "2026-10-21"
@@ -54,7 +54,7 @@
       "specs": [
         {
           "src": "id-law",
-          "value": "RGB 255-0-0 (пояснение к ст. 4)"
+          "value": "RGB 255-0-0 (explanation to art. 4)"
         },
         {
           "src": "london2012",
@@ -87,7 +87,7 @@
       }
     ],
     "source": "id-const",
-    "text": "Красный над белым, ширина — две трети длины."
+    "text": "Red above white, width two thirds of the length."
   },
   "probes": [
     {
@@ -96,7 +96,7 @@
         0.25
       ],
       "color": "red",
-      "why": "верхняя полоса"
+      "why": "top stripe"
     },
     {
       "at": [
@@ -104,7 +104,7 @@
         0.75
       ],
       "color": "white",
-      "why": "нижняя полоса"
+      "why": "bottom stripe"
     },
     {
       "at": [
@@ -112,7 +112,7 @@
         0.48
       ],
       "color": "red",
-      "why": "у границы"
+      "why": "near the boundary"
     },
     {
       "at": [
@@ -120,7 +120,7 @@
         0.52
       ],
       "color": "white",
-      "why": "у границы"
+      "why": "near the boundary"
     }
   ],
   "simplification": {

@@ -1,37 +1,37 @@
 {
-  "$comment": "Общие источники. Уровни: 1 — закон, указ, конституция или официальный документ правительства (1g — правительственное руководство без силы закона); 2 — Album des pavillons (SHOM); 3 — Flags and Anthems Manual London 2012; 4 — FOTW и другие вексиллологические вторичные источники; 5 — Wikipedia, Wikimedia Commons, hampusborgos, catamphetamine и прочие наборы: только для сравнения, геометрию и цвет из них не берём. Поле via говорит, как источник был прочитан в этой сессии: direct — сам документ, fotw — по транскрипции на FOTW, wikipedia — по цитате в Википедии со ссылкой на документ. accessed — дата чтения.",
+  "$comment": "Shared sources. Levels: 1 — law, decree, constitution or official government document (1g — government guideline without the force of law); 2 — Album des pavillons (SHOM); 3 — Flags and Anthems Manual London 2012; 4 — FOTW and other vexillological secondary sources; 5 — Wikipedia, Wikimedia Commons, hampusborgos, catamphetamine and other flag sets: comparison only, no geometry or color is taken from them. The via field says how the source was read: direct — the document itself, fotw — a transcription on FOTW, wikipedia — a Wikipedia quotation citing the document. accessed — date read.",
   "album2023": {
     "level": 2,
-    "title": "Album des pavillons nationaux et des marques distinctives, SHOM, издание 2023 (и 2025)",
+    "title": "Album des pavillons nationaux et des marques distinctives, SHOM, 2023 edition (and 2025)",
     "url": "https://diffusion.shom.fr/ouvrages/ouvrages-generaux/album-des-pavillons-nationaux-et-marques-distinctives.html",
-    "access": "Платное издание. В пилоте прочитано только через цитаты на FOTW (via: fotw). Издание 2025 не прочитано — пробел.",
+    "access": "Paid publication. In the pilot it was read only through quotations on FOTW (via: fotw). The 2025 edition has not been read — gap.",
     "accessed": "2026-10-21"
   },
   "album2000": {
     "level": 2,
-    "title": "Album des pavillons nationaux et des marques distinctives, SHOM, издание 2000 с исправлениями",
+    "title": "Album des pavillons nationaux et des marques distinctives, SHOM, 2000 edition with corrections",
     "url": "https://www.worldcat.org/oclc/468544080",
-    "access": "Через цитаты на FOTW.",
+    "access": "Through quotations on FOTW.",
     "accessed": "2026-10-21"
   },
   "london2012": {
     "level": 3,
     "title": "LOCOG, Flags and Anthems Manual London 2012",
     "url": "https://armedforcessports.defense.gov/Portals/19/Documents/LOC2012_ITR1201_Flags_Manual_Supplement.pdf",
-    "access": "PDF доступен. Значения Pantone в пилоте взяты через цитаты на FOTW. Все флаги в нём даны в 2:3 — это рекомендации НОК, а не правительственные спецификации.",
+    "access": "The PDF is available. Pantone values in the pilot were taken through FOTW quotations. All flags in it are drawn at 2:3 — these are NOC recommendations, not government specifications.",
     "accessed": "2026-10-21"
   },
   "beijing2008": {
     "level": 3,
     "title": "Flag Manual, Beijing 2008",
-    "access": "Только через цитаты на FOTW.",
+    "access": "Only through quotations on FOTW.",
     "accessed": "2026-10-21"
   },
   "fotw": {
     "level": 4,
     "title": "Flags of the World (crwflags.com)",
     "url": "https://www.crwflags.com/fotw/flags/",
-    "access": "Читается через WebFetch. Из shell рабочей среды сайт закрыт прокси.",
+    "access": "Read through a web fetch tool; the build environment's shell cannot reach the site.",
     "accessed": "2026-10-21"
   },
   "flaginstitute-uj": {
@@ -43,27 +43,27 @@
   },
   "naturalearth": {
     "level": 4,
-    "title": "Natural Earth 1:50m admin-0 (public domain), через npm-пакет world-atlas 2.0.2",
+    "title": "Natural Earth 1:50m admin-0 (public domain), via the npm package world-atlas 2.0.2",
     "url": "https://www.naturalearthdata.com/",
-    "access": "Геоданные для силуэтов карт на флагах CY и XK. Это реальная география, а не официальный рисунок карты на флаге.",
+    "access": "Geodata for the map silhouettes on the CY and XK flags. This is real geography, not the official drawing of the map on the flag.",
     "accessed": "2026-10-21"
   },
   "cldr": {
     "level": 1,
-    "title": "Unicode CLDR 45 (cldr-core, cldr-localenames-modern): коды alpha-3, numeric и названия",
+    "title": "Unicode CLDR 45 (cldr-core, cldr-localenames-modern): alpha-3 and numeric codes, names",
     "url": "https://cldr.unicode.org/",
-    "access": "npm-пакеты cldr-core 45.0.0 и cldr-localenames-modern 45.0.0.",
+    "access": "npm packages cldr-core 45.0.0 and cldr-localenames-modern 45.0.0.",
     "accessed": "2026-10-21"
   },
   "comparison": {
     "level": 5,
     "title": "Wikipedia, Wikimedia Commons, hampusborgos/country-flags, catamphetamine/country-flag-icons, flagcolorcodes.com",
-    "access": "Только для сравнения и как временный (provisional) цвет, если уровни 1–4 не дают числового значения. Каждый такой цвет помечен provisional.",
+    "access": "Comparison only, and as a provisional color when levels 1–4 give no numeric value. Every such color is marked provisional.",
     "accessed": "2026-10-21"
   },
   "album2023-pantone-map": {
     "level": 2,
-    "title": "Таблица Pantone → RGB, как её даёт Album 2023 (собрана из записей разных стран на FOTW)",
+    "title": "Pantone → RGB table as given by Album 2023 (assembled from the entries for different countries on FOTW)",
     "map": {
       "186c": "#D21034",
       "280c": "#00267F",
@@ -88,8 +88,8 @@
       "Yellow C": "#FFFF00"
     },
     "conflicts": [
-      "287c: для NZ дано 0-53-152 (#003598), для BR — 0-53-128 (#003580). Внутри одного издания одна и та же Pantone даёт два RGB.",
-      "186c: для FJ дано 200-16-46 (#C8102E), для MC, VA, NZ, RO — 210-16-52 (#D21034)."
+      "287c: 0-53-152 (#003598) for NZ, 0-53-128 (#003580) for BR. The same Pantone gets two RGB values within one edition.",
+      "186c: 200-16-46 (#C8102E) for FJ, 210-16-52 (#D21034) for MC, VA, NZ, RO."
     ]
   }
 }

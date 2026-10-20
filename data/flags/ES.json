@@ -47,7 +47,7 @@
     },
     "es-rd481": {
       "level": 1,
-      "title": "Real Decreto 481/1981 (цвета в CIELAB и CIE 1931)",
+      "title": "Real Decreto 481/1981 (colors in CIELAB and CIE 1931)",
       "via": "fotw",
       "url": "https://crwflags.com/fotw/flags/es.html",
       "accessed": "2026-10-21"
@@ -68,7 +68,7 @@
       "specs": [
         {
           "src": "es-rd481",
-          "value": "CIELAB L* 37, C* 70, h 35; CIE 1931 Y 9.5, x 0.614, y 0.320; допуск 5"
+          "value": "CIELAB L* 37, C* 70, h 35; CIE 1931 Y 9.5, x 0.614, y 0.320; tolerance 5"
         },
         {
           "src": "album2023",
@@ -78,7 +78,7 @@
       ],
       "computed": {
         "value": "#AD1519",
-        "method": "L*C*h (D65) → Lab → XYZ → sRGB; через xyY (D65) получается #B0081C"
+        "method": "L*C*h (D65) → Lab → XYZ → sRGB; via xyY (D65) the result is #B0081C"
       }
     },
     "yellow": {
@@ -88,7 +88,7 @@
       "specs": [
         {
           "src": "es-rd481",
-          "value": "CIELAB L* 80, C* 95, h 85; CIE 1931 Y 56.7, x 0.488, y 0.469; допуск 5"
+          "value": "CIELAB L* 80, C* 95, h 85; CIE 1931 Y 56.7, x 0.488, y 0.469; tolerance 5"
         },
         {
           "src": "album2023",
@@ -98,9 +98,9 @@
       ],
       "computed": {
         "value": "#FABD00",
-        "method": "L*C*h (D65) → sRGB; цвет вне охвата sRGB, обрезан"
+        "method": "L*C*h (D65) → sRGB; out of the sRGB gamut, clipped"
       },
-      "note": "Жёлтый закона вне охвата sRGB — на экране точно не воспроизводится."
+      "note": "The legal yellow is outside the sRGB gamut and cannot be reproduced exactly on screen."
     },
     "white": {
       "srgb": "#FFFFFF",
@@ -127,10 +127,10 @@
     "arms": {
       "h_h": 0.4,
       "cx_h": 0.5,
-      "square_rule": "centre"
+      "square_rule": "center"
     },
     "source": "es-rd2964",
-    "text": "Полосы 1:2:1. Герб высотой 2/5 высоты, ось на расстоянии половины высоты от древка; на квадратных и малых флагах — по центру."
+    "text": "Stripes 1:2:1. Arms 2/5 of the hoist tall, axis at half the hoist from the hoist edge; on square and small flags, centered."
   },
   "probes": [
     {
@@ -139,7 +139,7 @@
         0.1
       ],
       "color": "red",
-      "why": "верхняя полоса"
+      "why": "top stripe"
     },
     {
       "at": [
@@ -147,7 +147,7 @@
         0.9
       ],
       "color": "red",
-      "why": "нижняя полоса"
+      "why": "bottom stripe"
     },
     {
       "at": [
@@ -155,7 +155,7 @@
         0.5
       ],
       "color": "yellow",
-      "why": "жёлтая полоса вне герба"
+      "why": "yellow stripe outside the arms"
     },
     {
       "at": [
@@ -163,7 +163,7 @@
         0.24
       ],
       "color": "red",
-      "why": "у границы (1/4 высоты)"
+      "why": "near the boundary (1/4 of the hoist)"
     },
     {
       "at": [
@@ -171,35 +171,35 @@
         0.26
       ],
       "color": "yellow",
-      "why": "у границы"
+      "why": "near the boundary"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-EMBLEM-DROP",
-        "change": "Герб снят: Конституция допускает гражданский флаг без герба, и без герба флаг ни с кем не совпадает."
+        "change": "Arms removed: the Constitution allows the civil flag without arms, and without arms the flag matches no other flag."
       }
     ],
     "M": [
       {
         "rule": "S-EMBLEM",
-        "change": "Щит из 4 полей (красный, белый, жёлтый, красный) и корона красным блоком, без колонн."
+        "change": "Shield of 4 quarters (red, white, yellow, red) and the crown as a red block, no pillars."
       }
     ],
     "L": [
       {
         "rule": "S-EMBLEM",
-        "change": "+ колонны белыми полосами по бокам."
+        "change": "+ pillars as white bars on both sides."
       }
     ]
   },
   "confusable": [],
   "gaps": [
-    "Герб в полных форматах не нарисован: нужен рисунок по RD 2964/1981."
+    "Arms are not drawn in the full formats: needs the drawing from RD 2964/1981."
   ],
   "review": [
-    "Решить, показывать ли герб на S по умолчанию или давать два варианта (с гербом и без)."
+    "Decide whether S shows the arms by default or ships two variants (with and without arms)."
   ],
   "status": {
     "full": "draft",

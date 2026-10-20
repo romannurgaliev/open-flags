@@ -27,7 +27,7 @@
   "sources": {
     "bd-rules": {
       "level": 1,
-      "title": "People's Republic of Bangladesh Flag Rules, 1972 (revised up to May 1992), п. 1(II) и 3(I)",
+      "title": "People's Republic of Bangladesh Flag Rules, 1972 (revised up to May 1992), items 1(II) and 3(I)",
       "via": "fotw",
       "url": "https://crwflags.com/fotw/flags/bd'.html",
       "accessed": "2026-10-21"
@@ -41,7 +41,7 @@
       "specs": [
         {
           "src": "bd-rules",
-          "value": "Procion Brilliant Green H-2RS, 50 частей на 1000 (краситель, числа цвета нет)"
+          "value": "Procion Brilliant Green H-2RS, 50 parts per 1000 (dye, no color values)"
         },
         {
           "src": "album2000",
@@ -67,7 +67,7 @@
       "specs": [
         {
           "src": "bd-rules",
-          "value": "Procion Brilliant Orange H-2RS, 60 частей на 1000 (краситель)"
+          "value": "Procion Brilliant Orange H-2RS, 60 parts per 1000 (dye)"
         },
         {
           "src": "album2000",
@@ -85,7 +85,7 @@
           "via": "fotw"
         }
       ],
-      "note": "Закон называет краситель «оранжевым»; Album 2023 сменил Pantone 485c на 1787c."
+      "note": "The law names the dye \"orange\"; Album 2023 changed Pantone 485c to 1787c."
     }
   },
   "construction": {
@@ -94,7 +94,7 @@
       "cx_l": 0.45,
       "cy_h": 0.5,
       "source": "bd-rules",
-      "text": "Радиус диска — пятая часть длины; центр на перпендикуляре из точки 9/20 длины, посередине высоты."
+      "text": "Disc radius is one fifth of the length; center on the perpendicular from the point at 9/20 of the length, at half height."
     }
   },
   "probes": [
@@ -104,7 +104,7 @@
         0.5
       ],
       "color": "red",
-      "why": "центр диска (9/20 длины)"
+      "why": "disc center (9/20 of the length)"
     },
     {
       "at": [
@@ -112,7 +112,7 @@
         0.5
       ],
       "color": "red",
-      "why": "внутри у края со стороны древка (край на 0.25)"
+      "why": "inside, near the hoist-side edge (edge at 0.25)"
     },
     {
       "at": [
@@ -120,7 +120,7 @@
         0.5
       ],
       "color": "green",
-      "why": "снаружи у края со стороны древка"
+      "why": "outside, near the hoist-side edge"
     },
     {
       "at": [
@@ -128,7 +128,7 @@
         0.5
       ],
       "color": "red",
-      "why": "внутри у края к вольной части (край на 0.65)"
+      "why": "inside, near the fly-side edge (edge at 0.65)"
     },
     {
       "at": [
@@ -136,32 +136,32 @@
         0.5
       ],
       "color": "green",
-      "why": "снаружи"
+      "why": "outside"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-DISC",
-        "change": "Диаметр 10 px, левый край на 2 px: смещение к древку сохранено."
+        "change": "Diameter 10 px, left edge at 2 px: the offset toward the hoist is kept."
       }
     ],
     "M": [
       {
         "rule": "S-DISC",
-        "change": "Диаметр 16 px."
+        "change": "Diameter 16 px."
       }
     ],
     "L": [
       {
         "rule": "S-DISC",
-        "change": "Диаметр 26 px."
+        "change": "Diameter 26 px."
       }
     ]
   },
   "confusable": [],
   "gaps": [
-    "Цвет на уровне 1 задан красителями без колориметрии."
+    "Level 1 specifies color by dyes, without colorimetry."
   ],
   "review": [],
   "status": {

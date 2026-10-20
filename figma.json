@@ -1,5 +1,5 @@
 {
-  "$comment": "Файл Figma пилота и наборы компонентов по форматам. Экспорт: scripts/export-figma.mjs. Вариант набора называется Country=<ISO alpha-2>.",
+  "$comment": "Pilot Figma file and its component sets, one per format. Export: scripts/export-figma.mjs. Variants are named Country=<ISO alpha-2>.",
   "fileKey": "WfVWKCZNF2MyqZw7FishR2",
   "fileUrl": "https://www.figma.com/design/WfVWKCZNF2MyqZw7FishR2",
   "sets": {

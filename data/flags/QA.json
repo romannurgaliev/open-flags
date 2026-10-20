@@ -31,7 +31,7 @@
       "via": "fotw",
       "url": "https://crwflags.com/fotw/flags/qa.html",
       "accessed": "2026-10-21",
-      "note": "Текст закона не прочитан; пропорция и Pantone — по FOTW."
+      "note": "The text of the law has not been read; ratio and Pantone are from FOTW."
     },
     "qa-fotw": {
       "level": 4,
@@ -49,7 +49,7 @@
       "specs": [
         {
           "src": "qa-law",
-          "value": "Pantone 1955 C (по Harden на FOTW)",
+          "value": "Pantone 1955 C (per Harden on FOTW)",
           "via": "fotw"
         },
         {
@@ -59,10 +59,10 @@
         },
         {
           "src": "comparison",
-          "value": "#8A1538 (Википедия, flagcolorcodes; заявлено как 1955 C)"
+          "value": "#8A1538 (Wikipedia, flagcolorcodes; declared as 1955 C)"
         }
       ],
-      "note": "Уровень 1 даёт Pantone 1955 C, но в таблице Album 2023 этой Pantone нет. Берём значение уровня 5, которое заявлено как та же Pantone, и помечаем provisional. Album 2023 даёт другую Pantone (222c): ΔE большой."
+      "note": "Level 1 gives Pantone 1955 C, but this Pantone is not in the Album 2023 table. The level 5 value declared as the same Pantone is used and marked provisional. Album 2023 gives a different Pantone (222c): large ΔE."
     },
     "white": {
       "srgb": "#FFFFFF",
@@ -77,7 +77,7 @@
       "depth_l": 0.0714,
       "points": 9,
       "source": "album2000",
-      "text": "Album: 11:(8+2+18) — белая полоса 8/28 длины, зубцы глубиной 2/28, 9 белых зубцов."
+      "text": "Album: 11:(8+2+18) — white band 8/28 of the length, serrations 2/28 deep, 9 white points."
     }
   },
   "probes": [
@@ -87,7 +87,7 @@
         0.5
       ],
       "color": "white",
-      "why": "белая полоса у древка"
+      "why": "white band at the hoist"
     },
     {
       "at": [
@@ -95,7 +95,7 @@
         0.5
       ],
       "color": "maroon",
-      "why": "поле"
+      "why": "field"
     },
     {
       "at": [
@@ -103,7 +103,7 @@
         0.5
       ],
       "color": "white",
-      "why": "внутри среднего зубца (вершина на 10/28 = 0.357)"
+      "why": "inside the middle point (tip at 10/28 = 0.357)"
     },
     {
       "at": [
@@ -111,7 +111,7 @@
         0.5
       ],
       "color": "maroon",
-      "why": "за вершиной среднего зубца"
+      "why": "beyond the tip of the middle point"
     },
     {
       "at": [
@@ -119,26 +119,26 @@
         0.111
       ],
       "color": "maroon",
-      "why": "впадина между 1-м и 2-м зубцом (x 8/28 = 0.286)"
+      "why": "notch between the 1st and 2nd points (x 8/28 = 0.286)"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-REPEAT",
-        "change": "9 зубцов → 5 (шаг не меньше 3 px), глубина 2 px."
+        "change": "9 points → 5 (pitch at least 3 px), depth 2 px."
       }
     ],
     "M": [
       {
         "rule": "S-REPEAT",
-        "change": "9 → 7 зубцов."
+        "change": "9 → 7 points."
       }
     ],
     "L": [
       {
         "rule": "S-REPEAT",
-        "change": "9 зубцов, глубина 3 px."
+        "change": "9 points, depth 3 px."
       }
     ]
   },
@@ -146,8 +146,8 @@
     "BH"
   ],
   "gaps": [
-    "Текст закона 14/2012 не прочитан; геометрия зубцов — по Album 2000.",
-    "sRGB для Pantone 1955 C не получен из источников уровня 1–2."
+    "The text of Law 14/2012 has not been read; serration geometry is from Album 2000.",
+    "sRGB for Pantone 1955 C is not available from level 1–2 sources."
   ],
   "review": [],
   "status": {

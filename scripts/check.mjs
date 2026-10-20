@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// Проверяет все флаги в flags/ (или в --dir) по метаданным в data/.
-//   node scripts/check.mjs                 все проверки, код выхода 1 при ошибке
-//   node scripts/check.mjs --report r.md   плюс отчёт в Markdown (для GitHub step summary)
-//   node scripts/check.mjs --dir path      проверить другой каталог флагов (негативные тесты)
-//   node scripts/check.mjs --no-hidden     без C07 (самая медленная)
-// C15 (дифф с baseline/) — отчёт об изменениях, не ошибка.
+// Checks every flag in flags/ (or in --dir) against the metadata in data/.
+//   node scripts/check.mjs                 all checks, exit code 1 on failure
+//   node scripts/check.mjs --report r.md   plus a Markdown report (for the GitHub step summary)
+//   node scripts/check.mjs --dir path      check another flag directory (negative tests)
+//   node scripts/check.mjs --no-hidden     skip C07 (the slowest)
+// C15 (diff against baseline/) reports changes; it is not a failure.
 
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { PNG } from 'pngjs';
@@ -33,7 +33,7 @@ export function runChecks({ dir, codes = allCodes(), hiddenCheck = true, baselin
       const where = `${spec.dir}/${code}.svg`;
       const file = new URL(where, dir);
       if (!existsSync(file)) {
-        add(where, [{ id: 'C01', msg: 'файла нет' }]);
+        add(where, [{ id: 'C01', msg: 'file missing' }]);
         continue;
       }
       const svg = readFileSync(file, 'utf8');
@@ -55,11 +55,11 @@ export function runChecks({ dir, codes = allCodes(), hiddenCheck = true, baselin
       }
     }
   }
-  // C01: лишние файлы
+  // C01: extra files
   for (const spec of FORMATS) {
     const d = new URL(`${spec.dir}/`, dir);
     if (!existsSync(d)) continue;
-    for (const f of readdirSync(d)) if (!codes.includes(f.replace(/\.svg$/, ''))) problems.push({ id: 'C01', msg: 'лишний файл (нет в data/flags)', where: `${spec.dir}/${f}` });
+    for (const f of readdirSync(d)) if (!codes.includes(f.replace(/\.svg$/, ''))) problems.push({ id: 'C01', msg: 'extra file (not in data/flags)', where: `${spec.dir}/${f}` });
   }
   return { problems, changed };
 }
@@ -70,8 +70,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const { problems, changed } = runChecks({ dir, codes, hiddenCheck: withHidden });
   const files = codes.length * FORMATS.length;
   const summary = problems.length
-    ? `Проверка не прошла: ${problems.length} проблем в ${files} файлах.`
-    : `Все ${files} файлов прошли проверки (${codes.length} флагов × ${FORMATS.length} форматов) за ${((Date.now() - t0) / 1000).toFixed(1)} с.`;
+    ? `Checks failed: ${problems.length} problems in ${files} files.`
+    : `All ${files} files passed (${codes.length} flags × ${FORMATS.length} formats) in ${((Date.now() - t0) / 1000).toFixed(1)} s.`;
   console.log(summary);
   const byId = {};
   for (const p of problems) {
@@ -79,14 +79,14 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     console.log(`- [${p.id}] ${p.where}: ${p.msg}`);
   }
   if (changed.length) {
-    console.log(`\nC15: ${changed.length} файлов отличаются от baseline/:`);
-    for (const c of changed) console.log(`  ${c.where}: ${c.n === Infinity ? 'другой размер' : `${c.n} px`}`);
+    console.log(`\nC15: ${changed.length} files differ from baseline/:`);
+    for (const c of changed) console.log(`  ${c.where}: ${c.n === Infinity ? 'size changed' : `${c.n} px`}`);
   }
   if (reportPath) {
     const lines = [`### ${problems.length ? '⚠️' : '✅'} ${summary}`, ''];
     if (problems.length) lines.push(...problems.map((p) => `- \`${p.id}\` ${p.where}: ${p.msg}`), '');
-    lines.push(changed.length ? `**Изменения против baseline/** (C15): ${changed.length} файлов.` : 'Изменений против baseline/ нет.', '');
-    lines.push(...changed.map((c) => `- ${c.where}: ${c.n === Infinity ? 'другой размер' : `${c.n} px`}`));
+    lines.push(changed.length ? `**Changes against baseline/** (C15): ${changed.length} files.` : 'No changes against baseline/.', '');
+    lines.push(...changed.map((c) => `- ${c.where}: ${c.n === Infinity ? 'size changed' : `${c.n} px`}`));
     writeFileSync(reportPath, lines.join('\n') + '\n');
   }
   process.exit(problems.length ? 1 : 0);

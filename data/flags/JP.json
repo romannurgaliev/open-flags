@@ -22,7 +22,7 @@
   "adopted": {
     "value": "1999",
     "source": "jp-law",
-    "note": "Закон 1999 года; сам рисунок восходит к указу № 651 1870 года (FOTW)."
+    "note": "Law of 1999; the design goes back to Decree No. 651 of 1870 (FOTW)."
   },
   "sources": {
     "jp-law": {
@@ -48,7 +48,7 @@
       "specs": [
         {
           "src": "jp-law",
-          "value": "白色 (только название)"
+          "value": "白色 (name only)"
         }
       ]
     },
@@ -59,7 +59,7 @@
       "specs": [
         {
           "src": "jp-law",
-          "value": "紅色 (только название, числа нет)"
+          "value": "紅色 (name only, no value)"
         },
         {
           "src": "album2000",
@@ -73,10 +73,10 @@
         },
         {
           "src": "jp-fotw",
-          "value": "Pantone 193C (Southworth, по образцу ткани)"
+          "value": "Pantone 193C (Southworth, from a fabric sample)"
         }
       ],
-      "note": "Уровень 1 даёт только название. Pantone 186C из Album 2000 переведена в RGB по таблице Album 2023 (#D21034). Три источника называют три разных Pantone."
+      "note": "Level 1 gives only the color name. Pantone 186C from Album 2000 is converted to RGB with the Album 2023 table (#D21034). Three sources name three different Pantones."
     }
   },
   "construction": {
@@ -95,7 +95,7 @@
         0.5
       ],
       "color": "red",
-      "why": "центр диска"
+      "why": "disc center"
     },
     {
       "at": [
@@ -103,7 +103,7 @@
         0.21
       ],
       "color": "red",
-      "why": "внутри диска у верхнего края (край на 0.2)"
+      "why": "inside the disc near the top edge (edge at 0.2)"
     },
     {
       "at": [
@@ -111,7 +111,7 @@
         0.19
       ],
       "color": "white",
-      "why": "снаружи диска у верхнего края"
+      "why": "outside the disc near the top edge"
     },
     {
       "at": [
@@ -119,7 +119,7 @@
         0.5
       ],
       "color": "red",
-      "why": "внутри у левого края (край на 0.3 длины)"
+      "why": "inside near the left edge (edge at 0.3 of the length)"
     },
     {
       "at": [
@@ -127,32 +127,32 @@
         0.5
       ],
       "color": "white",
-      "why": "снаружи у левого края"
+      "why": "outside near the left edge"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-DISC",
-        "change": "Диаметр 0.6H → 10 px на 16 (чётный, центр без полупикселя)."
+        "change": "Diameter 0.6H → 10 px on 16 (even, so the center has no half pixel)."
       }
     ],
     "M": [
       {
         "rule": "S-DISC",
-        "change": "14 px на 24."
+        "change": "14 px on 24."
       }
     ],
     "L": [
       {
         "rule": "S-DISC",
-        "change": "24 px на 40."
+        "change": "24 px on 40."
       }
     ]
   },
   "confusable": [],
   "gaps": [
-    "Числового цвета красного на уровне 1 нет. Нужен ответ правительства или физический эталон."
+    "No numeric red at level 1. Needs a government answer or a physical reference."
   ],
   "review": [],
   "status": {

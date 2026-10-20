@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-// Сверка Figma ↔ репозиторий по пикселям.
-// Берёт рендеры наборов компонентов из Figma (PNG, скачанные через get_screenshot или REST /images
-// с format=png) и сравнивает каждый вариант с рендером SVG из flags/ в том же масштабе.
-// Сравниваются только «внутренние» пиксели: те, у которых в нашем рендере все 8 соседей того же
-// цвета, — на краях растеризаторы Figma и resvg сглаживают по-разному.
+// Pixel comparison, Figma ↔ repository.
+// Takes renders of the component sets from Figma (PNGs downloaded via get_screenshot or REST /images
+// with format=png) and compares each variant with a render of the SVG from flags/ at the same scale.
+// Only "interior" pixels are compared: those whose 8 neighbors in our render all have the same
+// color. At edges the Figma and resvg rasterizers antialias differently.
 //
-//   node tools/figma-roundtrip.mjs <каталог с PNG>
-// Имена PNG: square-16.png … rect-60x40.png, original.png, 3x2.png, 1x1.png.
-// Раскладка наборов — как в файле Figma пилота: миниатюры в ряд (поле 16, шаг размер+16),
-// полные форматы сеткой 5 колонок (поле 60, шаг максимальный размер+60).
+//   node tools/figma-roundtrip.mjs <directory with PNGs>
+// PNG names: square-16.png … rect-60x40.png, original.png, 3x2.png, 1x1.png.
+// Set layout as in the pilot Figma file: miniatures in a row (padding 16, step size+16),
+// full formats in a 5-column grid (padding 60, step max size+60).
 
 import { readFileSync, existsSync } from 'node:fs';
 import { PNG } from 'pngjs';
@@ -78,6 +78,6 @@ for (const spec of FORMATS) {
   worst = Math.max(worst, mism);
   rows.push(`| ${name} | ${scale.toFixed(3)} | ${checked} | ${mism} | ${bad.join(' ') || '—'} |`);
 }
-console.log('| Набор | Масштаб | Внутренних пикселей сверено | Расхождений (ΔE2000 > 3) | Где |\n|---|---|---|---|---|');
+console.log('| Set | Scale | Interior pixels compared | Mismatches (ΔE2000 > 3) | Where |\n|---|---|---|---|---|');
 console.log(rows.join('\n'));
 process.exit(worst ? 1 : 0);

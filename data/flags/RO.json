@@ -12,7 +12,7 @@
     "ru": "Румыния"
   },
   "classes": [
-    "tricolour-v"
+    "tricolor-v"
   ],
   "ratio": {
     "h": 2,
@@ -33,11 +33,11 @@
     },
     "ro-law": {
       "level": 1,
-      "title": "Legea nr. 75/1994, изменена Legea nr. 176 din 19.06.2023 (цвета в трёх системах)",
+      "title": "Legea nr. 75/1994, amended by Legea nr. 176 of 19.06.2023 (colors in three systems)",
       "via": "wikipedia",
       "url": "https://en.wikipedia.org/wiki/Flag_of_Romania",
       "accessed": "2026-10-21",
-      "note": "Значения закона прочитаны через Википедию; сам Monitorul Oficial не прочитан."
+      "note": "The law's values were read via Wikipedia; the Monitorul Oficial itself has not been read."
     },
     "ro-fotw": {
       "level": 4,
@@ -116,7 +116,7 @@
       }
     ],
     "source": "ro-const",
-    "text": "Вертикальные полосы синяя, жёлтая, красная от древка; ширина — две трети длины."
+    "text": "Vertical stripes blue, yellow, red from the hoist; width two thirds of the length."
   },
   "probes": [
     {
@@ -125,7 +125,7 @@
         0.5
       ],
       "color": "blue",
-      "why": "синяя полоса"
+      "why": "blue stripe"
     },
     {
       "at": [
@@ -133,7 +133,7 @@
         0.5
       ],
       "color": "yellow",
-      "why": "жёлтая полоса"
+      "why": "yellow stripe"
     },
     {
       "at": [
@@ -141,7 +141,7 @@
         0.5
       ],
       "color": "red",
-      "why": "красная полоса"
+      "why": "red stripe"
     },
     {
       "at": [
@@ -149,7 +149,7 @@
         0.5
       ],
       "color": "blue",
-      "why": "у границы 1/3"
+      "why": "near the 1/3 boundary"
     },
     {
       "at": [
@@ -157,7 +157,7 @@
         0.5
       ],
       "color": "yellow",
-      "why": "у границы 1/3"
+      "why": "near the 1/3 boundary"
     },
     {
       "at": [
@@ -165,7 +165,7 @@
         0.5
       ],
       "color": "yellow",
-      "why": "у границы 2/3"
+      "why": "near the 2/3 boundary"
     },
     {
       "at": [
@@ -173,14 +173,14 @@
         0.5
       ],
       "color": "red",
-      "why": "у границы 2/3"
+      "why": "near the 2/3 boundary"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-STRIPES",
-        "change": "5/6/5 px: остаток пикселя — средней полосе."
+        "change": "5/6/5 px: the remainder pixel goes to the middle stripe."
       }
     ],
     "M": [],
@@ -196,7 +196,7 @@
   ],
   "gaps": [],
   "review": [
-    "Круг: равные полосы или средняя шире (как в durev-flags 11/14/11) — проверить A/B в тесте узнаваемости."
+    "Circle: equal stripes or a wider middle (as in durev-flags, 11/14/11) — A/B in the recognition test."
   ],
   "status": {
     "full": "ok",

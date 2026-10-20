@@ -1,14 +1,14 @@
-// Построение 25 пилотных флагов. Все числа построения берутся из data/flags/<CODE>.json
-// (поле construction), здесь — только правила их применения в каждом формате и ступени.
+// Construction of the 25 pilot flags. All construction numbers come from data/flags/<CODE>.json
+// (the construction field); this file only holds the rules for applying them in each format and tier.
 //
 // ctx: { fmt: 'original'|'3x2'|'1x1'|'square'|'circle'|'rect', tier: null|'S'|'M'|'L',
-//        W, H, px: boolean (true для миниатюр), circle: boolean, k: meta.construction, c: цвета }
+//        W, H, px: boolean (true for miniatures), circle: boolean, k: meta.construction, c: colors }
 //
-// Правила унификации (docs/04-unified-and-miniature.md):
-//  U1. Деления поля вдоль длины масштабируются с длиной, вдоль высоты — с высотой.
-//  U2. Заряды (диски, звёзды, гербы, ширина плеч крестов) масштабируются с высотой и не растягиваются.
-//  U3. Центр заряда по горизонтали — доля длины, по вертикали — доля высоты, как в источнике.
-//  U4. Кантон, заданный как «четверть у древка», в 1:1 и миниатюрах становится квадратом.
+// Unification rules (docs/04-unified-and-miniature.md):
+//  U1. Field divisions along the length scale with the length; along the height, with the height.
+//  U2. Charges (discs, stars, emblems, cross arm widths) scale with the height and are not stretched.
+//  U3. A charge's center is a fraction of the length horizontally and of the height vertically, as in the source.
+//  U4. A canton defined as "the upper hoist quarter" becomes a square in 1:1 and the miniatures.
 
 import {
   rect, circle, poly, ellipse, unite, sub, inter, star, star5, band, distribute, sameParity,
@@ -19,7 +19,7 @@ import { nepalFrame } from './np.mjs';
 const L = (fill, item) => ({ fill, item });
 const field = (ctx, fill) => L(fill, rect(0, 0, ctx.W, ctx.H));
 
-// Диск: на сетке — целый диаметр той же чётности, что и холст по оси центрирования.
+// Disc: on the grid, an integer diameter with the same parity as the canvas along the centering axis.
 function disc(ctx, cxFrac, cyFrac, dH) {
   if (!ctx.px) return circle(cxFrac * ctx.W, cyFrac * ctx.H, (dH * ctx.H) / 2);
   const d = sameParity(dH * ctx.H, ctx.H);
@@ -28,7 +28,7 @@ function disc(ctx, cxFrac, cyFrac, dH) {
   return circle(left + d / 2, top + d / 2, d / 2);
 }
 
-// Точечный заряд меньше 4 px рисуется пиксельной точкой (правило S-POINT).
+// A point charge smaller than 4 px is drawn as a pixel dot (rule S-POINT).
 function dot(x, y, size = 1) {
   const s = Math.max(1, Math.round(size));
   const left = Math.round(x - s / 2);
@@ -65,7 +65,7 @@ const builders = {
     let bar = k.arm_w * u;
     let arm = k.arm_l * u;
     if (ctx.px) {
-      // Подбор целых: ширина плеча той же чётности, что и холст; длина плеча — ближе к 7/6.
+      // Integer fit: arm width with the same parity as the canvas; arm length as close to 7/6 as possible.
       const best = { cost: Infinity };
       for (let b = 2; b <= ctx.H / 2; b++) {
         if (b % 2 !== ctx.H % 2) continue;
@@ -99,7 +99,7 @@ const builders = {
     let depth = k.depth_l * ctx.W;
     let n = k.points;
     if (ctx.px) {
-      // S-REPEAT: зубцов столько, чтобы шаг был не меньше 3 px; число нечётное, как в оригинале.
+      // S-REPEAT: as many points as keep the step at least 3 px; an odd number, as in the original.
       n = Math.min(k.points, Math.floor(ctx.H / 3));
       if (n % 2 === 0) n--;
       depth = Math.max(2, Math.round(depth));
@@ -134,8 +134,8 @@ const builders = {
       layers.push(L('white', stars));
       return layers;
     }
-    // Миниатюры: S-STRIPES сокращает 13 полос; кантон ложится на ближайшую границу полос;
-    // звёзды — шахматное поле точек 1 px с шагом 2 px (S-POINT, S-REPEAT).
+    // Miniatures: S-STRIPES reduces the 13 stripes; the canton snaps to the nearest stripe edge;
+    // the stars become a checkerboard of 1 px dots at a 2 px step (S-POINT, S-REPEAT).
     const n = reduceStripes(13, H, 2, true);
     const st = stripes(ctx, { x: 0, y: 0, w: ctx.W, h: H }, 'h', Array.from({ length: n }, (_, i) => ({ c: i % 2 ? 'white' : 'red' })));
     layers.push(...st.layers);
@@ -187,7 +187,7 @@ const builders = {
     }
     const cw = ctx.px ? Math.round(k.canton.w_l * ctx.W) : k.canton.w_l * ctx.W;
     layers.push(L('blue', rect(0, 0, cw, ch)));
-    // Символы в единицах кантона: кантон = 8 × 14 единиц (оценка, см. gaps).
+    // Symbols in canton units: canton = 8 × 14 units (estimate, see gaps).
     const u = ch / k.canton.units_h;
     const groupCx = (k.symbol.group_cx_u / k.canton.units_w) * cw;
     const off = groupCx - (k.symbol.group_cx_u * u);
@@ -199,7 +199,7 @@ const builders = {
       layers.push(L('yellow', crescent(X(cr.outer_cx_u), Y(cr.cy_u), (cr.outer_d_u / 2) * u, (cr.inner_d_u / 2) * u, (cr.inner_cx_u - cr.outer_cx_u) * u)));
       layers.push(L('yellow', star(X(sr.cx_u), Y(sr.cy_u), (sr.d_u / 2) * u, (sr.d_u / 2) * u * sr.inner_ratio, 14)));
     } else {
-      // S/M: полумесяц не тоньше 1.5 px, звезда 8 лучей (S-POINTS).
+      // S/M: crescent no thinner than 1.5 px, 8-pointed star (S-POINTS).
       const R = (cr.outer_d_u / 2) * u;
       const thick = Math.max(1.5, R - (cr.inner_d_u / 2) * u + (cr.inner_cx_u - cr.outer_cx_u) * u);
       layers.push(L('yellow', crescent(X(cr.outer_cx_u), Y(cr.cy_u), R, R * 0.92, thick)));
@@ -217,13 +217,13 @@ const builders = {
     const square = ctx.fmt === '1x1' || ctx.fmt === 'square' || ctx.fmt === 'circle';
     const cbox = { x: 0, y: 0, w: square ? W / 2 : W / 2, h: H / 2 };
     layers.push(...unionJack(ctx, cbox, { blue: 'blue', red: 'red', white: 'white' }, ctx.tier, { field: false }));
-    // Звезда Содружества: центр нижней четверти у древка.
+    // Commonwealth Star: centered in the lower hoist quarter.
     const cs = k.commonwealth;
     const csR = (cs.d_h * H) / 2;
     let comm = ctx.px && csR * 2 < 4 ? dot(cs.cx_l * W, cs.cy_h * H, 2) : star(cs.cx_l * W, cs.cy_h * H, csR, csR * k.inner_ratio, cs.points);
     if (ctx.px) comm = snapCenter(comm);
     layers.push(L('white', inCircle(ctx, comm)));
-    // Южный Крест: смещения в долях высоты от центра вольной половины, сжатие f для узких форматов.
+    // Southern Cross: offsets as fractions of the height from the center of the fly half, compressed by f in narrow formats.
     const flyW = W / 2;
     const f = Math.min(1, flyW / H) * (ctx.px ? k.mini_spread[ctx.tier] ?? 1 : 1);
     const ccx = k.cross_center.cx_l * W;
@@ -255,8 +255,8 @@ const builders = {
       const R = (s.d_h * H) / 2;
       const b = k.border_h * H;
       if (ctx.px) {
-        // S-FIMB: кайма тоньше 0.5 px на ступени снимается, звезда остаётся красной.
-        // S-POINT: звезда меньше 4 px — пиксельная точка 2 px.
+        // S-FIMB: a fimbriation thinner than 0.5 px at the tier is dropped; the star stays red.
+        // S-POINT: a star smaller than 4 px becomes a 2 px pixel dot.
         if (R * 2 < 4) layers.push(L('red', inCircle(ctx, dot(x, y, 2))));
         else layers.push(L('red', inCircle(ctx, star(x, y, R, R * k.inner_ratio, 5))));
       } else {
@@ -273,7 +273,7 @@ const builders = {
     const W = ctx.W;
     const layers = [field(ctx, 'lightblue')];
     layers.push(...unionJack(ctx, { x: 0, y: 0, w: W / 2, h: H / 2 }, { blue: 'darkblue', red: 'red', white: 'white' }, ctx.tier));
-    if (!ctx.px) return layers; // щит в полном формате — пробел (gaps)
+    if (!ctx.px) return layers; // shield in the full formats: not drawn yet (see gaps)
     const sh = k.shield;
     let h = Math.round(sh.h_h * H);
     let w = Math.round(h * sh.aspect);
@@ -297,7 +297,7 @@ const builders = {
     const k = ctx.k;
     const st = stripes(ctx, { x: 0, y: 0, w: ctx.W, h: ctx.H }, 'v', k.bands);
     const layers = [...st.layers];
-    if (!ctx.px) return layers; // герб в полном формате — пробел
+    if (!ctx.px) return layers; // coat of arms in the full formats: not drawn yet
     const white = st.sizes[1];
     const x0 = st.sizes[0];
     const d = sameParity(k.emblem.d_of_white * white, white);
@@ -309,7 +309,7 @@ const builders = {
       layers.push(L('brown', ellipse(cx, top + d * 0.4, d * 0.42, d * 0.36)));
       layers.push(L('green', rect(left, top + d - 1, d, 1)));
     } else {
-      // M/L: орёл (тело, крыло), кактус, венок.
+      // M/L: eagle (body, wing), cactus, wreath.
       const body = ellipse(cx + d * 0.06, top + d * 0.42, d * 0.24, d * 0.27);
       const wing = poly([[cx - d * 0.05, top + d * 0.42], [cx - d * 0.46, top + d * 0.08], [cx - d * 0.16, top + d * 0.58]]);
       const head = circle(cx + d * 0.2, top + d * 0.16, d * 0.11);
@@ -326,7 +326,7 @@ const builders = {
     const k = ctx.k;
     const st = stripes(ctx, { x: 0, y: 0, w: ctx.W, h: ctx.H }, 'h', k.bands);
     const layers = [...st.layers];
-    if (!ctx.px || ctx.tier === 'S') return layers; // S: герб снят (правило S-EMBLEM-DROP)
+    if (!ctx.px || ctx.tier === 'S') return layers; // S: coat of arms dropped (rule S-EMBLEM-DROP)
     const square = ctx.fmt === 'square' || ctx.fmt === 'circle';
     const h = Math.round(k.arms.h_h * ctx.H);
     const cx = square ? ctx.W / 2 : k.arms.cx_h * ctx.H;
@@ -349,12 +349,12 @@ const builders = {
 
   SA(ctx) {
     const layers = [field(ctx, 'green')];
-    if (!ctx.px) return layers; // шахада и меч в полном формате — пробел
+    if (!ctx.px) return layers; // shahada and sword in the full formats: not drawn yet
     const W = ctx.W;
     const H = ctx.H;
     const cx = W / 2;
     const u = H / 16;
-    // Схематичная надпись: строки разной длины (ритм письма справа налево), меч под ней.
+    // Schematic inscription: lines of different lengths (the rhythm of right-to-left script), sword below.
     const rows = ctx.tier === 'S' ? [[0.62, 2]] : ctx.tier === 'M' ? [[0.5, 1], [0.6, 1]] : [[0.36, 1], [0.6, 1.4], [0.54, 1]];
     let y = Math.round(H * (ctx.tier === 'L' ? 0.28 : 0.3));
     for (const [wFrac, hh] of rows) {
@@ -372,7 +372,7 @@ const builders = {
       y += h + (ctx.tier === 'S' ? 1 : 2);
     }
     if (ctx.tier === 'S') layers.push(L('white', rect(Math.round(cx - W * 0.22), y, Math.round(W * 0.38), 1)));
-    // Меч: клинок к древку (влево), рукоять справа.
+    // Sword: blade toward the hoist (left), hilt on the right.
     const sy = Math.round(H * 0.7);
     const blade = Math.round(W * 0.62 * (ctx.fmt === 'rect' ? 0.8 : 1));
     const bx = Math.round(cx - blade / 2);
@@ -405,7 +405,7 @@ const builders = {
     const bandShape = inter(sub(circle(bcx, bcy, r2), circle(bcx, bcy, r1)), globe.clone({ insert: false }));
     layers.push(L('white', bandShape));
     if (ctx.px && ctx.tier !== 'S') {
-      // Звёзды на миниатюрах: несколько белых точек ниже ленты (S-REPEAT), не позиции закона.
+      // Stars on miniatures: a few white dots below the band (S-REPEAT), not the legal positions.
       const pts = ctx.tier === 'M' ? [[0, 0.45], [-0.35, 0.2], [0.35, 0.28]] : [[0, 0.5], [-0.38, 0.22], [0.36, 0.3], [0.1, 0.18], [-0.12, 0.72], [0.5, 0.6]];
       let d = null;
       for (const [dx, dy] of pts) {
@@ -422,7 +422,7 @@ const builders = {
     const W = ctx.W;
     const H = ctx.H;
     const layers = [field(ctx, 'blue')];
-    if (!ctx.px) return layers; // солнце, орёл, орнамент — пробел (ST RK 988-2007 не прочитан)
+    if (!ctx.px) return layers; // sun, eagle, ornament: not drawn yet (ST RK 988-2007 not read)
     const cx = W * k.sun_cx_l;
     const cy = Math.round(H * k.sun_cy_h);
     const tier = ctx.tier;
@@ -442,7 +442,7 @@ const builders = {
       rays = rays ? unite(rays, p) : p;
     }
     layers.push(L('yellow', unite(circle(cx, cy, discR), rays)));
-    // Орёл: крылья дугой под солнцем.
+    // Eagle: wings in an arc below the sun.
     const ey = H * k.eagle_cy_h;
     const span = H * k.eagle_span_h * (ctx.fmt === 'rect' ? 1 : 0.9);
     const thick = tier === 'S' ? 1.2 : tier === 'M' ? 1.8 : 2.4;
@@ -450,10 +450,10 @@ const builders = {
     const wings = inter(wing, rect(cx - span / 2, ey + span * 0.18 - span * 0.3 - 1, span, span * 0.24));
     layers.push(L('yellow', wings));
     if (tier !== 'S') layers.push(L('yellow', ellipse(cx, ey + (tier === 'L' ? 2 : 1.2), tier === 'L' ? 1.6 : 1.1, tier === 'L' ? 2.6 : 1.8)));
-    // Орнамент у древка: столбец с зубцами (S-LINE: 1 px допустим для опознавательного элемента).
+    // Hoist ornament: a toothed column (S-LINE: 1 px is allowed for an identifying element).
     const ow = tier === 'S' ? 1 : tier === 'M' ? 2 : 3;
     const pitch = tier === 'S' ? 3 : tier === 'M' ? 4 : 5;
-    // В круге столбец не притягивается к центру, а укорачивается до хорды (S-CIRCLE).
+    // In a circle the column is not pulled toward the center; it is shortened to the chord (S-CIRCLE).
     const ox = ctx.circle ? Math.round(W * 0.17) : Math.max(1, Math.round(W * k.ornament_x_l));
     let y0 = 1;
     let y1 = H - 1;
@@ -482,7 +482,7 @@ const builders = {
     }
     if (!ctx.px) {
       layers.push(L('red', rect(bx, 0, bw, H)));
-      return layers; // гёли, ветви, полумесяц и звёзды — пробел
+      return layers; // guls, branches, crescent and stars: not drawn yet
     }
     layers.push(L('red', rect(bx, 0, bw, H)));
     const n = 5;
@@ -497,7 +497,7 @@ const builders = {
         layers.push(L('white', dot(gx, gy, 1)));
       }
     }
-    // Полумесяц и пять звёзд справа от ковра, вверху.
+    // Crescent and five stars to the right of the carpet guard, at the top.
     const e = k.estimate;
     const ccx = bx + bw + W * e.crescent_dx_l;
     const ccy = H * e.crescent_cy_h;
@@ -524,7 +524,7 @@ const builders = {
     const eps = ctx.px ? (ctx.tier === 'S' ? 0.45 : 0.35) : 0;
     const map = mapShape(['Cyprus', 'N. Cyprus'], box, { eps, minArea: ctx.px ? 0.5 : 0 });
     layers.push(L('copper', map));
-    if (!ctx.px) return layers; // ветви — пробел
+    if (!ctx.px) return layers; // branches: not drawn yet
     const by = box.y + mh + (ctx.tier === 'S' ? 1.2 : 1.6);
     const half = mw * 0.32;
     const t = ctx.tier === 'S' ? 1 : 1.4;
@@ -542,7 +542,7 @@ const builders = {
     const box = { x: W / 2 - mh, y: H * k.map_cy_h - mh / 2, w: mh * 2, h: mh };
     const eps = ctx.px ? (ctx.tier === 'S' ? 0.45 : 0.35) : 0;
     layers.push(L('gold', mapShape(['Kosovo'], box, { eps })));
-    if (!ctx.px) return layers; // звёзды — пробел
+    if (!ctx.px) return layers; // stars: not drawn yet
     const n = 6;
     const arcR = H * k.stars_arc_r_h;
     const acx = W / 2;
@@ -561,7 +561,7 @@ const builders = {
     const H = ctx.H;
     const half = ctx.px ? Math.round(W / 2) : W / 2;
     const layers = [field(ctx, 'white'), L('yellow', rect(0, 0, half, H))];
-    if (!ctx.px) return layers; // ключи и тиара — пробел
+    if (!ctx.px) return layers; // keys and tiara: not drawn yet
     const cx = half + (W - half) / 2;
     const cy = H * 0.56;
     const s = H * (ctx.tier === 'S' ? 0.3 : 0.32);
@@ -579,12 +579,12 @@ const builders = {
     const f = nepalFrame();
     const W = ctx.W;
     const H = ctx.H;
-    // Непал не растягиваем: форма вписывается в холст, фон прозрачный (правило U-SHAPE).
+    // Nepal is not stretched: the shape is fitted into the canvas on a transparent background (rule U-SHAPE).
     let s = H;
     let ox = (W - f.w * s) / 2;
     let oy = 0;
     if (ctx.circle) {
-      // Вписать все вершины каймы в круг с полем 0.5 px.
+      // Fit every vertex of the border inside the circle with a 0.5 px margin.
       const R = W / 2 - 0.5;
       let best = 0;
       for (let k = 1; k > 0.3; k -= 0.005) {
@@ -613,7 +613,7 @@ const builders = {
     layers.push(L('blue', poly(f.outer.map(T))));
     let inner = c.outline;
     if (ctx.px) {
-      // Кайма не тоньше 1 px (S-MIN).
+      // Border no thinner than 1 px (S-MIN).
       const bpx = c.border * f.scale * s;
       if (bpx < 1) {
         const k = 1 / (f.scale * s);
@@ -621,10 +621,10 @@ const builders = {
       }
     }
     layers.push(L('crimson', poly(inner.map(T))));
-    const u = f.scale * s; // единица AB в пикселях холста
+    const u = f.scale * s; // unit AB in canvas pixels
     const pt = (p) => T(p);
     if (!ctx.px || ctx.tier === 'L') {
-      // Луна: чаша (шаги 13–14), полукруг с 8 лучами (шаги 16–18).
+      // Moon: bowl (steps 13–14), semicircle with 8 rays (steps 16–18).
       const m = c.moon;
       const [Lx, Ly] = pt(m.L);
       const [Mx, My] = pt(m.M);
@@ -646,7 +646,7 @@ const builders = {
         moon = unite(moon, tri);
       }
       layers.push(L('white', inter(moon, above.clone({ insert: false }).scale(1, 1.6, [Tx, Ty]))));
-      // Солнце: диск радиуса MN и 12 лучей до радиуса LN, два луча касаются HI.
+      // Sun: disc of radius MN and 12 rays out to radius LN; two rays touch HI.
       const [Wx, Wy] = pt(c.sun.W);
       let sun = circle(Wx, Wy, c.sun.inner * u);
       for (let i = 0; i < 12; i++) {
@@ -660,7 +660,7 @@ const builders = {
       }
       layers.push(L('white', sun));
     } else {
-      // S/M: луна — чаша + полудиск, солнце — диск; лучи сняты (S-POINT).
+      // S/M: the moon is a bowl plus a half-disc, the sun a disc; rays dropped (S-POINT).
       const [Mx, My] = pt(c.moon.M);
       const [Tx, Ty] = pt(c.moon.T);
       const r = Math.max(1.6, c.moon.rTS * u);
@@ -673,7 +673,7 @@ const builders = {
   },
 };
 
-// Сдвиг контура внутрь (для утолщения каймы на миниатюрах).
+// Inward contour offset (to thicken the border on miniatures).
 function innerOffset(outline, d) {
   const n = outline.length;
   const crossL = (p1, p2, p3, p4) => {
@@ -704,7 +704,7 @@ function snapCenter(item) {
 
 export function build(code, ctx) {
   const b = builders[code];
-  if (!b) throw new Error(`Нет построителя для ${code}`);
+  if (!b) throw new Error(`No builder for ${code}`);
   return b(ctx);
 }
 

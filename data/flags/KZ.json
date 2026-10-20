@@ -27,17 +27,17 @@
   "sources": {
     "kz-law": {
       "level": 1,
-      "title": "Конституционный закон РК «О государственных символах» № 258 (2007); указ 1996 г. (пропорция 1:2)",
+      "title": "Constitutional Law of the Republic of Kazakhstan \"On State Symbols\" No. 258 (2007); 1996 decree (ratio 1:2)",
       "via": "fotw",
       "url": "https://crwflags.com/fotw/flags/kz.html",
       "accessed": "2026-10-21"
     },
     "kz-strk": {
       "level": 1,
-      "title": "СТ РК 988-2007 «Государственный флаг Республики Казахстан. Общие технические условия»",
+      "title": "ST RK 988-2007 \"State Flag of the Republic of Kazakhstan. General technical conditions\"",
       "via": "fotw",
       "accessed": "2026-10-21",
-      "note": "Сам стандарт не прочитан; Pantone — по цитате на FOTW (Ломанцов, Диксон). Чертёж солнца, орла и орнамента — пробел."
+      "note": "The standard itself has not been read; Pantone values are from a FOTW quotation (Lomantsov, Dixon). Construction of the sun, eagle and ornament — gap."
     },
     "kz-fotw": {
       "level": 4,
@@ -55,7 +55,7 @@
       "specs": [
         {
           "src": "kz-strk",
-          "value": "Pantone 3125U (текстиль), 3125C/U (нетекстиль)",
+          "value": "Pantone 3125U (textile), 3125C/U (non-textile)",
           "via": "fotw"
         },
         {
@@ -81,7 +81,7 @@
       "specs": [
         {
           "src": "kz-strk",
-          "value": "Pantone 102U (текстиль), 810C/U (нетекстиль)",
+          "value": "Pantone 102U (textile), 810C/U (non-textile)",
           "via": "fotw"
         },
         {
@@ -95,10 +95,10 @@
         },
         {
           "src": "comparison",
-          "value": "#FEC50C (flagcolorcodes), #FFEC2D (Википедия)"
+          "value": "#FEC50C (flagcolorcodes), #FFEC2D (Wikipedia)"
         }
       ],
-      "note": "Уровень 1 (СТ РК 988-2007) называет Pantone 102U для ткани и 810C/U для прочего, без RGB; в таблице Album 2023 их нет. По правилу C-PROVISIONAL взято значение уровня 4, заявленное как 102U (#FFF203). Источники расходятся сильно (лимонный и золотистый) — нужен сам стандарт."
+      "note": "Level 1 (ST RK 988-2007) names Pantone 102U for fabric and 810C/U otherwise, without RGB; neither is in the Album 2023 table. Under rule C-PROVISIONAL the level 4 value declared as 102U (#FFF203) is used. Sources disagree strongly (lemon vs golden) — the standard itself is needed."
     }
   },
   "construction": {
@@ -112,7 +112,7 @@
       "ornament_x_l": 0.04
     },
     "source": "estimate",
-    "text": "Все размеры — оценка по изображениям: СТ РК 988-2007 не прочитан. Используются только на миниатюрах."
+    "text": "All dimensions are estimates from images: ST RK 988-2007 has not been read. Used for miniatures only."
   },
   "probes": [
     {
@@ -121,38 +121,38 @@
         0.5
       ],
       "color": "blue",
-      "why": "поле у края"
+      "why": "field near the edge"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-REPEAT",
-        "change": "32 луча → 8."
+        "change": "32 rays → 8."
       },
       {
         "rule": "S-EMBLEM",
-        "change": "Орёл → дуга крыльев 1 px."
+        "change": "Eagle → 1 px arc of wings."
       },
       {
         "rule": "S-LINE",
-        "change": "Орнамент → столбец 1 px с зубцами: опознавательный элемент, отличает от PW."
+        "change": "Ornament → 1 px column with teeth: an identifying element that separates the flag from PW."
       }
     ],
     "M": [
       {
         "rule": "S-REPEAT",
-        "change": "32 → 16 лучей."
+        "change": "32 → 16 rays."
       },
       {
         "rule": "S-EMBLEM",
-        "change": "Крылья 2 px + тело."
+        "change": "Wings 2 px + body."
       }
     ],
     "L": [
       {
         "rule": "S-EMBLEM",
-        "change": "32 луча, крылья, орнамент 3 px."
+        "change": "32 rays, wings, 3 px ornament."
       }
     ]
   },
@@ -160,11 +160,11 @@
     "PW"
   ],
   "gaps": [
-    "СТ РК 988-2007 не прочитан: нет чертежа солнца, орла, орнамента и выбора жёлтого.",
-    "Полные форматы нарисованы без эмблемы."
+    "ST RK 988-2007 has not been read: no construction for the sun, eagle, ornament, or the choice of yellow.",
+    "Full formats are drawn without the emblem."
   ],
   "review": [
-    "Проверить у владельцев стандарта (Казахстан) выбор жёлтого и рисунок орнамента на S."
+    "Check the choice of yellow and the S-size ornament with the owners of the standard (Kazakhstan)."
   ],
   "status": {
     "full": "draft",

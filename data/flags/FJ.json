@@ -32,7 +32,7 @@
       "url": "https://crwflags.com/fotw/flags/fj.html",
       "via": "direct",
       "accessed": "2026-10-21",
-      "note": "Официальных оттенков и чертежа нет (по FOTW)."
+      "note": "No official shades or construction sheet (per FOTW)."
     }
   },
   "colors": {
@@ -95,7 +95,7 @@
         },
         {
           "src": "comparison",
-          "value": "#FFD100 — sRGB-эквивалент PMS 109 не получен из уровня 1–2"
+          "value": "#FFD100 — the sRGB equivalent of PMS 109 is not available from levels 1–2"
         }
       ]
     }
@@ -107,7 +107,7 @@
       "h_h": 0.5,
       "aspect": 0.8,
       "source": "estimate",
-      "text": "Положение и размер щита — оценка по рисунку: в FOTW чертежа нет."
+      "text": "Shield position and size are estimates from images: FOTW has no construction sheet."
     }
   },
   "probes": [
@@ -117,7 +117,7 @@
         0.25
       ],
       "color": "red",
-      "why": "центр креста Union Jack"
+      "why": "center of the Union Jack cross"
     },
     {
       "at": [
@@ -125,33 +125,33 @@
         0.92
       ],
       "color": "lightblue",
-      "why": "поле"
+      "why": "field"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-EMBLEM",
-        "change": "Щит: белый с красным крестом и красной главой, без фигур."
+        "change": "Shield: white with a red cross and red chief, no figures."
       }
     ],
     "M": [
       {
         "rule": "S-EMBLEM",
-        "change": "+ жёлтая точка льва на главе."
+        "change": "+ yellow dot for the lion on the chief."
       }
     ],
     "L": [
       {
         "rule": "S-EMBLEM",
-        "change": "Как M."
+        "change": "Same as M."
       }
     ]
   },
   "confusable": [],
   "gaps": [
-    "Щит в полных форматах не нарисован: нужен рисунок по королевской грамоте 1908 г.",
-    "Размер и место щита — оценка."
+    "The shield is not drawn in the full formats: needs the drawing from the 1908 Royal Letters Patent.",
+    "Shield size and position are estimates."
   ],
   "review": [],
   "status": {

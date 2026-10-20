@@ -1,5 +1,5 @@
-# Проверки на каждый PR и push в main: метаданные, SVG, пиксели, пробные точки, сетка,
-# негативные тесты. Контактный лист и отчёт — в артефактах и в Summary запуска.
+# Runs on every PR and push to main: metadata, SVG, pixels, probe points, pixel grid,
+# negative tests. The contact sheet and the report go to the run's artifacts and Summary.
 name: Check flags
 
 on:

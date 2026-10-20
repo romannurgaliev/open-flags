@@ -1,30 +1,30 @@
-# Спецификация open-flags (пилот 0.1)
+# open-flags specification (pilot 0.1)
 
-Пилот проверяет подход на 25 флагах, а не рисует все 250. Цель спецификации — чтобы «лучше, чем у альтернатив» можно было проверить, а работу продолжил другой человек.
+The pilot tests the approach on 25 flags rather than drawing all 250. The specification exists so that "better than the alternatives" can be checked, and so that someone else can pick up the work.
 
-| Документ | Что решает |
+| Document | What it settles |
 |---|---|
-| [00 — Источники и цвет](00-sources-and-color.md) | Порядок приоритета источников, что прочитано и что нет, правила выбора sRGB |
-| [01 — Включение и релизы](01-inclusion-and-releases.md) | Какие флаги входят, как отслеживать изменения, semver для ассетов |
-| [02 — Лицензия](02-license.md) | Отдельно для рисунков и кода, происхождение каждого флага |
-| [03 — Метаданные](03-metadata.md) | Схема `data/flags/<CODE>.json` |
-| [04 — Форматы и ступени](04-unified-and-miniature.md) | Почему миниатюры 16/24/40, правила унификации U1–U4 |
-| [05 — Правила упрощения](05-simplification-rules.md) | S-правила по ступеням: минимальные размеры, остаток пикселя, текст, гербы, кантоны |
-| [06 — Неразличимые пары](06-confusable-pairs.md) | Реестр с измерениями и политика без искажения флага |
-| [07 — Проверки CI](07-ci-checks.md) | C01–C16, негативные тесты, сверка с Figma |
-| [08 — Как вносить изменения](08-contributing.md) | Мастер в Figma, репозиторий для релизов, правки через issue |
-| [Фаза 2](phase2/) | План внешней проверки: тест узнаваемости, вексиллологи, носители языка |
+| [00 — Sources and color](00-sources-and-color.md) | Source priority, what has and has not been read, rules for choosing sRGB |
+| [01 — Inclusion and releases](01-inclusion-and-releases.md) | Which flags are included, how changes are tracked, semver for assets |
+| [02 — License](02-license.md) | Separate terms for artwork and code, provenance of each flag |
+| [03 — Metadata](03-metadata.md) | The `data/flags/<CODE>.json` schema |
+| [04 — Formats and tiers](04-unified-and-miniature.md) | Why miniatures are 16/24/40, unification rules U1–U4 |
+| [05 — Simplification rules](05-simplification-rules.md) | Per-tier S rules: minimum sizes, leftover pixels, text, coats of arms, cantons |
+| [06 — Confusable pairs](06-confusable-pairs.md) | Registry with measurements, and the policy of never distorting a flag |
+| [07 — CI checks](07-ci-checks.md) | C01–C16, negative tests, Figma comparison |
+| [08 — Contributing](08-contributing.md) | Figma as the master, the repository for releases, changes through issues |
+| [Phase 2](phase2/) | External review plan: recognition test, vexillologists, native speakers |
 
-## Состояние пилота
+## Pilot status
 
-- 25 флагов × 12 форматов = 300 SVG в `flags/`, все проходят C01–C16.
-- 22 негативных теста: каждая проверка краснеет на сломанной копии.
-- Файл Figma: [Open Flags — pilot 0.1](https://www.figma.com/design/WfVWKCZNF2MyqZw7FishR2) — 12 наборов компонентов с переключателем Country. Пиксельная сверка Figma ↔ репозиторий: 0 расхождений на 2,2 млн внутренних пикселей.
-- Полные форматы десяти флагов — черновики: эмблемы, гербы, надписи и карты по официальным рисункам не нарисованы (BR, CY, ES, FJ, KZ, MX, SA, TM, VA, XK). Список пробелов — поле `gaps` в метаданных каждого флага.
+- 25 flags × 12 formats = 300 SVGs in `flags/`, all passing C01–C16.
+- 22 negative tests: every check fails on a broken copy.
+- Figma file: [Open Flags — pilot 0.1](https://www.figma.com/design/WfVWKCZNF2MyqZw7FishR2), 12 component sets with a Country property. Pixel comparison between Figma and the repository: 0 mismatches across 2.2 million interior pixels.
+- The full formats of ten flags are drafts: emblems, coats of arms, inscriptions and maps have not been drawn from the official artwork (BR, CY, ES, FJ, KZ, MX, SA, TM, VA, XK). Each flag's `gaps` field lists what is missing.
 
-## Термины
+## Terms
 
-- **Ступень** — размерный класс миниатюры: S = 16 px, M = 24 px, L = 40 px по короткой стороне.
-- **Полные форматы** — `original` (пропорция по закону), `3x2`, `1x1`. Рисунок без упрощений, для размеров от 64 px.
-- **Миниатюры** — `square`, `circle`, `rect` (3:2) на трёх ступенях. Геометрия на пиксельной сетке, упрощения по правилам S-*.
-- **Уровень источника** — 1 закон или документ правительства (1g — руководство без силы закона), 2 Album des pavillons, 3 London 2012, 4 FOTW и вторичные, 5 Wikipedia и другие наборы (только сравнение).
+- **Tier**: the size class of a miniature, by its short side. S = 16 px, M = 24 px, L = 40 px.
+- **Full formats**: `original` (the ratio set by law), `3x2`, `1x1`. Unsimplified artwork for sizes from 64 px up.
+- **Miniatures**: `square`, `circle`, `rect` (3:2) at the three tiers. Geometry on the pixel grid, simplified under the S rules.
+- **Source level**: 1 law or government document (1g: a guideline without the force of law), 2 Album des pavillons, 3 London 2012, 4 FOTW and other secondary sources, 5 Wikipedia and other flag sets (comparison only).

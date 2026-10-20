@@ -1,37 +1,37 @@
-# 00 — Источники и цвет
+# 00 — Sources and color
 
-## Порядок приоритета
+## Source priority
 
-| Уровень | Источник | Как используем |
+| Level | Source | How it is used |
 |---|---|---|
-| 1 | Закон, указ, конституция, официальный стандарт | Пропорция, построение, цвет. Всегда побеждает |
-| 1g | Документ правительства без силы закона (руководство по стилю, спецификация для ASEAN) | Как уровень 1, но помечается отдельно |
-| 2 | Album des pavillons (SHOM), издание 2023, при доступе 2025 | Цвет в Pantone/CMYK/RGB, чертёж, если закон молчит |
-| 3 | Flags and Anthems Manual, London 2012 | Pantone — рекомендация НОК, не правительства |
-| 4 | FOTW, Flag Institute, Natural Earth | История изменений, сравнение источников, транскрипции законов |
-| 5 | Wikipedia, Wikimedia Commons, hampusborgos, catamphetamine, flagcolorcodes | Только сравнение. Геометрию отсюда не берём. Цвет — только как provisional |
+| 1 | Law, decree, constitution, official standard | Ratio, construction, color. Always wins |
+| 1g | Government document without the force of law (style guide, ASEAN specification) | Same as level 1, but marked separately |
+| 2 | Album des pavillons (SHOM), 2023 edition, 2025 when available | Pantone/CMYK/RGB colors; the drawing when the law is silent |
+| 3 | Flags and Anthems Manual, London 2012 | Pantone values recommended by national Olympic committees, not governments |
+| 4 | FOTW, Flag Institute, Natural Earth | History of changes, comparison of sources, transcriptions of laws |
+| 5 | Wikipedia, Wikimedia Commons, hampusborgos, catamphetamine, flagcolorcodes | Comparison only. No geometry is taken from them; a color only as `provisional` |
 
-При конфликте записываются все значения (`colors.<key>.specs`), выбранное — в `srgb`, правило выбора — в `rule`.
+When sources conflict, every value is recorded (`colors.<key>.specs`), the chosen one goes in `srgb`, and the rule that chose it in `rule`.
 
-Поле `via` у источника говорит, как он прочитан: `direct` — сам документ, `fotw` — по транскрипции на FOTW, `wikipedia` — по цитате со ссылкой на документ, `transcription` — по другой перепечатке. Транскрипция не повышает уровень: закон, прочитанный через FOTW, остаётся уровнем 1 с пометкой `via: fotw`, а не превращается в «прочитанный закон».
+A source's `via` field says how it was read: `direct` (the document itself), `fotw` (a transcription on FOTW), `wikipedia` (a quotation citing the document), `transcription` (another reprint). A transcription does not raise the level: a law read through FOTW stays level 1, marked `via: fotw`; it does not become a "law we have read".
 
-## Что прочитано в пилоте
+## What the pilot has read
 
-Доступ из рабочей среды: shell видит npm, PyPI, `api.figma.com`, `www.figma.com`; FOTW, ISO, Natural Earth, SHOM и unicode.org из shell закрыты, страницы FOTW читались через веб-инструмент.
+Network access from the build environment: the shell reaches npm, PyPI, `api.figma.com` and `www.figma.com`; FOTW, ISO, Natural Earth, SHOM and unicode.org are blocked from the shell, so FOTW pages were read through a web fetch tool.
 
-| Источник | Состояние |
+| Source | Status |
 |---|---|
-| Законы | Напрямую — только закон Японии (сайт Кабинета министров). Остальные — через транскрипции FOTW, Википедию, ushistory.org. Это главный пробел пилота |
-| Album des pavillons 2023 | Платный; значения взяты из цитат на FOTW. Издание 2025 не прочитано |
-| London 2012 | PDF доступен, значения взяты через FOTW |
-| ASEAN flagspec (MY) | Прочитан напрямую |
-| Flag Institute: Union Flag | Прочитан напрямую |
-| Natural Earth 1:50m | Через npm `world-atlas` 2.0.2 |
-| Unicode CLDR 45 | Через npm `cldr-core`, `cldr-localenames-modern` |
+| Laws | Read directly only for Japan (Cabinet Office website). The rest through FOTW transcriptions, Wikipedia and ushistory.org. This is the pilot's main gap |
+| Album des pavillons 2023 | Paid; values taken from quotations on FOTW. The 2025 edition has not been read |
+| London 2012 | The PDF is available; values taken through FOTW |
+| ASEAN flag specification (MY) | Read directly |
+| Flag Institute: Union Flag | Read directly |
+| Natural Earth 1:50m | Through the npm package `world-atlas` 2.0.2 |
+| Unicode CLDR 45 | Through the npm packages `cldr-core` and `cldr-localenames-modern` |
 
-Покрытие по флагам (из `node tools/coverage.mjs`):
+Coverage by flag (from `node tools/coverage.mjs`):
 
-| Флаг | Пропорция | Построение | Цвета ok / provisional / conflict | Полные форматы | Миниатюры |
+| Flag | Ratio | Construction | Colors ok / provisional / conflict | Full formats | Miniatures |
 |---|---|---|---|---|---|
 | AU | 1g | 4 | 3 / 0 / 0 | ok | ok |
 | BD | 1 | 1 | 2 / 0 / 0 | ok | ok |
@@ -39,13 +39,13 @@
 | CH | 1 | 1 | 2 / 0 / 0 | ok | ok |
 | CY | 1 | 4 | 3 / 0 / 0 | draft | draft |
 | ES | 1 | 1 | 3 / 0 / 0 | draft | draft |
-| FJ | 4 | оценка | 4 / 1 / 0 | draft | draft |
+| FJ | 4 | estimate | 4 / 1 / 0 | draft | draft |
 | ID | 1 | 1 | 2 / 0 / 0 | ok | ok |
 | JP | 1 | 1 | 1 / 1 / 0 | ok | ok |
-| KZ | 1 | оценка | 0 / 2 / 0 | draft | draft |
+| KZ | 1 | estimate | 0 / 2 / 0 | draft | draft |
 | MC | 1 | 1 | 2 / 0 / 0 | ok | ok |
 | MX | 1 | 1 | 3 / 2 / 0 | draft | draft |
-| MY | 1g | оценка | 1 / 3 / 0 | ok-estimate | ok |
+| MY | 1g | estimate | 1 / 3 / 0 | ok-estimate | ok |
 | NP | 1 | 1 | 2 / 1 / 0 | ok | ok |
 | NZ | 1 | 4 | 3 / 0 / 0 | ok-estimate | ok |
 | PL | 1 | 1 | 2 / 0 / 0 | ok | ok |
@@ -59,38 +59,38 @@
 | VA | 1 | 1 | 2 / 2 / 0 | draft | draft |
 | XK | 4 | 4 | 1 / 2 / 0 | draft | draft |
 
-Цветов всего 74: 55 ok, 18 provisional, 1 conflict. Provisional включает дизайнерские цвета деталей миниатюр (орёл MX, ключи VA), у которых источника нет совсем.
+74 colors in total: 55 ok, 18 provisional, 1 conflict. The provisional ones include design colors for miniature details that have no source at all (the MX eagle, the VA keys).
 
-## Правила выбора sRGB
+## Rules for choosing sRGB
 
-| Правило | Когда | Что берём |
+| Rule | When | What is used |
 |---|---|---|
-| C-L1-RGB | Уровень 1 даёт RGB или HEX | Его |
-| C-L1-CIE | Уровень 1 даёт колориметрию (PL — CIE xyY, ES — CIELAB) | Пересчёт в sRGB через `src/color.mjs`: xyY или L\*C\*h → XYZ → адаптация Брэдфорда к D65 → sRGB. Значение вне охвата sRGB обрезается и помечается |
-| C-PANTONE-MAP | Уровень 1 даёт только Pantone | RGB для той же Pantone из таблицы Album 2023 (`data/sources.json → album2023-pantone-map`) |
-| C-ALBUM-FLAG | Уровень 1 числа не даёт | Запись Album 2023 для этого флага |
-| C-CONFLICT | Результат C-PANTONE-MAP отличается от записи Album для флага больше чем на ΔE2000 10 | Запись Album для флага, статус `conflict`, решение за мейнтейнером. Обычно это значит, что уровень 1 назвал общую Pantone («PMS Yellow» у Бразилии) |
-| C-PROVISIONAL | Ничего выше нет, или Pantone нет в таблице Album | Значение из нижнего уровня, заявленное как та же Pantone; статус `provisional` |
-| C-WHITE | Белый поля | `#FFFFFF`. Если закон задаёт белый колориметрически (PL: Y = 82, это ткань), расчётное значение хранится в `computed`, но на экран идёт белый — иначе поле выглядит серым |
-| C-DESIGN | Цвет детали миниатюры, у которой нет источника | Дизайнерский, всегда `provisional` |
+| C-L1-RGB | Level 1 gives RGB or hex | That value |
+| C-L1-CIE | Level 1 gives colorimetry (PL: CIE xyY, ES: CIELAB) | Converted to sRGB by `src/color.mjs`: xyY or L\*C\*h → XYZ → Bradford adaptation to D65 → sRGB. A value outside the sRGB gamut is clipped and flagged |
+| C-PANTONE-MAP | Level 1 gives only Pantone | The RGB that the Album 2023 table gives for that Pantone (`data/sources.json → album2023-pantone-map`) |
+| C-ALBUM-FLAG | Level 1 gives no numbers | The Album 2023 entry for this flag |
+| C-CONFLICT | The C-PANTONE-MAP result differs from the Album entry for the flag by more than ΔE2000 10 | The Album entry for the flag, status `conflict`, a maintainer decides. Usually this means level 1 named a generic Pantone ("PMS Yellow" for Brazil) |
+| C-PROVISIONAL | None of the above, or the Pantone is missing from the Album table | A value from a lower level that claims the same Pantone; status `provisional` |
+| C-WHITE | White field | `#FFFFFF`. If the law defines white colorimetrically (PL: Y = 82, which describes fabric), the computed value is kept in `computed`, but the screen gets white; otherwise the field looks gray |
+| C-DESIGN | Color of a miniature detail that has no source | A design choice, always `provisional` |
 
-Порог 10 выбран как граница «разные цвета, а не оттенок одного»: ΔE2000 около 2 различим при сравнении бок о бок, 10 — заметно другой цвет.
+The threshold of 10 marks the line between "different colors" and "shades of one color": ΔE2000 around 2 is visible side by side; 10 is a clearly different color.
 
-Найденные конфликты, ΔE2000:
+Conflicts found, ΔE2000:
 
-| Флаг | Что с чем | ΔE2000 | Решение |
+| Flag | What against what | ΔE2000 | Decision |
 |---|---|---|---|
-| BR жёлтый | PMS Yellow по таблице Album (#FFFF00) ↔ запись Album для Бразилии 7408c (#F8C100) | 17,9 | C-CONFLICT, взят #F8C100 |
-| KZ жёлтый | 102U по Ellis (#FFF203) ↔ золотистый (#FEC50C) | 14,1 | provisional #FFF203 до чтения СТ РК 988-2007 |
-| TM красный | 1795c по таблице (#D51F2A) ↔ запись Album для TM (#B31B34) | 9,0 | Ниже порога, взято по таблице |
-| NZ синий | 280c по таблице ↔ 287c из записи Album для NZ | 5,2 | Ниже порога, взято по таблице |
-| PL красный | расчёт из CIE закона ↔ Album 1795c | 5,1 | Закон |
-| JP красный | Album 186C ↔ London 2012 032 | 8,5 | Album; закон даёт только «紅色» |
+| BR yellow | PMS Yellow from the Album table (#FFFF00) vs. the Album entry for Brazil, 7408c (#F8C100) | 17.9 | C-CONFLICT, #F8C100 used |
+| KZ yellow | 102U per Ellis (#FFF203) vs. golden (#FEC50C) | 14.1 | Provisional #FFF203 until ST RK 988-2007 is read |
+| TM red | 1795c from the table (#D51F2A) vs. the Album entry for TM (#B31B34) | 9.0 | Below the threshold, table value used |
+| NZ blue | 280c from the table vs. 287c from the Album entry for NZ | 5.2 | Below the threshold, table value used |
+| PL red | Computed from the law's CIE values vs. Album 1795c | 5.1 | The law |
+| JP red | Album 186C vs. London 2012 032 | 8.5 | Album; the law only says 紅色 (crimson) |
 
-Таблица Album 2023 сама противоречива: у 287c два RGB (для NZ и для BR), у 186c — тоже два (FJ и остальные). Это записано в `data/sources.json`.
+The Album 2023 table contradicts itself: 287c has two RGB values (for NZ and for BR), and so does 186c (FJ and the rest). This is recorded in `data/sources.json`.
 
-## Что сделать до релиза 1.0
+## Before release 1.0
 
-1. Прочитать законы напрямую: приоритет — флаги с оценками (MY, NZ, FJ, KZ, TM, XK) и флаги, где уровень 1 даёт только название цвета (JP, BD, PW, NP, TD).
-2. Купить или найти в библиотеке Album des pavillons 2025: это единственный свод с чертежами и тремя системами цвета для всех флагов.
-3. Получить sRGB для Pantone из первичного источника (Pantone Connect) вместо таблицы Album, где Album даёт разные RGB для одной Pantone.
+1. Read the laws directly. Priority: flags with estimates (MY, NZ, FJ, KZ, TM, XK) and flags whose level 1 source only names the color (JP, BD, PW, NP, TD).
+2. Buy the Album des pavillons 2025 or find it in a library: it is the only reference with drawings and three color systems for every flag.
+3. Get sRGB for each Pantone from the primary source (Pantone Connect) instead of the Album table, where the Album gives different RGB values for the same Pantone.

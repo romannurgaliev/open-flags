@@ -1,17 +1,17 @@
-# 06 — Неразличимые пары
+# 06 — Confusable pairs
 
-Некоторые флаги в унифицированном формате и на миниатюрах становятся почти одинаковыми. Искажать флаг ради различимости нельзя: «более синий» Чад — уже не флаг Чада. Политика:
+Some flags become nearly identical in the unified formats and in miniatures. Distorting a flag to make it distinguishable is not allowed: a "bluer" Chad is no longer the flag of Chad. The policy:
 
-1. Цвета каждого флага — по его источникам, без подгонки к соседу.
-2. Пара записывается в `confusable` обоих флагов.
-3. В README и в описании компонентов Figma — рекомендация для интерфейса: рядом с флагом показывать название страны или код. В пикере телефонного кода код уже есть.
-4. Каждая пара входит в тест узнаваемости ([фаза 2](phase2/recognition-test.md)) отдельной строкой матрицы ошибок.
+1. Each flag's colors follow its own sources, with no adjustment toward its neighbor.
+2. The pair is recorded in `confusable` on both flags.
+3. The README and the Figma component descriptions recommend showing the country name or code next to the flag. A phone-code picker already shows the code.
+4. Each pair gets its own row in the confusion matrix of the recognition test ([phase 2](phase2/recognition-test.md)).
 
-## Измерения (пилот)
+## Measurements (pilot)
 
-`node tools/confusable.mjs`: в ячейке — доля пикселей, отличающихся сильнее ΔE2000 10, и средний ΔE2000 по кадру.
+`node tools/confusable.mjs`. Each cell: share of pixels differing by more than ΔE2000 10 / mean ΔE2000 over the frame.
 
-| Пара | square-16 | circle-16 | rect-24x16 | square-24 | square-40 | 1x1 (40 px) |
+| Pair | square-16 | circle-16 | rect-24x16 | square-24 | square-40 | 1x1 (40 px) |
 |---|---|---|---|---|---|---|
 | TD — RO | 0% / 4.3 | 0% / 3.6 | 0% / 4.3 | 0% / 4.3 | 0% / 4.3 | 0% / 4.3 |
 | ID — MC | 50% / 7.0 | 38% / 5.9 | 50% / 7.0 | 50% / 7.0 | 50% / 7.0 | 50% / 7.0 |
@@ -20,23 +20,23 @@
 | CY — XK | 99% / 52.8 | 80% / 39.7 | 99% / 54.7 | 97% / 51.8 | 100% / 53.7 | 100% / 54.8 |
 | PL — ID | 100% / 47.1 | 83% / 36.7 | 100% / 47.1 | 100% / 47.1 | 100% / 47.1 | 100% / 47.1 |
 
-Как читать:
+How to read it:
 
-- **TD — RO** неразличимы ни на одном формате: средняя разница 4.3 (оттенки синего, жёлтого и красного по Album 2023). Это предел: без подписи пользователь не отличит.
-- **ID — MC** в оригинальных пропорциях различаются только пропорцией (2:3 и 4:5), в 3:2, 1:1 и миниатюрах — только оттенком красного: у Индонезии #FF0000 по пояснению к закону, у Монако #D21034 по Album. Разница 14 по ΔE2000 видна рядом, но не по памяти.
-- **AU — NZ** различаются цветом звёзд (белые и красные) и звездой Содружества. 11–12 в среднем — заметно, но на 16 px звёзды занимают несколько пикселей. Нужен тест.
-- **PW — KZ** по пикселям разные (поле разного синего, у KZ солнце с лучами, орёл и орнамент), но гипотеза «голубое поле с жёлтым кругом» требует теста: именно поэтому у KZ на S оставлен орнамент (S-LINE).
-- **CY — XK** и **PL — ID** по пикселям далеки; в реестре они как контроль метода — тест должен показать, что их не путают.
+- **TD and RO** are indistinguishable in every format: the mean difference is 4.3 (shades of blue, yellow and red per Album 2023). This is the limit; without a label, users cannot tell them apart.
+- **ID and MC** differ only in ratio (2:3 and 4:5) in the original format; in 3:2, 1:1 and the miniatures, only in the shade of red: #FF0000 for Indonesia, per the explanatory note to the law, and #D21034 for Monaco, per the Album. A difference of 14 in ΔE2000 is visible side by side, but not from memory.
+- **AU and NZ** differ in the color of the stars (white vs. red) and in the Commonwealth Star. A mean of 11–12 is noticeable, but at 16 px the stars cover only a few pixels. Needs testing.
+- **PW and KZ** are different pixel by pixel (different blue fields; KZ has a rayed sun, an eagle and an ornament), but the impression "light blue field with a yellow circle" needs testing. This is why KZ keeps its ornament at S (S-LINE).
+- **CY and XK**, **PL and ID** are far apart pixel by pixel. They are in the registry as a control for the method: the test should show they are not confused.
 
-## Пары вне пилота, которые нужно добавить
+## Pairs outside the pilot to add
 
-| Пара | Чем различаются |
+| Pair | How they differ |
 |---|---|
-| NL — LU | Оттенок синего и пропорция |
-| IE — CI | Порядок полос (зеркально) |
-| CO — EC | Пропорция и герб Эквадора (S-NODROP) |
-| SN — ML | Звезда Сенегала |
-| MX — IT | Герб Мексики (S-NODROP) |
-| QA — BH | Цвет поля и число зубцов |
-| HT — LI | Гербы |
-| AU — NZ — TV — FJ | Синие поля с Union Jack |
+| NL — LU | Shade of blue and ratio |
+| IE — CI | Stripe order (mirrored) |
+| CO — EC | Ratio and Ecuador's coat of arms (S-NODROP) |
+| SN — ML | Senegal's star |
+| MX — IT | Mexico's coat of arms (S-NODROP) |
+| QA — BH | Field color and number of points |
+| HT — LI | Coats of arms |
+| AU — NZ — TV — FJ | Blue fields with a Union Jack |

@@ -28,7 +28,7 @@
   "sources": {
     "au-act": {
       "level": 1,
-      "title": "Flags Act 1953; Commonwealth Gazette No. 18, 23 March 1934 (описание)",
+      "title": "Flags Act 1953; Commonwealth Gazette No. 18, 23 March 1934 (description)",
       "via": "fotw",
       "url": "https://crwflags.com/fotw/flags/au.html",
       "accessed": "2026-10-21"
@@ -147,7 +147,7 @@
       "L": 1.1
     },
     "source": "au-fotw",
-    "text": "Звезда Содружества: центр нижней четверти у древка, внешний диаметр 3/10 высоты. Южный Крест: смещения от центра вольной половины в долях высоты; внешние диаметры 1/7 и 1/12; внутренний радиус 4/9 внешнего."
+    "text": "Commonwealth Star: centered in the lower hoist quarter, outer diameter 3/10 of the hoist. Southern Cross: offsets from the center of the fly half in fractions of the hoist; outer diameters 1/7 and 1/12; inner radius 4/9 of the outer."
   },
   "probes": [
     {
@@ -156,7 +156,7 @@
         0.25
       ],
       "color": "red",
-      "why": "центр креста Union Jack"
+      "why": "center of the Union Jack cross"
     },
     {
       "at": [
@@ -164,7 +164,7 @@
         0.75
       ],
       "color": "white",
-      "why": "центр звезды Содружества"
+      "why": "center of the Commonwealth Star"
     },
     {
       "at": [
@@ -172,7 +172,7 @@
         0.1667
       ],
       "color": "white",
-      "why": "центр Гаммы"
+      "why": "center of Gamma"
     },
     {
       "at": [
@@ -180,7 +180,7 @@
         0.8333
       ],
       "color": "white",
-      "why": "центр Альфы"
+      "why": "center of Alpha"
     },
     {
       "at": [
@@ -188,38 +188,38 @@
         0.92
       ],
       "color": "blue",
-      "why": "поле"
+      "why": "field"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "U4",
-        "change": "Кантон — квадрат в четверти поля."
+        "change": "Canton becomes a square in the quarter of the field."
       },
       {
         "rule": "S-UJ",
-        "change": "Union Jack без красного косого креста."
+        "change": "Union Jack without the red saltire."
       },
       {
         "rule": "S-POINT",
-        "change": "Звёзды Южного Креста — точки 2 px, Эпсилон — 1 px."
+        "change": "Southern Cross stars → 2 px dots, Epsilon → 1 px."
       },
       {
         "rule": "S-CIRCLE",
-        "change": "В круге заряды притянуты внутрь, поле не меньше 1 px."
+        "change": "In the circle, charges are pulled inward to keep at least 1 px of field."
       }
     ],
     "M": [
       {
         "rule": "S-UJ",
-        "change": "Без красного косого креста."
+        "change": "No red saltire."
       }
     ],
     "L": [
       {
         "rule": "S-UJ",
-        "change": "Красный косой крест 1 px со смещением."
+        "change": "Red saltire 1 px with counterchange."
       }
     ]
   },
@@ -227,7 +227,7 @@
     "NZ"
   ],
   "gaps": [
-    "Схема из Flags Act 1953 и Gazette 1934 первично не прочитана; числа — по FOTW."
+    "The diagram in the Flags Act 1953 and the 1934 Gazette has not been read first-hand; numbers are from FOTW."
   ],
   "review": [],
   "status": {

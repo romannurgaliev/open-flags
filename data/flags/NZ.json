@@ -28,7 +28,7 @@
   "sources": {
     "nz-act": {
       "level": 1,
-      "title": "Flags, Emblems, and Names Protection Act 1981; описание на сайте правительства NZ",
+      "title": "Flags, Emblems, and Names Protection Act 1981; description on the NZ government website",
       "via": "fotw",
       "url": "https://crwflags.com/fotw/flags/nz.html",
       "accessed": "2026-10-21"
@@ -49,7 +49,7 @@
       "specs": [
         {
           "src": "nz-act",
-          "value": "Pantone 280 C (правительство)"
+          "value": "Pantone 280 C (government)"
         },
         {
           "src": "album2023",
@@ -57,7 +57,7 @@
           "via": "fotw"
         }
       ],
-      "note": "Pantone 280c по таблице Album 2023 = #00267F. Сам Album для NZ даёт другую Pantone (287c)."
+      "note": "Pantone 280c per the Album 2023 table = #00267F. The Album entry for NZ itself gives a different Pantone (287c)."
     },
     "red": {
       "srgb": "#D21034",
@@ -66,7 +66,7 @@
       "specs": [
         {
           "src": "nz-act",
-          "value": "Pantone 186 C (правительство)"
+          "value": "Pantone 186 C (government)"
         },
         {
           "src": "album2023",
@@ -121,7 +121,7 @@
       "L": 1.1
     },
     "source": "nz-fotw",
-    "text": "Центры верхней и нижней звёзд на вертикали посередине между кантоном и краем, 36/60 высоты друг от друга. Короткая ось пересекает длинную под 82° в 12/60 ниже верхней звезды; до звезды у края 12/60, до звезды у кантона 14/60. Диаметры 6, 7, 6, 5 шестидесятых; белая кайма 1/120. Положение длинной оси по высоте (центр на середине) — оценка."
+    "text": "Centers of the top and bottom stars lie on the vertical midway between the canton and the fly edge, 36/60 of the hoist apart. The short limb crosses the long one at 82°, 12/60 below the top star; 12/60 to the fly-side star, 14/60 to the canton-side star. Diameters 6, 7, 6, 5 sixtieths; white border 1/120. The vertical position of the long limb (centered) is an estimate."
   },
   "probes": [
     {
@@ -130,7 +130,7 @@
         0.25
       ],
       "color": "red",
-      "why": "центр креста Union Jack"
+      "why": "center of the Union Jack cross"
     },
     {
       "at": [
@@ -138,7 +138,7 @@
         0.2
       ],
       "color": "red",
-      "why": "центр верхней звезды"
+      "why": "center of the top star"
     },
     {
       "at": [
@@ -146,7 +146,7 @@
         0.8
       ],
       "color": "red",
-      "why": "центр нижней звезды"
+      "why": "center of the bottom star"
     },
     {
       "at": [
@@ -154,30 +154,30 @@
         0.92
       ],
       "color": "blue",
-      "why": "поле"
+      "why": "field"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-POINT",
-        "change": "Звёзды — красная точка 2 px в белой рамке 1 px."
+        "change": "Stars → red 2 px dots; the white fimbriation (under 0.5 px) is dropped (S-FIMB)."
       },
       {
         "rule": "S-UJ",
-        "change": "Без красного косого креста."
+        "change": "No red saltire."
       }
     ],
     "M": [
       {
         "rule": "S-UJ",
-        "change": "Без красного косого креста."
+        "change": "No red saltire; stars red 2 px dots without fimbriation."
       }
     ],
     "L": [
       {
         "rule": "S-UJ",
-        "change": "Красный косой крест 1 px."
+        "change": "Red saltire 1 px; stars without fimbriation."
       }
     ]
   },
@@ -185,7 +185,7 @@
     "AU"
   ],
   "gaps": [
-    "Вертикальное положение созвездия — оценка (центр длинной оси на середине высоты)."
+    "Vertical position of the constellation is an estimate (long limb centered on the hoist)."
   ],
   "review": [],
   "status": {

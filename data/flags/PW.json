@@ -23,7 +23,7 @@
   "adopted": {
     "value": "1981-01-01",
     "source": "pw-law",
-    "note": "Закон утверждён 22.10.1980, флаг поднят 01.01.1981."
+    "note": "The law was approved on 22.10.1980, the flag raised on 01.01.1981."
   },
   "sources": {
     "pw-law": {
@@ -42,7 +42,7 @@
       "specs": [
         {
           "src": "pw-law",
-          "value": "sky blue (только название)"
+          "value": "sky blue (name only)"
         },
         {
           "src": "album2023",
@@ -63,7 +63,7 @@
       "specs": [
         {
           "src": "pw-law",
-          "value": "golden yellow (только название)"
+          "value": "golden yellow (name only)"
         },
         {
           "src": "album2023",
@@ -76,7 +76,7 @@
           "via": "fotw"
         }
       ],
-      "note": "Album даёт лимонный 101c, London 2012 — золотистый 109. Закон говорит «golden yellow». Конфликт для ревью."
+      "note": "Album gives lemon 101c, London 2012 golden 109. The law says \"golden yellow\". Conflict for review."
     }
   },
   "construction": {
@@ -85,7 +85,7 @@
       "cx_l": 0.4375,
       "cy_h": 0.5,
       "source": "pw-law",
-      "text": "Диаметр 0.6 высоты; касательная к диску со стороны древка на 1/4 длины; центр по высоте посередине."
+      "text": "Diameter 0.6 of the hoist; the tangent to the disc on the hoist side at 1/4 of the length; vertically centered."
     }
   },
   "probes": [
@@ -95,7 +95,7 @@
         0.5
       ],
       "color": "yellow",
-      "why": "центр диска"
+      "why": "disc center"
     },
     {
       "at": [
@@ -103,7 +103,7 @@
         0.5
       ],
       "color": "yellow",
-      "why": "внутри у касательной (1/4 длины)"
+      "why": "inside, near the tangent (1/4 of the length)"
     },
     {
       "at": [
@@ -111,7 +111,7 @@
         0.5
       ],
       "color": "blue",
-      "why": "снаружи у касательной"
+      "why": "outside, near the tangent"
     },
     {
       "at": [
@@ -119,7 +119,7 @@
         0.21
       ],
       "color": "yellow",
-      "why": "внутри у верхнего края"
+      "why": "inside near the top edge"
     },
     {
       "at": [
@@ -127,26 +127,26 @@
         0.19
       ],
       "color": "blue",
-      "why": "снаружи у верхнего края"
+      "why": "outside near the top edge"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-DISC",
-        "change": "Диаметр 10 px, смещение к древку сохранено."
+        "change": "Diameter 10 px, offset toward the hoist kept."
       }
     ],
     "M": [
       {
         "rule": "S-DISC",
-        "change": "Диаметр 14 px."
+        "change": "Diameter 14 px."
       }
     ],
     "L": [
       {
         "rule": "S-DISC",
-        "change": "Диаметр 24 px."
+        "change": "Diameter 24 px."
       }
     ]
   },
@@ -155,7 +155,7 @@
   ],
   "gaps": [],
   "review": [
-    "Оттенок жёлтого: лимонный (Album 2023) или золотистый (London 2012, текст закона)."
+    "Shade of yellow: lemon (Album 2023) or golden (London 2012, wording of the law)."
   ],
   "status": {
     "full": "ok",

@@ -1,58 +1,58 @@
-# Фаза 2 — Тест узнаваемости (план, не запущен)
+# Phase 2 — Recognition test (plan, not run yet)
 
-## Вопрос
+## Question
 
-Узнаются ли наши миниатюры на 16 и 24 px лучше, чем у альтернатив, и помогают ли правила упрощения на трудных классах. Если нет — правила пересматриваются до того, как рисовать остальные 225 флагов.
+Are our miniatures at 16 and 24 px recognized better than the alternatives, and do the simplification rules help on the hard classes? If not, the rules get revised before the remaining 225 flags are drawn.
 
-## Стимулы
+## Stimuli
 
-| Группа (между участниками) | Что показываем |
+| Group (between participants) | What is shown |
 |---|---|
-| A — наши | `mini/rect-24x16` и `mini/rect-36x24` |
-| B — catamphetamine 1.6.20 | 3:2 высотой 16 и 24 |
-| C — hampusborgos | оригинальные пропорции, уменьшенные до высоты 16 и 24 |
-| D — эмодзи Noto Color Emoji | глифы флагов высотой 16 и 24 (открытая лицензия; системные эмодзи зависят от ОС, а Windows вместо флагов показывает буквы) |
+| A: ours | `mini/rect-24x16` and `mini/rect-36x24` |
+| B: catamphetamine 1.6.20 | 3:2 at 16 and 24 high |
+| C: hampusborgos | original ratios, scaled to 16 and 24 high |
+| D: Noto Color Emoji | flag glyphs at 16 and 24 high (open license; system emoji depend on the OS, and Windows shows letters instead of flags) |
 
-Флаги — все 25 пилотных. Формат прямоугольника выбран потому, что так показывают флаги пикеры (см. [04](../04-unified-and-miniature.md)). Круг 16 и 24 — отдельный короткий блок только для группы A, A/B «равные полосы против средней шире».
+All 25 pilot flags. The rectangle is used because that is how pickers show flags (see [04](../04-unified-and-miniature.md)). Circles at 16 and 24 get a separate short block for group A only: an A/B of equal stripes vs. a wider middle stripe.
 
-## Задача участника
+## Participant task
 
-1. Флаг на сером фоне в настоящем размере (SVG в CSS-пикселях; записываем devicePixelRatio).
-2. Четыре варианта: правильный, один подобранный (пара из [06](../06-confusable-pairs.md) или сосед по региону) и два случайных, плюс «не знаю».
-3. Сначала все 25 флагов маленькими (16 или 24 — случайно поровну), потом те же 25 крупно (64 px). Крупный блок меряет, знает ли человек флаг вообще.
-4. Две контрольные карточки (JP и CH на 64 px) отсеивают невнимательных.
+1. A flag on a gray background at actual size (SVG in CSS pixels; devicePixelRatio is recorded).
+2. Four options: the correct one, one chosen distractor (a pair from [06](../06-confusable-pairs.md) or a regional neighbor) and two random ones, plus "don't know".
+3. First all 25 flags small (16 or 24, randomly split evenly), then the same 25 large (64 px). The large block measures whether the person knows the flag at all.
+4. Two attention checks (JP and CH at 64 px) screen out careless participants.
 
-Около 52 карточек, 5–6 минут.
+About 52 cards, 5–6 minutes.
 
-## Метрики
+## Metrics
 
-- **Точность на 16 и 24 px** по группе.
-- **Удержание** = точность на маленьком размере / точность на 64 px по тем же флагам у тех же людей. Отделяет «плохо нарисовано» от «человек не знает этот флаг».
-- **Матрица ошибок**: какой флаг принимают за какой. Отдельные строки для TD/RO, ID/MC, AU/NZ, PW/KZ.
-- Анализ: логистическая регрессия со смешанными эффектами — `верно ~ группа × размер + (1 | участник) + (1 | флаг)`.
+- **Accuracy at 16 and 24 px** by group.
+- **Retention** = accuracy at the small size / accuracy at 64 px, for the same flags and the same people. It separates "badly drawn" from "this person doesn't know the flag".
+- **Confusion matrix**: which flag is mistaken for which. Separate rows for TD/RO, ID/MC, AU/NZ, PW/KZ.
+- Analysis: mixed-effects logistic regression, `correct ~ group × size + (1 | participant) + (1 | flag)`.
 
-## Выборка
+## Sample
 
-60 человек на группу, 240 всего: 1 500 ответов на группу и размер, стандартная ошибка общей точности около 1 п. п., различие в 5 п. п. между группами видно. По отдельным флагам выборка мала — там только описательная статистика с интервалами.
+60 people per group, 240 in total: 1,500 answers per group and size, a standard error of about 1 percentage point on overall accuracy, enough to detect a 5-point difference between groups. The per-flag sample is small, so per-flag results are descriptive only, with intervals.
 
-Набор: платная панель (Prolific: разные страны, оплата около £1–2 за участника, порядка £400 на всё) плюс свои каналы. Только свои каналы дадут в основном дизайнеров — это смещение, его нужно указать в отчёте.
+Recruitment: a paid panel (Prolific: several countries, about £1–2 per participant, roughly £400 in total) plus our own channels. Our own channels alone would bring mostly designers; that bias has to be stated in the report.
 
-## Порог успеха пилота
+## Pilot success threshold
 
-Пилот считается успешным, если одновременно:
+The pilot succeeds if all of the following hold:
 
-1. На 16 px группа A не хуже лучшей из B–D: нижняя граница 95% интервала разницы выше −2 п. п.
-2. На трудных классах (MX, ES, BR, KZ, TM, CY, XK, AU, NZ, FJ, US, MY, VA, SA) группа A лучше лучшей из B–D минимум на 5 п. п.
-3. У группы A удержание каждого флага ≥ 0.8, кроме пар TD/RO и ID/MC, где флаги неразличимы по построению.
+1. At 16 px, group A is no worse than the best of B–D: the lower bound of the 95% interval of the difference is above −2 points.
+2. On the hard classes (MX, ES, BR, KZ, TM, CY, XK, AU, NZ, FJ, US, MY, VA, SA), group A beats the best of B–D by at least 5 points.
+3. In group A, retention is ≥ 0.8 for every flag except the TD/RO and ID/MC pairs, which are indistinguishable by construction.
 
-Если пункт 2 не выполнен, правила упрощения не дают преимущества — их нужно менять до масштабирования.
+If condition 2 fails, the simplification rules give no advantage and must change before scaling up.
 
-## Инструмент
+## Tooling
 
-Готовые сервисы (Lyssna, Maze) рассчитаны на тесты интерфейсов и плохо подходят для 50 рандомизированных карточек с выбором из четырёх. Проще статическая страница: рандомизация, SVG на месте, ответы в простое хранилище (GitHub Pages + форма, или опубликованная страница с общей базой данных). Протокол и код страницы публикуются вместе с результатами.
+Off-the-shelf services (Lyssna, Maze) are built for interface tests and fit poorly with 50 randomized four-option cards. A static page is simpler: randomization, SVGs inline, answers sent to simple storage (GitHub Pages plus a form, or a published page with a shared database). The protocol and the page's code are published with the results.
 
-## Что нужно решить до запуска
+## To decide before running
 
-- Бюджет и панель.
-- Языки интерфейса теста (названия стран из CLDR: en, ru, плюс языки панели).
-- Брать ли в группу D второй набор эмодзи (Twemoji, CC-BY 4.0).
+- Budget and panel.
+- Interface languages for the test (country names from CLDR: en, ru, plus the panel's languages).
+- Whether group D should include a second emoji set (Twemoji, CC-BY 4.0).

@@ -1,51 +1,55 @@
-# open-flags (рабочее название) — пилот 0.1
+# open-flags (working title) — pilot 0.1
 
-Флаги стран для интерфейсов: точные полные форматы по законам и миниатюры 16/24/40 px — квадрат, круг и 3:2, — нарисованные под размер по записанным правилам упрощения.
+Country flags for interfaces: accurate full-size flags built from each country's law, plus 16/24/40 px miniatures (square, circle and 3:2) drawn for their size under written simplification rules.
 
-Это пилот на 25 флагах, выбранных по трудным классам: мелкие полосы, кантоны с Union Jack, гербы, надписи, смещённые диски, нестандартные формы, экстремальные пропорции, орнаменты, карты, неразличимые пары. Задача пилота — проверить подход, а не нарисовать весь набор.
+This is a pilot of 25 flags, chosen for the hard cases: fine stripes, Union Jack cantons, coats of arms, inscriptions, offset discs, non-rectangular shapes, extreme ratios, ornaments, maps and near-identical pairs. Its job is to test the approach, not to cover every country yet.
 
-![Контактный лист](preview/contact-sheet.png)
+![Contact sheet](preview/contact-sheet.png)
 
-Красный угол на листе — черновик: эмблема, герб или надпись ещё не нарисованы по официальному рисунку, или миниатюра ждёт ревью.
+A red corner on the sheet marks a draft: an emblem, coat of arms or inscription not yet drawn from the official artwork, or a miniature waiting for review.
 
-## Что внутри
+## What's inside
 
 ```
-data/flags/<CODE>.json   метаданные: источники с уровнем, цвета с правилом выбора, числа построения,
-                         пробные точки, упрощения по ступеням, пробелы
-data/sources.json        общие источники и таблица Pantone → RGB из Album 2023
-flags/original/          пропорция по закону
-flags/3x2/  flags/1x1/   унифицированные форматы
-flags/mini/              square-, circle-, rect- на ступенях 16, 24, 40
-overlays/                контур 1 px для белых краёв, кладётся поверх
-docs/                    спецификация (начать с docs/README.md)
-src/                     генератор геометрии из чисел построения, цвет и ΔE2000
-scripts/                 проверки C01–C16, негативные тесты, контактный лист, выгрузка из Figma
-tools/                   CLDR, сверка с Figma, реестр пар, пакет для вексиллологов
-figma.json               файл и наборы компонентов в Figma
+data/flags/<CODE>.json   metadata: sources with levels, colors with the rule used to pick them,
+                         construction numbers, probe points, per-tier simplifications, gaps
+data/sources.json        shared sources and the Album 2023 Pantone → RGB table
+flags/original/          the ratio set by law
+flags/3x2/  flags/1x1/   unified formats
+flags/mini/              square-, circle-, rect- at tiers 16, 24, 40
+overlays/                1 px outline for flags with white edges, laid on top
+docs/                    specification (start with docs/README.md)
+src/                     geometry generator from construction numbers, color math and ΔE2000
+scripts/                 checks C01–C16, negative tests, contact sheet, Figma export
+tools/                   CLDR sync, Figma comparison, confusable-pairs measurement, vexillologist packet
+figma.json               Figma file and component sets
 ```
 
-Файл Figma: [Open Flags — pilot 0.1](https://www.figma.com/design/WfVWKCZNF2MyqZw7FishR2) — 12 наборов `Flag / …` с переключателем `Country`.
+Figma file: [Open Flags — pilot 0.1](https://www.figma.com/design/WfVWKCZNF2MyqZw7FishR2), 12 `Flag / …` component sets with a `Country` property.
 
-## Команды
+## Commands
 
-Нужен Node 20+.
+Requires Node 20+.
 
 ```bash
 npm ci
-npm run build          # собрать flags/ из data/ (геометрия, заданная числами закона)
-npm test               # проверки C01–C16 и негативные тесты
-npm run sheet          # контактный лист preview/contact-sheet.png
-npm run baseline       # снимок для визуального диффа C15 (при выпуске релиза)
-FIGMA_TOKEN=… npm run export:figma   # выгрузить из Figma с нормализацией
+npm run build          # build flags/ from data/ (geometry defined by the law's numbers)
+npm test               # checks C01–C16 and negative tests
+npm run sheet          # contact sheet at preview/contact-sheet.png
+npm run baseline       # snapshot for the C15 visual diff (at release time)
+FIGMA_TOKEN=… npm run export:figma   # export from Figma with normalization
 ```
 
-## Использование в интерфейсе
+## Using the flags
 
-- Миниатюры рассчитаны на показ в своём размере или кратном (×2, ×3): границы лежат на пиксельной сетке.
-- Флаги с белым краем (JP, PL, ID, MC, CY) на белом фоне теряют край — кладите поверх `overlays/<формат>.svg`.
-- Некоторые флаги неразличимы в любом формате (TD — RO, ID — MC в 3:2 и 1:1). Показывайте рядом название или код страны. Реестр — `docs/06-confusable-pairs.md`.
+- Miniatures are meant to be shown at their own size or an integer multiple (×2, ×3): their edges sit on the pixel grid.
+- Flags with a white edge (JP, PL, ID, MC, CY) lose that edge on a white background. Lay `overlays/<format>.svg` on top.
+- Some flags cannot be told apart in any format (TD and RO; ID and MC in 3:2 and 1:1). Show the country name or code next to the flag. See `docs/06-confusable-pairs.md`.
 
-## Лицензия
+## Contributing
 
-Рисунки и метаданные — CC0 1.0, код — MIT (`LICENSE`, `LICENSE-ARTWORK`). Лицензия описывает права на наш рисунок; использование государственных символов может ограничиваться законами отдельных стран.
+Corrections need a primary source (a law, decree, standard or the Album des pavillons). Open an issue with the "Flag is wrong or has changed" template. See `docs/08-contributing.md`.
+
+## License
+
+Artwork and metadata: CC0 1.0. Code: MIT (`LICENSE`, `LICENSE-ARTWORK`). The license covers our drawings; some countries restrict how their state symbols may be used, and CC0 does not change that.

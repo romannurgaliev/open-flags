@@ -24,12 +24,12 @@
   "adopted": {
     "value": "1960-08-16",
     "source": "cy-fotw",
-    "note": "Рисунок изменён решением 2006 г."
+    "note": "Design changed by the 2006 decision."
   },
   "sources": {
     "cy-decision": {
       "level": 1,
-      "title": "Решение Совета министров № 63.673 от 20.04.2006",
+      "title": "Council of Ministers Decision No. 63.673 of 20.04.2006",
       "via": "fotw",
       "url": "https://crwflags.com/fotw/flags/cy.html",
       "accessed": "2026-10-21"
@@ -95,7 +95,7 @@
       "map_cy_h": 0.42
     },
     "source": "naturalearth",
-    "text": "Силуэт — Natural Earth 1:50m (Cyprus + N. Cyprus), равнопромежуточная проекция с поправкой cos(φ). Это география, а не официальный рисунок карты 2006 г. Размер и место — оценка."
+    "text": "Silhouette from Natural Earth 1:50m (Cyprus + N. Cyprus), equirectangular projection with cos(φ) correction. This is geography, not the official 2006 drawing of the map. Size and position are estimates."
   },
   "probes": [
     {
@@ -104,30 +104,30 @@
         0.05
       ],
       "color": "white",
-      "why": "поле"
+      "why": "field"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-MAP",
-        "change": "Силуэт упрощён (Дуглас — Пекер, 0.45 px), карта увеличена на 25% в квадрате."
+        "change": "Silhouette simplified (Douglas–Peucker, 0.45 px); map enlarged by 25% in the square."
       },
       {
         "rule": "S-EMBLEM",
-        "change": "Ветви → две зелёные черты 1 px."
+        "change": "Branches → two green 1 px strokes."
       }
     ],
     "M": [
       {
         "rule": "S-MAP",
-        "change": "Упрощение 0.35 px."
+        "change": "Simplification 0.35 px."
       }
     ],
     "L": [
       {
         "rule": "S-MAP",
-        "change": "Упрощение 0.35 px."
+        "change": "Simplification 0.35 px."
       }
     ]
   },
@@ -135,7 +135,7 @@
     "XK"
   ],
   "gaps": [
-    "Официальный рисунок карты и ветвей 2006 г. не получен; карта в полных форматах — географическое приближение, ветвей нет."
+    "The official 2006 drawing of the map and branches has not been obtained; the map in the full formats is a geographic approximation, without branches."
   ],
   "review": [],
   "status": {

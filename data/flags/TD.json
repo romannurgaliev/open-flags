@@ -12,13 +12,13 @@
     "ru": "Чад"
   },
   "classes": [
-    "tricolour-v"
+    "tricolor-v"
   ],
   "ratio": {
     "h": 2,
     "w": 3,
     "source": "td-fotw",
-    "note": "Конституция пропорцию не задаёт; 2:3 — практика (FOTW). Пробел."
+    "note": "The Constitution does not specify a ratio; 2:3 is practice (FOTW). Gap."
   },
   "adopted": {
     "value": "1959-11-06",
@@ -27,7 +27,7 @@
   "sources": {
     "td-const": {
       "level": 1,
-      "title": "Constitution 1996, art. 8 (без цветов и пропорций)",
+      "title": "Constitution 1996, art. 8 (no colors, no ratio)",
       "via": "fotw",
       "url": "https://crwflags.com/fotw/flags/td.html",
       "accessed": "2026-10-21"
@@ -65,7 +65,7 @@
       "specs": [
         {
           "src": "album2023",
-          "value": "RGB 255-222-0 (Pantone указан как 281c — вероятно, ошибка Album)",
+          "value": "RGB 255-222-0 (Pantone listed as 281c — probably an Album error)",
           "via": "fotw"
         },
         {
@@ -82,7 +82,7 @@
       "specs": [
         {
           "src": "album2023",
-          "value": "PMS 115c (так у FOTW); RGB 222-47-45",
+          "value": "PMS 115c (as given on FOTW); RGB 222-47-45",
           "via": "fotw"
         },
         {
@@ -109,7 +109,7 @@
       }
     ],
     "source": "td-const",
-    "text": "Синяя, золотая, красная вертикальные полосы равной ширины, синяя у древка."
+    "text": "Blue, gold and red vertical stripes of equal width, blue at the hoist."
   },
   "probes": [
     {
@@ -118,7 +118,7 @@
         0.5
       ],
       "color": "blue",
-      "why": "синяя полоса"
+      "why": "blue stripe"
     },
     {
       "at": [
@@ -126,7 +126,7 @@
         0.5
       ],
       "color": "yellow",
-      "why": "жёлтая полоса"
+      "why": "yellow stripe"
     },
     {
       "at": [
@@ -134,7 +134,7 @@
         0.5
       ],
       "color": "red",
-      "why": "красная полоса"
+      "why": "red stripe"
     }
   ],
   "simplification": {
@@ -151,8 +151,8 @@
     "RO"
   ],
   "gaps": [
-    "Ни цвет, ни пропорция не заданы на уровне 1.",
-    "Запись Album 2023 в транскрипции FOTW содержит ошибку Pantone у жёлтого."
+    "Neither color nor ratio is specified at level 1.",
+    "The Album 2023 entry, as transcribed on FOTW, has a Pantone error for yellow."
   ],
   "review": [],
   "status": {

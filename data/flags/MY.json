@@ -28,11 +28,11 @@
   "sources": {
     "my-asean": {
       "level": "1g",
-      "title": "Flag specification: Malaysia (документ на сайте ASEAN)",
+      "title": "Flag specification: Malaysia (document on the ASEAN website)",
       "url": "https://asean.org/wp-content/uploads/2020/10/flagspec_malaysia.pdf",
       "via": "direct",
       "accessed": "2026-10-21",
-      "note": "Даёт пропорцию 1:2 и Pantone; размеров кантона, полумесяца и звезды нет."
+      "note": "Gives the 1:2 ratio and Pantone values; no dimensions for the canton, crescent or star."
     },
     "my-fotw": {
       "level": 4,
@@ -40,7 +40,7 @@
       "url": "https://crwflags.com/fotw/flags/my'.html",
       "via": "direct",
       "accessed": "2026-10-21",
-      "note": "Размеры звезды и полумесяца — ручные измерения участников FOTW, помечены как оценки."
+      "note": "Star and crescent dimensions are hand measurements by FOTW contributors, marked as estimates."
     }
   },
   "colors": {
@@ -60,7 +60,7 @@
         },
         {
           "src": "comparison",
-          "value": "#CC0001 (Википедия)"
+          "value": "#CC0001 (Wikipedia)"
         }
       ]
     },
@@ -80,7 +80,7 @@
         },
         {
           "src": "comparison",
-          "value": "#010066 (Википедия)"
+          "value": "#010066 (Wikipedia)"
         }
       ]
     },
@@ -100,7 +100,7 @@
         },
         {
           "src": "comparison",
-          "value": "#FFCC00 (Википедия)"
+          "value": "#FFCC00 (Wikipedia)"
         }
       ]
     },
@@ -119,7 +119,7 @@
       "units_h": 8,
       "units_w": 14,
       "source": "estimate",
-      "text": "Кантон на 8 полос и половину длины — по рисунку, не по документу. Пробел."
+      "text": "Canton of 8 stripes and half the length — from images, not from a document. Gap."
     },
     "symbol": {
       "group_cx_u": 7.75,
@@ -137,7 +137,7 @@
         "inner_ratio": 0.45
       },
       "source": "my-fotw",
-      "text": "Внутренний круг полумесяца d 5.5, внешний d 6, звезда в круге d 5, её центр в 5.5 ед. от края кантона (FOTW). Положение внешнего круга и острота звезды — оценки."
+      "text": "Inner crescent circle d 5.5, outer d 6, star inscribed in a circle of d 5 with its center 5.5 units from the canton edge (FOTW). Position of the outer circle and the star's sharpness are estimates."
     }
   },
   "probes": [
@@ -147,7 +147,7 @@
         0.0357
       ],
       "color": "red",
-      "why": "1-я полоса"
+      "why": "1st stripe"
     },
     {
       "at": [
@@ -155,7 +155,7 @@
         0.107
       ],
       "color": "white",
-      "why": "2-я полоса"
+      "why": "2nd stripe"
     },
     {
       "at": [
@@ -163,7 +163,7 @@
         0.964
       ],
       "color": "white",
-      "why": "14-я полоса (белая)"
+      "why": "14th stripe (white)"
     },
     {
       "at": [
@@ -171,7 +171,7 @@
         0.02
       ],
       "color": "blue",
-      "why": "угол кантона"
+      "why": "canton corner"
     },
     {
       "at": [
@@ -179,34 +179,34 @@
         0.2857
       ],
       "color": "yellow",
-      "why": "центр звезды (8.5/28, 4/14)"
+      "why": "star center (8.5/28, 4/14)"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-STRIPES",
-        "change": "14 → 8 полос по 2 px (красная сверху, белая снизу)."
+        "change": "14 → 8 stripes of 2 px (red on top, white at the bottom)."
       },
       {
         "rule": "S-POINTS",
-        "change": "Звезда 14 лучей → 8 лучей; полумесяц не тоньше 1.5 px."
+        "change": "Star of 14 points → 8 points; crescent no thinner than 1.5 px."
       }
     ],
     "M": [
       {
         "rule": "S-STRIPES",
-        "change": "14 → 12 полос."
+        "change": "14 → 12 stripes."
       },
       {
         "rule": "S-POINTS",
-        "change": "Звезда 8 лучей."
+        "change": "Star with 8 points."
       }
     ],
     "L": [
       {
         "rule": "S-STRIPES",
-        "change": "14 полос."
+        "change": "14 stripes."
       }
     ]
   },
@@ -215,8 +215,8 @@
     "LR"
   ],
   "gaps": [
-    "Размеры кантона не подтверждены первичным источником.",
-    "Цвета: Pantone 199/2768/108 из ASEAN без RGB; в таблице Album 2023 этих Pantone нет."
+    "Canton dimensions are not confirmed by a primary source.",
+    "Colors: Pantone 199/2768/108 from ASEAN without RGB; these Pantones are not in the Album 2023 table."
   ],
   "review": [],
   "status": {

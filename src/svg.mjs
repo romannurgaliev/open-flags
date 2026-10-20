@@ -1,5 +1,5 @@
-// Сериализация слоёв в SVG: абсолютные координаты (без накопления ошибки округления),
-// у каждого пути явный fill-rule, никаких clip-path, stroke, text, image и внешних ссылок.
+// Serializes layers to SVG: absolute coordinates (no accumulated rounding error),
+// an explicit fill-rule on every path, and no clip-path, stroke, text, image or external references.
 
 const fmt = (v, p) => {
   const s = (Math.round(v * 10 ** p) / 10 ** p).toFixed(p);
@@ -20,7 +20,7 @@ function pathToD(path, p) {
     const h2 = b.handleIn;
     const isLine = h1.isZero() && h2.isZero();
     if (i === n - 1) {
-      // замыкающий отрезок
+      // closing segment
       if (isLine) break;
     }
     if (isLine) d += `L${pt(b.point)}`;

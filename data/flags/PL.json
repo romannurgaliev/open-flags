@@ -12,7 +12,7 @@
     "ru": "Польша"
   },
   "classes": [
-    "bicolour-h",
+    "bicolor-h",
     "white-edge"
   ],
   "ratio": {
@@ -31,7 +31,7 @@
       "url": "https://en.wikipedia.org/wiki/Flag_of_Poland",
       "via": "wikipedia",
       "accessed": "2026-10-21",
-      "note": "Текст ст. 4 прочитан на standardyprawa.pl; координаты цвета из приложения № 2 — через цитату в Википедии. Сам Dziennik Ustaw не прочитан."
+      "note": "Text of art. 4 was read on standardyprawa.pl; the color coordinates of Annex 2 via a Wikipedia quotation. The Dziennik Ustaw itself has not been read."
     },
     "pl-fotw": {
       "level": 4,
@@ -49,14 +49,14 @@
       "specs": [
         {
           "src": "pl-act",
-          "value": "CIE xyY 0.315, 0.320, 82.0 (осветитель C, d/0), допуск ΔE*uv 4.0"
+          "value": "CIE xyY 0.315, 0.320, 82.0 (illuminant C, d/0), tolerance ΔE*uv 4.0"
         }
       ],
       "computed": {
         "value": "#EDE9E5",
-        "method": "xyY → XYZ (C) → Bradford → D65 → sRGB, относительно идеального рассеивателя"
+        "method": "xyY → XYZ (C) → Bradford → D65 → sRGB, relative to the perfect diffuser"
       },
-      "note": "Закон задаёт белый как отражающую ткань (Y 82). Для экрана белый поля выводим как #FFFFFF (правило C-WHITE), расчётное значение хранится здесь."
+      "note": "The law defines white as reflective fabric (Y 82). On screen the white field is rendered as #FFFFFF (rule C-WHITE); the computed value is kept here."
     },
     "red": {
       "srgb": "#D7213E",
@@ -65,7 +65,7 @@
       "specs": [
         {
           "src": "pl-act",
-          "value": "CIE xyY 0.570, 0.305, 16.0 (осветитель C, d/0), допуск ΔE*uv 8.0"
+          "value": "CIE xyY 0.570, 0.305, 16.0 (illuminant C, d/0), tolerance ΔE*uv 8.0"
         },
         {
           "src": "album2023",
@@ -79,7 +79,7 @@
         },
         {
           "src": "comparison",
-          "value": "#DC143C (Википедия, flagcolorcodes)"
+          "value": "#DC143C (Wikipedia, flagcolorcodes)"
         }
       ],
       "computed": {
@@ -100,7 +100,7 @@
       }
     ],
     "source": "pl-act",
-    "text": "Две горизонтальные полосы равной ширины, белая сверху; пропорция 5:8."
+    "text": "Two horizontal stripes of equal width, white on top; ratio 5:8."
   },
   "probes": [
     {
@@ -109,7 +109,7 @@
         0.25
       ],
       "color": "white",
-      "why": "верхняя полоса"
+      "why": "top stripe"
     },
     {
       "at": [
@@ -117,7 +117,7 @@
         0.75
       ],
       "color": "red",
-      "why": "нижняя полоса"
+      "why": "bottom stripe"
     },
     {
       "at": [
@@ -125,7 +125,7 @@
         0.48
       ],
       "color": "white",
-      "why": "у границы, сверху"
+      "why": "near the boundary, above"
     },
     {
       "at": [
@@ -133,7 +133,7 @@
         0.52
       ],
       "color": "red",
-      "why": "у границы, снизу"
+      "why": "near the boundary, below"
     }
   ],
   "simplification": {
@@ -151,10 +151,10 @@
     "MC"
   ],
   "gaps": [
-    "Приложение № 2 прочитано через вторичную цитату."
+    "Annex 2 was read through a secondary quotation."
   ],
   "review": [
-    "Белое поле сливается с белым фоном интерфейса: нужен оверлей-контур (overlays/)."
+    "The white field merges with a white UI background: use the outline overlay (overlays/)."
   ],
   "status": {
     "full": "ok",

@@ -1,6 +1,6 @@
-// Цвет: sRGB ⇄ XYZ ⇄ CIELAB, пересчёт из CIE xyY и L*C*h, ΔE2000.
-// Все пересчёты, которыми получены sRGB-значения в data/flags/*.json, идут через этот файл,
-// чтобы метод был один и проверяемый.
+// Color: sRGB ⇄ XYZ ⇄ CIELAB, conversion from CIE xyY and L*C*h, ΔE2000.
+// Every conversion behind the sRGB values in data/flags/*.json goes through this file,
+// so there is one method and it can be checked.
 
 const WHITE = {
   D65: [0.95047, 1.0, 1.08883],
@@ -49,7 +49,7 @@ export function rgbToXyz(rgb) {
   ];
 }
 
-// Возвращает { rgb, clipped }: clipped=true, если цвет вне охвата sRGB и был обрезан.
+// Returns { rgb, clipped }: clipped=true if the color was outside the sRGB gamut and got clipped.
 export function xyzToRgb(xyz) {
   const [x, y, z] = xyz;
   const l = [
@@ -80,14 +80,14 @@ export function labToXyz([L, a, b], white = 'D65') {
 export const hexToLab = (hex) => xyzToLab(rgbToXyz(hexToRgb(hex)));
 export const rgbToLab = (rgb) => xyzToLab(rgbToXyz(rgb));
 
-// CIE xyY (Y в процентах, 0–100) под осветителем `illuminant` → sRGB (D65).
+// CIE xyY (Y in percent, 0–100) under illuminant `illuminant` → sRGB (D65).
 export function xyYToSrgb(x, y, Y, illuminant = 'D65') {
   const Yn = Y / 100;
   const xyz = [(x * Yn) / y, Yn, ((1 - x - y) * Yn) / y];
   return xyzToRgb(adapt(xyz, illuminant, 'D65'));
 }
 
-// CIELAB, заданный в L*, C*, h° (как в испанском RD 481/1981), → sRGB.
+// CIELAB given as L*, C*, h° (as in Spain's RD 481/1981) → sRGB.
 export function lchToSrgb(L, C, h, illuminant = 'D65') {
   const a = C * Math.cos((h * Math.PI) / 180);
   const b = C * Math.sin((h * Math.PI) / 180);

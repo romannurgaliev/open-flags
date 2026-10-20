@@ -1,25 +1,25 @@
 #!/usr/bin/env node
-// Собирает пакет для вексиллологов из метаданных: по каждому флагу — источники, числа построения,
-// оценки и пробелы, превращённые в конкретные вопросы. Печатает Markdown.
+// Builds the vexillologist review packet from the metadata: for each flag, its sources, construction numbers,
+// and the estimates and gaps turned into concrete questions. Prints Markdown.
 import { allCodes, loadMeta } from '../src/build.mjs';
 
 const out = [];
-out.push('# Пакет для ревью вексиллологами (сгенерирован из data/flags)\n');
-out.push('Для каждого флага: что мы взяли за источник, какие числа построили и где сомневаемся. К пакету прикладывается контактный лист `preview/contact-sheet.png` и SVG из `flags/original/`.\n');
+out.push('# Vexillologist review packet (generated from data/flags)\n');
+out.push('For each flag: what we used as the source, which numbers we built from, and where we are unsure. The contact sheet `preview/contact-sheet.png` and the SVGs in `flags/original/` go with this packet.\n');
 for (const c of allCodes()) {
   const m = loadMeta(c);
-  out.push(`## ${c} — ${m.names.en} (${m.names.ru})\n`);
-  const r = m.ratio.shape ? `форма ${m.ratio.shape}, W/H ${m.ratio.w_over_h}` : `${m.ratio.h}:${m.ratio.w}`;
-  out.push(`- Пропорция: ${r}. Статус полного формата: ${m.status.full}.`);
-  const srcs = Object.entries(m.sources).filter(([, s]) => !s.ref).map(([id, s]) => `${s.title} (уровень ${s.level}, прочитано: ${s.via})`);
-  out.push(`- Источники: ${srcs.join('; ')}.`);
+  out.push(`## ${c} — ${m.names.en}\n`);
+  const r = m.ratio.shape ? `shape ${m.ratio.shape}, W/H ${m.ratio.w_over_h}` : `${m.ratio.h}:${m.ratio.w}`;
+  out.push(`- Ratio: ${r}. Full-format status: ${m.status.full}.`);
+  const srcs = Object.entries(m.sources).filter(([, s]) => !s.ref).map(([id, s]) => `${s.title} (level ${s.level}, read via: ${s.via})`);
+  out.push(`- Sources: ${srcs.join('; ')}.`);
   const cons = Object.values(m.construction).find((v) => v && typeof v === 'object' && v.text)?.text ?? m.construction.text;
-  if (cons) out.push(`- Построение: ${cons}`);
+  if (cons) out.push(`- Construction: ${cons}`);
   const est = m.construction.estimate || m.construction.source === 'estimate' || Object.values(m.construction).some((v) => v?.source === 'estimate');
-  const qs = [...m.gaps.map((g) => `Пробел: ${g} Есть ли у вас первичный документ?`), ...(est ? ['Часть чисел — оценка по изображениям. Совпадает ли с официальным чертежом?'] : [])];
-  for (const [k, col] of Object.entries(m.colors)) if (col.status !== 'ok') qs.push(`Цвет «${k}» (${col.srgb}, ${col.status}): ${col.note ?? 'источника уровня 1–2 нет'}`);
+  const qs = [...m.gaps.map((g) => `Gap: ${g} Do you have the primary document?`), ...(est ? ['Some numbers are estimates from images. Do they match the official drawing?'] : [])];
+  for (const [k, col] of Object.entries(m.colors)) if (col.status !== 'ok') qs.push(`Color "${k}" (${col.srgb}, ${col.status}): ${col.note ?? 'no level 1–2 source'}`);
   if (qs.length) {
-    out.push('- Вопросы:');
+    out.push('- Questions:');
     for (const q of qs) out.push(`  - ${q}`);
   }
   out.push('');

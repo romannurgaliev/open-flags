@@ -12,7 +12,7 @@
     "ru": "Мексика"
   },
   "classes": [
-    "tricolour-v",
+    "tricolor-v",
     "arms"
   ],
   "ratio": {
@@ -48,7 +48,7 @@
       "specs": [
         {
           "src": "mx-law",
-          "value": "verde (только название)"
+          "value": "verde (name only)"
         },
         {
           "src": "album2023",
@@ -57,7 +57,7 @@
         },
         {
           "src": "mx-fotw",
-          "value": "SEGOB (личное сообщение): 3425 C; RGB 0-107-71"
+          "value": "SEGOB (personal communication): 3425 C; RGB 0-107-71"
         }
       ]
     },
@@ -88,14 +88,14 @@
       "status": "provisional",
       "rule": "C-DESIGN",
       "specs": [],
-      "note": "Цвет орла на миниатюрах — дизайнерский, источника нет."
+      "note": "The eagle color on miniatures is a design choice, no source."
     },
     "blue": {
       "srgb": "#0072BB",
       "status": "provisional",
       "rule": "C-DESIGN",
       "specs": [],
-      "note": "Вода под кактусом на ступени L — дизайнерский."
+      "note": "Water under the cactus at tier L — design choice."
     }
   },
   "construction": {
@@ -117,7 +117,7 @@
       "d_of_white": 0.75
     },
     "source": "mx-law",
-    "text": "Три равные вертикальные полосы; герб в центре белой полосы, диаметр — 3/4 её ширины."
+    "text": "Three equal vertical stripes; arms centered in the white stripe, diameter 3/4 of its width."
   },
   "probes": [
     {
@@ -126,7 +126,7 @@
         0.5
       ],
       "color": "green",
-      "why": "зелёная полоса"
+      "why": "green stripe"
     },
     {
       "at": [
@@ -134,7 +134,7 @@
         0.5
       ],
       "color": "red",
-      "why": "красная полоса"
+      "why": "red stripe"
     },
     {
       "at": [
@@ -142,30 +142,30 @@
         0.1
       ],
       "color": "white",
-      "why": "белая полоса над гербом (герб с 0.28 высоты)"
+      "why": "white stripe above the arms (arms start at 0.28 of the hoist)"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-EMBLEM",
-        "change": "Герб → коричневое пятно орла + зелёная черта 1 px (кактус, венок). Два цвета."
+        "change": "Arms → brown eagle blob + green 1 px stroke (cactus, wreath). Two colors."
       },
       {
         "rule": "S-NODROP",
-        "change": "Герб не снимается: без него флаг похож на IT."
+        "change": "The arms are never removed: without them the flag looks like IT."
       }
     ],
     "M": [
       {
         "rule": "S-EMBLEM",
-        "change": "Орёл (тело, крыло, голова), кактус, дуга венка."
+        "change": "Eagle (body, wing, head), cactus, wreath arc."
       }
     ],
     "L": [
       {
         "rule": "S-EMBLEM",
-        "change": "+ вода под кактусом."
+        "change": "+ water under the cactus."
       }
     ]
   },
@@ -173,7 +173,7 @@
     "IT"
   ],
   "gaps": [
-    "Герб в полных форматах не нарисован: нужен официальный рисунок (art. 2)."
+    "Arms are not drawn in the full formats: needs the official drawing (art. 2)."
   ],
   "review": [],
   "status": {

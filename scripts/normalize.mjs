@@ -1,11 +1,11 @@
-// Нормализация SVG из экспорта Figma к виду, который требуют проверки C02–C16.
-// Только детерминированные замены атрибутов, геометрию не трогаем:
-//  - убрать fill="none" у корня <svg> (Figma ставит его всегда);
-//  - убрать clip-rule (Figma дублирует fill-rule; clip-rule без clip-path ничего не значит);
-//  - именованные цвета white/black → #FFFFFF/#000000, hex — в верхний регистр;
-//  - добавить <title> с названием страны.
-// Всё остальное, что Figma может добавить (clipPath, mask, transform, g), не исправляется,
-// а ловится проверками: такой файл должен вернуться на правку в Figma.
+// Normalizes SVG exported from Figma to the form that checks C02–C16 require.
+// Only deterministic attribute replacements; geometry is left alone:
+//  - remove fill="none" from the root <svg> (Figma always adds it);
+//  - remove clip-rule (Figma duplicates fill-rule; clip-rule without clip-path has no effect);
+//  - named colors white/black → #FFFFFF/#000000, hex to uppercase;
+//  - add a <title> with the country name.
+// Anything else Figma may add (clipPath, mask, transform, g) is not fixed here
+// but caught by the checks: such a file goes back to Figma to be fixed.
 
 const NAMED = { white: '#FFFFFF', black: '#000000' };
 

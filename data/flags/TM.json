@@ -28,7 +28,7 @@
   "sources": {
     "tm-decree2017": {
       "level": 1,
-      "title": "Указ Президента Туркменистана 2017 г. о цветах флага (Pantone 348C, 1795C, 123C, Black C)",
+      "title": "Decree of the President of Turkmenistan, 2017, on flag colors (Pantone 348C, 1795C, 123C, Black C)",
       "via": "fotw",
       "url": "https://crwflags.com/fotw/flags/tm.html",
       "accessed": "2026-10-21"
@@ -57,7 +57,7 @@
           "via": "fotw"
         }
       ],
-      "note": "348c нет в таблице Album 2023 — взята запись Album для TM."
+      "note": "348c is not in the Album 2023 table — the Album entry for TM is used."
     },
     "red": {
       "srgb": "#D51F2A",
@@ -78,7 +78,7 @@
           "value": "1795c → #D51F2A"
         }
       ],
-      "note": "Карта Pantone: 1795c → #D51F2A. Запись Album для TM — #B31B34, ΔE2000 = 9.0 (ниже порога конфликта 10)."
+      "note": "Pantone map: 1795c → #D51F2A. The Album entry for TM is #B31B34, ΔE2000 = 9.0 (below the conflict threshold of 10)."
     },
     "orange": {
       "srgb": "#FF9A00",
@@ -101,7 +101,7 @@
       "status": "provisional",
       "rule": "C-DESIGN",
       "specs": [],
-      "note": "Точки гёлей на S — дизайнерский цвет."
+      "note": "Gul dots at S — design color."
     },
     "white": {
       "srgb": "#FFFFFF",
@@ -115,7 +115,7 @@
       "x_l": 0.1212,
       "w_l": 0.1818,
       "source": "tm-fotw",
-      "text": "Пропорции по горизонтали 4-6-23 (FOTW, без пояснений): зелёный 4/33, ковёр 6/33, зелёный 23/33."
+      "text": "Horizontal proportions 4-6-23 (FOTW, without explanation): green 4/33, carpet 6/33, green 23/33."
     },
     "estimate": {
       "crescent_dx_l": 0.1,
@@ -131,7 +131,7 @@
         0.5
       ],
       "color": "green",
-      "why": "зелёный у древка (0–0.121)"
+      "why": "green at the hoist (0–0.121)"
     },
     {
       "at": [
@@ -139,37 +139,37 @@
         0.9
       ],
       "color": "green",
-      "why": "поле"
+      "why": "field"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-REPEAT",
-        "change": "5 гёлей → 5 точек 1 px в красной полосе."
+        "change": "5 guls → 5 dots of 1 px in the red band."
       },
       {
         "rule": "S-POINT",
-        "change": "5 звёзд → 2 точки; полумесяц 2–3 px."
+        "change": "5 stars → 2 dots; crescent 2–3 px."
       }
     ],
     "M": [
       {
         "rule": "S-REPEAT",
-        "change": "Гёли → ромбы 3 px с белой точкой."
+        "change": "Guls → 3 px diamonds with a white dot."
       }
     ],
     "L": [
       {
         "rule": "S-REPEAT",
-        "change": "Гёли → ромбы 4 px; 5 звёзд."
+        "change": "Guls → 4 px diamonds; 5 stars."
       }
     ]
   },
   "confusable": [],
   "gaps": [
-    "Указ об утверждении флага 2001 г. не прочитан; чертёж гёлей, ветвей, полумесяца и звёзд — пробел.",
-    "Пропорции 4-6-23 даны без пояснения."
+    "The 2001 decree adopting the flag has not been read; construction of the guls, branches, crescent and stars — gap.",
+    "The 4-6-23 proportions are given without explanation."
   ],
   "review": [],
   "status": {

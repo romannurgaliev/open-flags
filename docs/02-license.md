@@ -1,26 +1,26 @@
-# 02 — Лицензия и происхождение
+# 02 — License and provenance
 
-## Решение для пилота
+## Decision for the pilot
 
-| Что | Лицензия | Почему |
+| What | License | Why |
 |---|---|---|
-| Рисунки флагов (`flags/`, `overlays/`, файл Figma) | CC0 1.0 | Главная боль дизайнеров — неясные права. CC0 снимает вопрос полностью: можно в коммерческий продукт, без атрибуции |
-| Код (`src/`, `scripts/`, `tools/`) | MIT | Стандарт для инструментов |
-| Метаданные (`data/`) | CC0 1.0 | Это факты и ссылки; чем свободнее, тем больше шансов, что их будут исправлять |
+| Flag artwork (`flags/`, `overlays/`, the Figma file) | CC0 1.0 | Unclear rights are designers' main problem with existing sets. CC0 removes the question: commercial use, no attribution |
+| Code (`src/`, `scripts/`, `tools/`) | MIT | The usual choice for tooling |
+| Metadata (`data/`) | CC0 1.0 | Facts and references; the freer they are, the more likely people are to correct them |
 
-Решение можно поменять до первого публичного релиза: пока ничего не опубликовано. Для открытой библиотеки CC-BY 4.0 тоже подходит, если нужна атрибуция; цена — каждому пользователю придётся её где-то показывать.
+The decision can change before the first public release. CC-BY 4.0 would also suit an open library if attribution is wanted; the cost is that every user has to display it somewhere.
 
-## Почему рисуем сами, а не берём готовое
+## Why we draw our own instead of reusing a set
 
-- **hampusborgos/country-flags.** Исходники взяты с Wikimedia Commons, файла LICENSE в репозитории нет, в README — только тезис, что флаги в общественном достоянии. У отдельных SVG на Commons, особенно с гербами, своя лицензия автора рисунка. Если взять геометрию, неясность перейдёт сюда.
-- **catamphetamine/country-flag-icons.** MIT, но, по словам автора, референсы искались через поиск картинок, а простые полосатые флаги частично скопированы из Википедии и других наборов.
+- **hampusborgos/country-flags.** The sources come from Wikimedia Commons; the repository has no LICENSE file, and the README only states that flags are in the public domain. Individual SVGs on Commons, especially those with coats of arms, carry their artist's license. Taking that geometry would carry the uncertainty over.
+- **catamphetamine/country-flag-icons.** MIT, but by the author's own account the references were found through image search, and some simple striped flags were partly copied from Wikipedia and other sets.
 
-Поэтому правило: геометрия только из чисел построения (уровни 1–4) или рисуется заново. Наборы уровня 5 — для сравнения в тесте узнаваемости.
+Hence the rule: geometry comes only from construction numbers (levels 1–4) or is drawn from scratch. Level 5 sets are used for comparison in the recognition test.
 
-## Происхождение каждого флага
+## Provenance of each flag
 
-Метаданные отвечают на вопрос «откуда это»: у пропорции, построения и каждого цвета есть ссылка на источник с уровнем, способом чтения и датой (`sources`, `colors.*.specs`). Для карт CY и XK источник — Natural Earth (общественное достояние).
+The metadata answers "where did this come from": the ratio, the construction and every color link to a source with its level, how it was read and when (`sources`, `colors.*.specs`). For the CY and XK maps the source is Natural Earth (public domain).
 
-## Ограничения, о которых нужно сказать пользователям
+## Limits users should know about
 
-Лицензия описывает права на наш рисунок. Использование государственных символов может ограничиваться законами отдельных стран (особенно гербы и надписи), и CC0 этого не отменяет. Эта оговорка идёт в README.
+The license covers the rights to our drawings. Some countries restrict how their state symbols may be used (coats of arms and inscriptions especially), and CC0 does not change that. The README says so.

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Дописывает в data/flags/*.json коды ISO (alpha-3, numeric) и названия (en, ru) из Unicode CLDR.
-// Поля iso и names генерируются — руками их не правим.
+// Adds ISO codes (alpha-3, numeric) and names (en, ru) from Unicode CLDR to data/flags/*.json.
+// The iso and names fields are generated; do not edit them by hand.
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 
 const req = (p) => JSON.parse(readFileSync(new URL(`../node_modules/${p}`, import.meta.url), 'utf8'));

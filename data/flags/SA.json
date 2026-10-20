@@ -34,17 +34,17 @@
     },
     "sa-guide": {
       "level": "1g",
-      "title": "Правительственное руководство 2023 г. (цвета)",
+      "title": "Government guideline, 2023 (colors)",
       "via": "fotw",
       "url": "https://crwflags.com/fotw/flags/sa.html",
       "accessed": "2026-10-21"
     },
     "sa-saso": {
       "level": 1,
-      "title": "SASO Mandatory Standards (1984–85), fig. 2 и табл. 8 — геометрия меча",
+      "title": "SASO Mandatory Standards (1984–85), fig. 2 and table 8 — sword geometry",
       "via": "fotw",
       "accessed": "2026-10-21",
-      "note": "Не прочитан — пробел."
+      "note": "Not read — gap."
     },
     "sa-fotw": {
       "level": 4,
@@ -85,7 +85,7 @@
   },
   "construction": {
     "source": "sa-basic",
-    "text": "Шахада по центру, под ней обнажённый меч; рукоять справа под началом надписи, клинок к древку. Ширина — 2/3 длины."
+    "text": "Shahada centered with an unsheathed sword below; the hilt on the right under the beginning of the inscription, the blade toward the hoist. Width 2/3 of the length."
   },
   "probes": [
     {
@@ -94,36 +94,36 @@
         0.05
       ],
       "color": "green",
-      "why": "поле"
+      "why": "field"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-TEXT",
-        "change": "Надпись → одна белая строка 2 px и короткая строка 1 px; меч — линия 1 px с рукоятью справа."
+        "change": "Inscription → one white 2 px line and a short 1 px line; sword → 1 px line with the hilt on the right."
       }
     ],
     "M": [
       {
         "rule": "S-TEXT",
-        "change": "Надпись → две строки разной длины."
+        "change": "Inscription → two lines of different length."
       }
     ],
     "L": [
       {
         "rule": "S-TEXT",
-        "change": "Надпись → три строки из отрезков разной длины."
+        "change": "Inscription → three lines of segments of different length."
       }
     ]
   },
   "confusable": [],
   "gaps": [
-    "Шахада и меч в полных форматах не нарисованы: нужен официальный рисунок SASO.",
-    "Геометрия меча (SASO, fig. 2) не прочитана."
+    "The shahada and sword are not drawn in the full formats: needs the official SASO drawing.",
+    "Sword geometry (SASO, fig. 2) has not been read."
   ],
   "review": [
-    "Схематичная замена шахады требует решения носителей языка до релиза (docs/phase2/native-review.md). До решения миниатюры SA в релиз не идут."
+    "A schematic replacement of the shahada needs a decision by native speakers before release (docs/phase2/native-review.md). Until then SA miniatures are not released."
   ],
   "status": {
     "full": "draft",

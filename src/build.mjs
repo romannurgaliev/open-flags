@@ -1,16 +1,16 @@
 #!/usr/bin/env node
-// Собирает все форматы пилота из data/flags/*.json в flags/.
+// Builds every pilot format from data/flags/*.json into flags/.
 //
-// Запуск: node src/build.mjs [CODE ...]
+// Usage: node src/build.mjs [CODE ...]
 //
-// Форматы:
-//   flags/original/CODE.svg      исходная пропорция, высота 600
+// Formats:
+//   flags/original/CODE.svg      original aspect ratio, height near 600
 //   flags/3x2/CODE.svg           900×600
 //   flags/1x1/CODE.svg           600×600
 //   flags/mini/square-{16,24,40}/CODE.svg
 //   flags/mini/circle-{16,24,40}/CODE.svg
 //   flags/mini/rect-{24x16,36x24,60x40}/CODE.svg
-// Плюс overlays/ — контуры для белых краёв, отдельно от флагов.
+// Plus overlays/: outlines for flags with white edges, kept separate from the flags.
 
 import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { build } from './flags.mjs';
@@ -40,9 +40,9 @@ export function allCodes() {
     .sort();
 }
 
-// Ширина и высота original — целые: экспорт Figma округляет viewBox до целого, а дробная ширина
-// даёт сдвиг содержимого. Высота — ближайшее к 600 число, при котором ширина по пропорции целая.
-// У Непала пропорция иррациональна: ширина округляется (ошибка < 0.1%, C14 это допускает).
+// The original width and height are integers: the Figma export rounds the viewBox, and a fractional width
+// shifts the content. The height is the number nearest 600 for which the width from the ratio is an integer.
+// Nepal's ratio is irrational: the width is rounded (error < 0.1%, which C14 allows).
 export function originalSize(meta) {
   if (meta.ratio.shape === 'pennant') return { W: Math.round(600 * nepalFrame().w), H: 600 };
   const { w, h } = meta.ratio;
@@ -69,20 +69,20 @@ export function renderFlag(code, spec, meta = loadMeta(code)) {
   };
   let layers = build(code, ctx);
   const nulls = layers.filter((l) => !l.item);
-  if (nulls.length) throw new Error(`${code} ${spec.dir}: пустой слой ${nulls.map((l) => l.fill).join(', ')}`);
-  // Всё, что вне холста (круга или прямоугольника), отрезается геометрически: иначе Figma
-  // при выключенной обрезке расширяет экспорт под вылезающие фигуры (так было у VA).
+  if (nulls.length) throw new Error(`${code} ${spec.dir}: empty layer ${nulls.map((l) => l.fill).join(', ')}`);
+  // Everything outside the canvas (circle or rectangle) is cut off geometrically; otherwise Figma,
+  // with clipping off, grows the export to fit shapes that stick out (as happened with VA).
   const canvas = ctx.circle ? circle(size.W / 2, size.H / 2, size.W / 2) : rect(0, 0, size.W, size.H);
   layers = layers.map((l) => ({ ...l, item: inter(l.item, canvas) }));
   layers = layers.filter((l) => !isEmpty(l.item));
   for (const l of layers) {
-    if (!colors[l.fill]) throw new Error(`${code} ${spec.dir}: цвет "${l.fill}" не описан в metadata.colors`);
+    if (!colors[l.fill]) throw new Error(`${code} ${spec.dir}: color "${l.fill}" is not defined in metadata.colors`);
   }
   return toSvg(layers.map((l) => ({ ...l, hex: colors[l.fill] })), size.W, size.H, { precision: ctx.px ? 3 : 2, title: `${meta.names?.en ?? code}` });
 }
 
 function overlays() {
-  // Контур 1 px внутрь для флагов с белым краем: накладывается поверх, во флаг не вшивается.
+  // A 1 px inner outline for flags with a white edge: laid on top, not baked into the flag.
   const out = new URL('overlays/', root);
   mkdirSync(out, { recursive: true });
   for (const [tier, s] of Object.entries(TIERS)) {
@@ -112,5 +112,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     }
   }
   overlays();
-  console.log(`Собрано ${n} файлов: ${codes.length} флагов × ${FORMATS.length} форматов.`);
+  console.log(`Built ${n} files: ${codes.length} flags × ${FORMATS.length} formats.`);
 }

@@ -53,7 +53,7 @@
         },
         {
           "src": "comparison",
-          "value": "#DA291C (неофициальные таблицы)"
+          "value": "#DA291C (unofficial tables)"
         }
       ]
     },
@@ -71,7 +71,7 @@
       "arm_w": 6,
       "arm_l": 7,
       "source": "ch-law",
-      "text": "Плечи на 1/6 длиннее своей ширины; по приложению поле до креста равно ширине плеча: 6 + 7 + 6 + 7 + 6 = 32."
+      "text": "Arms are 1/6 longer than they are wide; per the annex the field around the cross equals the arm width: 6 + 7 + 6 + 7 + 6 = 32."
     }
   },
   "probes": [
@@ -81,7 +81,7 @@
         0.5
       ],
       "color": "white",
-      "why": "центр креста"
+      "why": "center of the cross"
     },
     {
       "at": [
@@ -89,7 +89,7 @@
         0.5
       ],
       "color": "white",
-      "why": "левое плечо (начинается на 6/32 = 0.1875)"
+      "why": "left arm (starts at 6/32 = 0.1875)"
     },
     {
       "at": [
@@ -97,7 +97,7 @@
         0.5
       ],
       "color": "red",
-      "why": "поле слева от плеча"
+      "why": "field left of the arm"
     },
     {
       "at": [
@@ -105,7 +105,7 @@
         0.38
       ],
       "color": "red",
-      "why": "угол между плечами (плечо шириной 13/32…19/32)"
+      "why": "corner between arms (arm spans 13/32…19/32)"
     },
     {
       "at": [
@@ -113,32 +113,32 @@
         0.3
       ],
       "color": "white",
-      "why": "верхнее плечо"
+      "why": "top arm"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-RATIO",
-        "change": "Плечо 4 px, длина плеча 4 px: соотношение 1.0 вместо 7/6 (отклонение 14%), поле 2 px."
+        "change": "Arm width 4 px, arm length 4 px: ratio 1.0 instead of 7/6 (−14%), field 2 px."
       }
     ],
     "M": [
       {
         "rule": "S-RATIO",
-        "change": "Плечо 4 px, длина 5 px: 1.25 вместо 7/6 (+7%)."
+        "change": "Arm width 4 px, length 5 px: 1.25 instead of 7/6 (+7%)."
       }
     ],
     "L": [
       {
         "rule": "S-RATIO",
-        "change": "Плечо 8 px, длина 9 px: 1.125 (−4%)."
+        "change": "Arm width 8 px, length 9 px: 1.125 (−4%)."
       }
     ]
   },
   "confusable": [],
   "gaps": [
-    "Текст приложения прочитан через FOTW, не напрямую на fedlex."
+    "The annex text was read via FOTW, not directly on fedlex."
   ],
   "review": [],
   "status": {

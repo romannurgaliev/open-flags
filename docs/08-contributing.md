@@ -1,30 +1,30 @@
-# 08 — Как вносить изменения
+# 08 — Contributing
 
-## Кто где правит
+## Who edits what, where
 
-| Что | Где | Кто |
+| What | Where | Who |
 |---|---|---|
-| Рисунок флага (геометрия, эмблемы, миниатюры) | Файл Figma, наборы `Flag / …` | Мейнтейнер |
-| Числа построения, цвета, источники, пробные точки | `data/flags/*.json` | Мейнтейнер или контрибьютор через PR |
-| SVG в `flags/` | Только выгрузка из Figma (`export-figma.yml`) или генератор (`npm run build`) для геометрии, заданной законом | Никто руками |
-| Правила упрощения | `docs/05`, `src/flags.mjs` | Мейнтейнер |
+| Flag artwork (geometry, emblems, miniatures) | The Figma file, `Flag / …` sets | Maintainer |
+| Construction numbers, colors, sources, probe points | `data/flags/*.json` | Maintainer, or a contributor through a PR |
+| SVGs in `flags/` | Only the Figma export (`export-figma.yml`) or the generator (`npm run build`) for geometry defined by law | Nobody, by hand |
+| Simplification rules | `docs/05`, `src/flags.mjs` | Maintainer |
 
-Figma Community не принимает pull request, а SVG, поправленный руками, расходится с мастером. Поэтому внешние люди присылают **issue с первичным источником**, а не SVG. Шаблон — `.github/ISSUE_TEMPLATE/flag-change.yml`: страна, что не так, ссылка на закон или Album, страница или пункт.
+Figma Community does not accept pull requests, and an SVG fixed by hand drifts away from the master. So outside contributors send an **issue with a primary source**, not an SVG. The template is `.github/ISSUE_TEMPLATE/flag-change.yml`: country, what is wrong, a link to the law or the Album, with the page or section.
 
-## Генератор и Figma: что первично
+## Generator and Figma: which comes first
 
-В пилоте геометрия, заданная числами закона (полосы, диски, кресты, звёзды, построение Непала), строится генератором `src/flags.mjs` из метаданных и загружается в Figma. Эмблемы, гербы, надписи и карты по официальным рисункам рисуются руками в Figma. После этого Figma — мастер для всего: следующая выгрузка идёт из Figma, проверки сравнивают её с метаданными (C09) и с прошлым релизом (C15).
+In the pilot, geometry defined by the law's numbers (stripes, discs, crosses, stars, Nepal's construction) is built by the generator `src/flags.mjs` from the metadata and loaded into Figma. Emblems, coats of arms, inscriptions and maps from official artwork are drawn by hand in Figma. After that, Figma is the master for everything: the next export comes from Figma, and the checks compare it with the metadata (C09) and with the previous release (C15).
 
-Правило для правок в Figma:
+Rules for editing in Figma:
 
-- Форму круга не делать обрезкой рамки: только геометрия (Boolean → Intersect). Иначе экспорт либо добавит clip-path (C04), либо выбросит его, и круг станет квадратом (C08).
-- Рамку компонента не заливать: заливка рамки — скрытая заливка или белый квадрат вокруг круга.
-- Ничего не выводить за рамку компонента (C16).
-- После любой правки геометрии — пробная выгрузка одного SVG на каждый тип формы до массовой работы.
+- Do not make the circle shape by clipping the frame; use geometry only (Boolean → Intersect). Otherwise the export either adds a clip-path (C04) or drops it, and the circle becomes a square (C08).
+- Do not fill the component frame: a frame fill is a hidden fill, or a white square around the circle.
+- Keep everything inside the component frame (C16).
+- After any geometry change, export one SVG of each shape type as a test before doing bulk work.
 
-## Порядок PR
+## Pull requests
 
-1. Изменение метаданных — с источником в `sources` и уровнем.
-2. `npm test` локально или в CI.
-3. В описании PR — контактный лист из артефакта CI, если менялись рисунки.
-4. Изменение цвета больше чем на ΔE2000 2 или геометрии больше чем на 1% — только с источником уровня 1 или 2.
+1. Metadata changes come with a source in `sources`, including its level.
+2. Run `npm test` locally or let CI run it.
+3. If artwork changed, include the contact sheet from the CI artifacts in the PR description.
+4. A color change of more than ΔE2000 2, or a geometry change of more than 1%, needs a level 1 or 2 source.

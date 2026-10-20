@@ -12,7 +12,7 @@
     "ru": "Монако"
   },
   "classes": [
-    "bicolour-h"
+    "bicolor-h"
   ],
   "ratio": {
     "h": 4,
@@ -26,11 +26,11 @@
   "sources": {
     "mc-decree": {
       "level": 1,
-      "title": "Ordonnance Souveraine du 4 avril 1881 (приложение с рисунком 4:5) и ст. 7 Конституции 1962 г.",
+      "title": "Ordonnance Souveraine du 4 avril 1881 (annex with a 4:5 drawing) and art. 7 of the 1962 Constitution",
       "via": "fotw",
       "url": "https://crwflags.com/fotw/flags/mc.html",
       "accessed": "2026-10-21",
-      "note": "По FOTW, приложение к указу не найдено; 4:5 известно по Southworth и Crampton. На практике почти всегда 2:3."
+      "note": "Per FOTW the annex to the ordinance has not been located; 4:5 is known from Southworth and Crampton. In practice it is almost always 2:3."
     }
   },
   "colors": {
@@ -75,7 +75,7 @@
       }
     ],
     "source": "mc-decree",
-    "text": "Две равные горизонтальные полосы, красная сверху."
+    "text": "Two equal horizontal stripes, red on top."
   },
   "probes": [
     {
@@ -84,7 +84,7 @@
         0.25
       ],
       "color": "red",
-      "why": "верхняя полоса"
+      "why": "top stripe"
     },
     {
       "at": [
@@ -92,7 +92,7 @@
         0.75
       ],
       "color": "white",
-      "why": "нижняя полоса"
+      "why": "bottom stripe"
     }
   ],
   "simplification": {
@@ -105,7 +105,7 @@
     "PL"
   ],
   "gaps": [
-    "Рисунок 4:5 из приложения 1881 года первично не прочитан. Цвет на уровне 1 не задан."
+    "The 4:5 drawing in the 1881 annex has not been read first-hand. Color is not specified at level 1."
   ],
   "review": [],
   "status": {

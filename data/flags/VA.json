@@ -31,7 +31,7 @@
       "via": "fotw",
       "url": "https://crwflags.com/fotw/flags/va.html",
       "accessed": "2026-10-21",
-      "note": "Пропорция 1:1 — по рисунку приложения; FOTW отмечает, что в тексте пропорция не названа."
+      "note": "Ratio 1:1 from the annex drawing; FOTW notes that the text does not state a ratio."
     },
     "va-fotw": {
       "level": 4,
@@ -67,7 +67,7 @@
       "specs": [
         {
           "src": "va-fotw",
-          "value": "Vexilla Mundi: PMS 118 C (золото)"
+          "value": "Vexilla Mundi: PMS 118 C (gold)"
         }
       ]
     },
@@ -78,14 +78,14 @@
       "specs": [
         {
           "src": "va-fotw",
-          "value": "Vexilla Mundi: PMS 428 C (серебро)"
+          "value": "Vexilla Mundi: PMS 428 C (silver)"
         }
       ]
     }
   },
   "construction": {
     "source": "va-law",
-    "text": "Два вертикальных поля: жёлтое у древка, белое. В белом — скрещённые ключи и тиара; по Album 2000 высота эмблемы — половина высоты флага."
+    "text": "Two vertical fields: yellow at the hoist, white. In the white field, crossed keys and the tiara; per Album 2000 the emblem is half the hoist tall."
   },
   "probes": [
     {
@@ -94,7 +94,7 @@
         0.5
       ],
       "color": "yellow",
-      "why": "жёлтая половина"
+      "why": "yellow half"
     },
     {
       "at": [
@@ -102,32 +102,32 @@
         0.05
       ],
       "color": "white",
-      "why": "белая половина, угол"
+      "why": "white half, corner"
     }
   ],
   "simplification": {
     "S": [
       {
         "rule": "S-EMBLEM",
-        "change": "Ключи → две диагонали 1 px (золото и серебро); тиара — золотое пятно."
+        "change": "Keys → two 1 px diagonals (gold and silver); tiara → gold blob."
       }
     ],
     "M": [
       {
         "rule": "S-EMBLEM",
-        "change": "Диагонали 1.4 px."
+        "change": "Diagonals 1.4 px."
       }
     ],
     "L": [
       {
         "rule": "S-EMBLEM",
-        "change": "Диагонали 2 px, тиара с белым поясом."
+        "change": "Diagonals 2 px, tiara with a white band."
       }
     ]
   },
   "confusable": [],
   "gaps": [
-    "Ключи и тиара в полных форматах не нарисованы: нужен рисунок allegato A."
+    "Keys and tiara are not drawn in the full formats: needs the allegato A drawing."
   ],
   "review": [],
   "status": {

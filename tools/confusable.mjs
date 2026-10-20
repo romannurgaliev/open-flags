@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Измеряет, насколько пары из реестра неразличимых отличаются на миниатюрах:
-// доля пикселей с ΔE2000 > 10 и средний ΔE2000 по всему кадру. Печатает таблицу Markdown.
+// Measures how much the pairs in the confusable-pairs registry differ in miniatures:
+// share of pixels with ΔE2000 > 10, and mean ΔE2000 over the whole frame. Prints a Markdown table.
 //   node tools/confusable.mjs
 import { readFileSync, existsSync } from 'node:fs';
 import { Resvg } from '@resvg/resvg-js';
@@ -39,7 +39,7 @@ for (const [a, b] of PAIRS) {
   });
   rows.push(`| ${a} — ${b} | ${cells.join(' | ')} |`);
 }
-console.log(`| Пара | ${DIRS.map((d) => d.replace('mini/', '')).join(' | ')} |`);
+console.log(`| Pair | ${DIRS.map((d) => d.replace('mini/', '')).join(' | ')} |`);
 console.log(`|---|${DIRS.map(() => '---').join('|')}|`);
 console.log(rows.join('\n'));
-console.log('\nВ ячейке: доля пикселей, отличающихся сильнее ΔE2000 10 / средний ΔE2000 по кадру. 1x1 — рендер на 40 px.');
+console.log('\nEach cell: share of pixels differing by more than ΔE2000 10 / mean ΔE2000 over the frame. 1x1 is rendered at 40 px.');

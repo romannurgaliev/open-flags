@@ -1,12 +1,12 @@
-// Флаг Непала по Конституции 2015 года, Приложение 1 (шаги 1–24).
-// Транскрипция шагов: FOTW, страница np-law.html (via: fotw), прочитано 2026-10-21.
-// Единица — длина AB. Ось y направлена вверх, начало в точке A. Наружу отдаём в координатах SVG.
+// Flag of Nepal per the 2015 Constitution, Schedule 1 (steps 1–24).
+// Step transcription: FOTW, page np-law.html (via: fotw), read 2026-10-21.
+// The unit is the length AB. The y axis points up, origin at point A. Output is in SVG coordinates.
 
 const pt = (x, y) => ({ x, y });
 const lerp = (a, b, t) => pt(a.x + (b.x - a.x) * t, a.y + (b.y - a.y) * t);
 const dist = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
 
-// Пересечение двух прямых, каждая задана двумя точками.
+// Intersection of two lines, each given by two points.
 function cross(p1, p2, p3, p4) {
   const d = (p1.x - p2.x) * (p3.y - p4.y) - (p1.y - p2.y) * (p3.x - p4.x);
   const a = p1.x * p2.y - p1.y * p2.x;
@@ -14,7 +14,7 @@ function cross(p1, p2, p3, p4) {
   return pt((a * (p3.x - p4.x) - (p1.x - p2.x) * b) / d, (a * (p3.y - p4.y) - (p1.y - p2.y) * b) / d);
 }
 
-// Пересечение двух окружностей; возвращает обе точки.
+// Intersection of two circles; returns both points.
 function circles(c1, r1, c2, r2) {
   const d = dist(c1, c2);
   const a = (d * d + r1 * r1 - r2 * r2) / (2 * d);
@@ -24,41 +24,41 @@ function circles(c1, r1, c2, r2) {
 }
 
 export function nepalConstruction() {
-  // A. Форма внутри каймы
+  // A. Shape inside the border
   const A = pt(0, 0);
-  const B = pt(1, 0); // шаг 1
-  const C = pt(0, 4 / 3); // шаг 2: AC = AB + AB/3
+  const B = pt(1, 0); // step 1
+  const C = pt(0, 4 / 3); // step 2: AC = AB + AB/3
   const D = pt(0, 1); // AD = AB
-  const E = lerp(B, D, 1 / dist(B, D)); // шаг 3: BE = AB
-  const F = pt(0, E.y); // шаг 4
+  const E = lerp(B, D, 1 / dist(B, D)); // step 3: BE = AB
+  const F = pt(0, E.y); // step 4
   const G = pt(1, E.y); // FG = AB
-  // B. Луна
-  const H = pt(0.25, 0); // шаг 6
+  // B. Moon
+  const H = pt(0.25, 0); // step 6
   const I = cross(H, pt(0.25, 1), C, G);
-  const J = lerp(C, F, 0.5); // шаг 7
+  const J = lerp(C, F, 0.5); // step 7
   const K = cross(J, pt(1, J.y), C, G);
-  const L = cross(J, K, H, I); // шаг 8
-  const M = cross(J, G, H, I); // шаги 9–10
-  // шаг 11: радиус — кратчайшее расстояние от M до BD
+  const L = cross(J, K, H, I); // step 8
+  const M = cross(J, G, H, I); // steps 9–10
+  // step 11: the radius is the shortest distance from M to BD
   const rMN = Math.abs(M.x + M.y - 1) / Math.SQRT2;
   const N = pt(M.x, M.y - rMN);
-  const rLN = dist(L, N); // шаг 13
+  const rLN = dist(L, N); // step 13
   const dyLM = L.y - M.y;
   const half = Math.sqrt(rLN * rLN - dyLM * dyLM);
   const P = pt(L.x - half, M.y);
   const Q = pt(L.x + half, M.y);
-  const rMQ = dist(M, Q); // шаг 14
-  const [R, S] = circles(N, dist(N, M), L, rLN); // шаг 15
+  const rMQ = dist(M, Q); // step 14
+  const [R, S] = circles(N, dist(N, M), L, rLN); // step 15
   const T = cross(R, S, H, I);
-  const rTS = dist(T, S); // шаг 16: внешний радиус лучей луны
-  const rTM = dist(T, M); // шаг 17: полукруг луны
-  // C. Солнце
-  const U = lerp(A, F, 0.5); // шаг 19
-  const W = cross(U, pt(1, U.y), H, I); // шаг 20 (центр солнца на HI)
-  const sunInner = rMN; // шаг 20: радиус MN
-  const sunOuter = rLN; // шаг 21: радиус LN
-  // D. Кайма
-  const border = dist(T, N); // шаг 23
+  const rTS = dist(T, S); // step 16: outer radius of the moon's rays
+  const rTM = dist(T, M); // step 17: the moon's semicircle
+  // C. Sun
+  const U = lerp(A, F, 0.5); // step 19
+  const W = cross(U, pt(1, U.y), H, I); // step 20 (sun center on HI)
+  const sunInner = rMN; // step 20: radius MN
+  const sunOuter = rLN; // step 21: radius LN
+  // D. Border
+  const border = dist(T, N); // step 23
   return {
     outline: [A, B, E, G, C],
     moon: { L, rLN, M, rMQ, T, rTS, rTM, P, Q },
@@ -68,11 +68,11 @@ export function nepalConstruction() {
   };
 }
 
-// Кайма: внешний контур, смещённый наружу на ширину каймы с острыми (митровыми) углами —
-// «внешние углы равны внутренним» (шаг 23).
+// Border: the outer contour offset outward by the border width, with sharp (mitered) corners:
+// "the outer angles equal the inner angles" (step 23).
 export function offsetPolygon(poly, d) {
   const n = poly.length;
-  // Контур A→B→E→G→C идёт против часовой стрелки (y вверх). Нормаль наружу — справа от направления.
+  // The contour A→B→E→G→C runs counterclockwise (y up). The outward normal is to the right of the direction.
   const lines = poly.map((p, i) => {
     const q = poly[(i + 1) % n];
     const len = dist(p, q);
@@ -87,7 +87,7 @@ export function offsetPolygon(poly, d) {
   });
 }
 
-// Всё в координатах SVG: рамка — габарит внешнего контура каймы, y вниз, высота = 1.
+// Everything in SVG coordinates: the frame is the bounding box of the border's outer contour, y down, height = 1.
 export function nepalFrame() {
   const c = nepalConstruction();
   const outer = offsetPolygon(c.outline, c.border);
@@ -99,6 +99,6 @@ export function nepalFrame() {
   const maxY = Math.max(...ys);
   const h = maxY - minY;
   const w = maxX - minX;
-  const to = (p) => pt((p.x - minX) / h, (maxY - p.y) / h); // единица — высота
+  const to = (p) => pt((p.x - minX) / h, (maxY - p.y) / h); // the unit is the height
   return { c, outer, w: w / h, h: 1, to, scale: 1 / h };
 }

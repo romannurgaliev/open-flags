@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// Контактный лист: все флаги во всех форматах.
+// Contact sheet: every flag in every format.
 //   node scripts/sheet.mjs preview/contact-sheet.png [--scale 2] [--dir flags] [--codes JP,BD]
 //
-// Колонки: полные форматы (высота 48 css px), миниатюры в настоящем размере, и «пиксельный вид»
-// S-ступени: рендер 1x, увеличенный в 4 раза без сглаживания — так видно сетку.
-// Черновики (status draft / blocked-review в метаданных) помечены красным углом.
+// Columns: full formats (48 CSS px high), miniatures at actual size, and a "pixel view"
+// of the S tier: rendered at 1x and enlarged 4× without smoothing, so the grid is visible.
+// Drafts (status draft / blocked-review in the metadata) are marked with a red corner.
 
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 'node:fs';
 import { dirname } from 'node:path';
@@ -68,7 +68,7 @@ function text(s, size = 11, weight = 400, color = '#222') {
   return { w: img.width, h: img.height, px: img.pixels };
 }
 
-// Рендерим всё заранее, чтобы посчитать ширины колонок.
+// Render everything first to compute column widths.
 const cells = codes.map((code) => {
   const meta = JSON.parse(readFileSync(new URL(`data/flags/${code}.json`, root), 'utf8'));
   return cols.map((c) => {
@@ -109,7 +109,7 @@ function blit(img, x0, y0) {
       const Y = y0 + y;
       if (X < 0 || Y < 0 || X >= png.width || Y >= png.height) continue;
       const d = (Y * png.width + X) * 4;
-      // resvg отдаёт премультиплицированные значения
+      // resvg returns premultiplied values
       for (let k = 0; k < 3; k++) png.data[d + k] = Math.round(img.px[s + k] + png.data[d + k] * (1 - a));
     }
 }
@@ -141,4 +141,4 @@ cells.forEach((row, i) => {
 
 mkdirSync(dirname(out), { recursive: true });
 writeFileSync(out, PNG.sync.write(png));
-console.log(`Лист: ${out} (${png.width}×${png.height})`);
+console.log(`Sheet: ${out} (${png.width}×${png.height})`);

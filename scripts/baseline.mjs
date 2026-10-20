@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Записывает baseline/ — растровые снимки текущих флагов, с которыми C15 сравнивает следующий PR.
-// Запускать при выпуске релиза: снимок фиксирует «как было» для следующего ревью.
+// Writes baseline/: raster snapshots of the current flags that C15 compares the next PR against.
+// Run at release time: the snapshot records the "before" state for the next review.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { PNG } from 'pngjs';
 import { FORMATS, allCodes, loadMeta, originalSize } from '../src/build.mjs';
@@ -22,4 +22,4 @@ for (const code of allCodes()) {
     n++;
   }
 }
-console.log(`baseline/: ${n} снимков`);
+console.log(`baseline/: ${n} snapshots`);
