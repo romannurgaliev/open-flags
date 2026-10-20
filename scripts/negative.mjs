@@ -38,7 +38,7 @@ const cases = [
   { n: 'N06', id: 'C04', code: 'JP', dir: 'original', what: 'raster image', mut: (s) => s.replace('</svg>', '<image href="flag.png" width="10" height="10"/></svg>') },
   { n: 'N07', id: 'C04', code: 'JP', dir: 'mini/circle-16', what: 'circle relies on clip-path (like a Figma export with frame clipping)', mut: () => read('mini/square-16', 'JP').replace('<path', '<clipPath id="c"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#c)"><path').replace('</svg>', '</g></svg>') },
   { n: 'N08', id: 'C08', code: 'JP', dir: 'mini/circle-16', what: 'Figma dropped the clip-path: circle exported as a square (a durev-flags bug)', mut: () => read('mini/square-16', 'JP') },
-  { n: 'N09', id: 'C05', code: 'JP', dir: 'original', what: 'unclosed subpath (no Z)', mut: (s) => s.replace(/Z"\/>/, '"/>') },
+  { n: 'N09', id: 'C05', code: 'JP', dir: 'original', what: 'unclosed subpath (no Z)', mut: (s) => s.replace(/Z"/, '"') },
   { n: 'N10', id: 'C05', code: 'JP', dir: 'original', what: 'no fill-rule', mut: (s) => s.replace(/ fill-rule="evenodd"/g, '') },
   { n: 'N11', id: 'C05', code: 'US', dir: 'original', what: 'fill-rule="nonzero" on a multi-subpath path (durev-flags normalization c5525e5)', mut: (s) => s.replace(/fill-rule="evenodd"/g, 'fill-rule="nonzero"') },
   { n: 'N12', id: 'C06', code: 'JP', dir: 'original', what: 'color not in the palette', mut: (s) => s.replace('#D21034', '#D21035') },
