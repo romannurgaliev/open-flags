@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <title>Turkmenistan</title>
-<path fill="#006A4E" fill-rule="evenodd" d="M0 12C0 5.373 5.373 0 12 0C18.627 0 24 5.373 24 12C24 18.627 18.627 24 12 24C5.373 24 0 18.627 0 12Z"/>
-<path fill="#D51F2A" fill-rule="evenodd" d="M3 19.937L3 4.063C4.104 2.812 5.465 1.793 7 1.088L7 22.912C5.465 22.207 4.104 21.188 3 19.937Z"/>
-<path fill="#FF9A00" fill-rule="evenodd" d="M6.26 2.4L5 3.8L4.184 2.894C4.66 2.485 5.168 2.113 5.704 1.782Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M5 3L5 2.252C5.12 2.166 5.241 2.082 5.364 2L6 2L6 3Z"/>
-<path fill="#FF9A00" fill-rule="evenodd" d="M5 5.8L6.26 7.2L5 8.6L3.74 7.2Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M5 8L5 7L6 7L6 8Z"/>
-<path fill="#FF9A00" fill-rule="evenodd" d="M5 10.6L6.26 12L5 13.4L3.74 12Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M5 13L5 12L6 12L6 13Z"/>
-<path fill="#FF9A00" fill-rule="evenodd" d="M5 15.4L6.26 16.8L5 18.2L3.74 16.8Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M5 17L5 16L6 16L6 17Z"/>
-<path fill="#FF9A00" fill-rule="evenodd" d="M5 20.2L6.26 21.6L5.704 22.218C5.168 21.887 4.66 21.515 4.184 21.106Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M5 21L6 21L6 22L5.364 22C5.241 21.918 5.12 21.834 5 21.748Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M7 4.8C7 3.475 8.075 2.4 9.4 2.4C9.837 2.4 10.247 2.517 10.6 2.721C10.537 2.715 10.473 2.712 10.408 2.712C9.321 2.712 8.44 3.593 8.44 4.68C8.44 5.767 9.321 6.648 10.408 6.648C10.634 6.648 10.851 6.61 11.053 6.54C10.623 6.949 10.041 7.2 9.4 7.2C8.075 7.2 7 6.125 7 4.8Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M13 2L13 1L14 1L14 2Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M14 4L14 3L15 3L15 4Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M14 6L14 5L15 5L15 6Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M14 8L14 7L15 7L15 8Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M12 9L12 8L13 8L13 9Z"/>
+<path d="M0 12C0 5.373 5.373 0 12 0C18.627 0 24 5.373 24 12C24 18.627 18.627 24 12 24C5.373 24 0 18.627 0 12Z" fill-rule="evenodd" fill="#006A4E"/>
+<path d="M3 19.937V4.06301C4.104 2.81201 5.465 1.79301 7 1.08801V22.912C5.465 22.207 4.104 21.188 3 19.937Z" fill-rule="evenodd" fill="#D51F2A"/>
+<path d="M6.26002 2.40001L5.00002 3.80001L4.18402 2.89401C4.66002 2.48501 5.16802 2.11301 5.70402 1.78201L6.26002 2.40001Z" fill-rule="evenodd" fill="#FF9A00"/>
+<path d="M5 3V2.252C5.12 2.166 5.241 2.082 5.364 2H6V3H5Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M4.99999 5.79999L6.25999 7.19999L4.99999 8.59999L3.73999 7.19999L4.99999 5.79999Z" fill-rule="evenodd" fill="#FF9A00"/>
+<path d="M5 8V7H6V8H5Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M4.99999 10.6L6.25999 12L4.99999 13.4L3.73999 12L4.99999 10.6Z" fill-rule="evenodd" fill="#FF9A00"/>
+<path d="M5 13V12H6V13H5Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M4.99999 15.4L6.25999 16.8L4.99999 18.2L3.73999 16.8L4.99999 15.4Z" fill-rule="evenodd" fill="#FF9A00"/>
+<path d="M5 17V16H6V17H5Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M5.00002 20.2L6.26002 21.6L5.70402 22.218C5.16802 21.887 4.66002 21.515 4.18402 21.106L5.00002 20.2Z" fill-rule="evenodd" fill="#FF9A00"/>
+<path d="M5 21H6V22H5.364C5.241 21.918 5.12 21.834 5 21.748V21Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M7 4.79999C7 3.47499 8.075 2.39999 9.4 2.39999C9.837 2.39999 10.247 2.51699 10.6 2.72099C10.537 2.71499 10.473 2.71199 10.408 2.71199C9.321 2.71199 8.44 3.59299 8.44 4.67999C8.44 5.76699 9.321 6.64799 10.408 6.64799C10.634 6.64799 10.851 6.60999 11.053 6.53999C10.623 6.94899 10.041 7.19999 9.4 7.19999C8.075 7.19999 7 6.12499 7 4.79999Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M13 2V1H14V2H13Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M14 4V3H15V4H14Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M14 6V5H15V6H14Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M14 8V7H15V8H14Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M12 9V8H13V9H12Z" fill-rule="evenodd" fill="#FFFFFF"/>
 </svg>

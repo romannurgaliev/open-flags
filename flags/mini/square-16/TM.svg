@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
 <title>Turkmenistan</title>
-<path fill="#006A4E" fill-rule="evenodd" d="M0 16L0 0L16 0L16 16Z"/>
-<path fill="#D51F2A" fill-rule="evenodd" d="M2 16L2 0L5 0L5 16Z"/>
-<path fill="#FFC72C" fill-rule="evenodd" d="M3 2L3 1L4 1L4 2Z"/>
-<path fill="#FFC72C" fill-rule="evenodd" d="M3 5L3 4L4 4L4 5Z"/>
-<path fill="#FFC72C" fill-rule="evenodd" d="M3 9L3 8L4 8L4 9Z"/>
-<path fill="#FFC72C" fill-rule="evenodd" d="M3 12L3 11L4 11L4 12Z"/>
-<path fill="#FFC72C" fill-rule="evenodd" d="M3 15L3 14L4 14L4 15Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M4.4 3.2C4.4 1.985 5.385 1 6.6 1C7.001 1 7.377 1.107 7.7 1.295C7.642 1.289 7.583 1.286 7.524 1.286C6.528 1.286 5.72 2.094 5.72 3.09C5.72 4.086 6.528 4.894 7.524 4.894C7.731 4.894 7.93 4.859 8.115 4.795C7.721 5.17 7.187 5.4 6.6 5.4C5.385 5.4 4.4 4.415 4.4 3.2Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M10 2L10 1L11 1L11 2Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M10 5L10 4L11 4L11 5Z"/>
+<path d="M0 16V0H16V16H0Z" fill-rule="evenodd" fill="#006A4E"/>
+<path d="M2 16V0H5V16H2Z" fill-rule="evenodd" fill="#D51F2A"/>
+<path d="M3 2V1H4V2H3Z" fill-rule="evenodd" fill="#FFC72C"/>
+<path d="M3 5V4H4V5H3Z" fill-rule="evenodd" fill="#FFC72C"/>
+<path d="M3 9V8H4V9H3Z" fill-rule="evenodd" fill="#FFC72C"/>
+<path d="M3 12V11H4V12H3Z" fill-rule="evenodd" fill="#FFC72C"/>
+<path d="M3 15V14H4V15H3Z" fill-rule="evenodd" fill="#FFC72C"/>
+<path d="M4.40002 3.2C4.40002 1.985 5.38502 1 6.60002 1C7.00102 1 7.37702 1.107 7.70002 1.295C7.64202 1.289 7.58302 1.286 7.52402 1.286C6.52802 1.286 5.72002 2.094 5.72002 3.09C5.72002 4.086 6.52802 4.894 7.52402 4.894C7.73102 4.894 7.93002 4.859 8.11502 4.795C7.72102 5.17 7.18702 5.4 6.60002 5.4C5.38502 5.4 4.40002 4.415 4.40002 3.2Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M10 2V1H11V2H10Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M10 5V4H11V5H10Z" fill-rule="evenodd" fill="#FFFFFF"/>
 </svg>

@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24">
+<svg width="36" height="24" viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
 <title>US</title>
-<path fill="#B31942" fill-rule="evenodd" d="M0 24L0 0L36 0L36 24Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 24L0 2L36 2L36 24Z"/>
-<path fill="#B31942" fill-rule="evenodd" d="M0 24L0 4L36 4L36 24Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 24L0 6L36 6L36 24Z"/>
-<path fill="#B31942" fill-rule="evenodd" d="M0 24L0 8L36 8L36 24Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 24L0 11L36 11L36 24Z"/>
-<path fill="#B31942" fill-rule="evenodd" d="M0 24L0 13L36 13L36 24Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 24L0 16L36 16L36 24Z"/>
-<path fill="#B31942" fill-rule="evenodd" d="M0 24L0 18L36 18L36 24Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 24L0 20L36 20L36 24Z"/>
-<path fill="#B31942" fill-rule="evenodd" d="M0 24L0 22L36 22L36 24Z"/>
-<path fill="#0A3161" fill-rule="evenodd" d="M18 13L0 13L0 0L18 0Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M1 2L1 1L2 1L2 2ZM5 2L5 1L6 1L6 2ZM9 2L9 1L10 1L10 2ZM13 2L13 1L14 1L14 2ZM3 4L3 3L4 3L4 4ZM7 4L7 3L8 3L8 4ZM11 4L11 3L12 3L12 4ZM15 4L15 3L16 3L16 4ZM1 6L1 5L2 5L2 6ZM5 6L5 5L6 5L6 6ZM9 6L9 5L10 5L10 6ZM13 6L13 5L14 5L14 6ZM3 8L3 7L4 7L4 8ZM7 8L7 7L8 7L8 8ZM11 8L11 7L12 7L12 8ZM15 8L15 7L16 7L16 8ZM1 10L1 9L2 9L2 10ZM5 10L5 9L6 9L6 10ZM9 10L9 9L10 9L10 10ZM13 10L13 9L14 9L14 10ZM3 12L3 11L4 11L4 12ZM7 12L7 11L8 11L8 12ZM11 12L11 11L12 11L12 12ZM15 12L15 11L16 11L16 12Z"/>
+<path d="M0 24V0H36V24H0Z" fill-rule="evenodd" fill="#B31942"/>
+<path d="M0 24V2H36V24H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 24V4H36V24H0Z" fill-rule="evenodd" fill="#B31942"/>
+<path d="M0 24V6H36V24H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 24V8H36V24H0Z" fill-rule="evenodd" fill="#B31942"/>
+<path d="M0 24V11H36V24H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 24V13H36V24H0Z" fill-rule="evenodd" fill="#B31942"/>
+<path d="M0 24V16H36V24H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 24V18H36V24H0Z" fill-rule="evenodd" fill="#B31942"/>
+<path d="M0 24V20H36V24H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 24V22H36V24H0Z" fill-rule="evenodd" fill="#B31942"/>
+<path d="M0 13V0H18V13H0Z" fill-rule="evenodd" fill="#0A3161"/>
+<path d="M1 2V1H2V2H1ZM5 2V1H6V2H5ZM9 2V1H10V2H9ZM13 2V1H14V2H13ZM3 4V3H4V4H3ZM7 4V3H8V4H7ZM11 4V3H12V4H11ZM15 4V3H16V4H15ZM1 6V5H2V6H1ZM5 6V5H6V6H5ZM9 6V5H10V6H9ZM13 6V5H14V6H13ZM3 8V7H4V8H3ZM7 8V7H8V8H7ZM11 8V7H12V8H11ZM15 8V7H16V8H15ZM1 10V9H2V10H1ZM5 10V9H6V10H5ZM9 10V9H10V10H9ZM13 10V9H14V10H13ZM3 12V11H4V12H3ZM7 12V11H8V12H7ZM11 12V11H12V12H11ZM15 12V11H16V12H15Z" fill-rule="evenodd" fill="#FFFFFF"/>
 </svg>

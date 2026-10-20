@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24">
+<svg width="36" height="24" viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
 <title>Palau</title>
-<path fill="#00A0E2" fill-rule="evenodd" d="M0 24L0 0L36 0L36 24Z"/>
-<path fill="#F5EC62" fill-rule="evenodd" d="M9 12C9 8.134 12.134 5 16 5C19.866 5 23 8.134 23 12C23 15.866 19.866 19 16 19C12.134 19 9 15.866 9 12Z"/>
+<path d="M0 24V0H36V24H0Z" fill-rule="evenodd" fill="#00A0E2"/>
+<path d="M9 12C9 8.134 12.134 5 16 5C19.866 5 23 8.134 23 12C23 15.866 19.866 19 16 19C12.134 19 9 15.866 9 12Z" fill-rule="evenodd" fill="#F5EC62"/>
 </svg>

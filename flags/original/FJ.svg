@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
 <title>Fiji</title>
-<path fill="#42B4E6" fill-rule="evenodd" d="M0 600L0 0L1200 0L1200 600Z"/>
-<path fill="#0033A0" fill-rule="evenodd" d="M600 300L0 300L0 0L600 0Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M300 116.46L532.92 0L600 0L600 33.54L367.08 150L600 266.46L600 300L532.92 300L300 183.54L67.08 300L0 300L0 266.46L232.92 150L0 33.54L0 0L67.08 0Z"/>
-<path fill="#C8102E" fill-rule="evenodd" d="M300 150L255.28 150L0 22.36L0 0Z"/>
-<path fill="#C8102E" fill-rule="evenodd" d="M300 150L300 172.36L44.72 300L0 300Z"/>
-<path fill="#C8102E" fill-rule="evenodd" d="M300 150L300 127.64L555.28 0L600 0Z"/>
-<path fill="#C8102E" fill-rule="evenodd" d="M300 150L344.72 150L600 277.64L600 300Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M250 300L250 200L0 200L0 100L250 100L250 0L350 0L350 100L600 100L600 200L350 200L350 300Z"/>
-<path fill="#C8102E" fill-rule="evenodd" d="M270 300L270 180L0 180L0 120L270 120L270 0L330 0L330 120L600 120L600 180L330 180L330 300Z"/>
+<path d="M0 600V0H1200V600H0Z" fill-rule="evenodd" fill="#42B4E6"/>
+<path d="M0 300V0H600V300H0Z" fill-rule="evenodd" fill="#0033A0"/>
+<path d="M300 116.46L532.92 0H600V33.54L367.08 150L600 266.46V300H532.92L300 183.54L67.08 300H0V266.46L232.92 150L0 33.54V0H67.08L300 116.46Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M300 150H255.28L0 22.36V0L300 150Z" fill-rule="evenodd" fill="#C8102E"/>
+<path d="M300 150V172.36L44.72 300H0L300 150Z" fill-rule="evenodd" fill="#C8102E"/>
+<path d="M300 150V127.64L555.28 0H600L300 150Z" fill-rule="evenodd" fill="#C8102E"/>
+<path d="M300 150H344.72L600 277.64V300L300 150Z" fill-rule="evenodd" fill="#C8102E"/>
+<path d="M250 300V200H0V100H250V0H350V100H600V200H350V300H250Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M270 300V180H0V120H270V0H330V120H600V180H330V300H270Z" fill-rule="evenodd" fill="#C8102E"/>
 </svg>

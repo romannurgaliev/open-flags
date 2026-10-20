@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
 <title>Malaysia</title>
-<path fill="#CC0001" fill-rule="evenodd" d="M0 16L0 0L16 0L16 16Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 16L0 2L16 2L16 16Z"/>
-<path fill="#CC0001" fill-rule="evenodd" d="M0 16L0 4L16 4L16 16Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 16L0 6L16 6L16 16Z"/>
-<path fill="#CC0001" fill-rule="evenodd" d="M0 16L0 8L16 8L16 16Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 16L0 10L16 10L16 16Z"/>
-<path fill="#CC0001" fill-rule="evenodd" d="M0 16L0 12L16 12L16 16Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 16L0 14L16 14L16 16Z"/>
-<path fill="#010066" fill-rule="evenodd" d="M8 10L0 10L0 0L8 0Z"/>
-<path fill="#FFCC00" fill-rule="evenodd" d="M0.366 5C0.366 2.929 2.045 1.25 4.116 1.25C4.655 1.25 5.168 1.364 5.631 1.569C3.895 1.749 2.541 3.216 2.541 5C2.541 6.784 3.895 8.251 5.631 8.431C5.168 8.636 4.655 8.75 4.116 8.75C2.045 8.75 0.366 7.071 0.366 5Z"/>
-<path fill="#FFCC00" fill-rule="evenodd" d="M5.666 1.875L6.264 3.556L7.876 2.79L7.11 4.402L8.791 5L7.11 5.598L7.876 7.21L6.264 6.444L5.666 8.125L5.068 6.444L3.456 7.21L4.223 5.598L2.541 5L4.223 4.402L3.456 2.79L5.068 3.556Z"/>
+<path d="M0 16V0H16V16H0Z" fill-rule="evenodd" fill="#CC0001"/>
+<path d="M0 16V2H16V16H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 16V4H16V16H0Z" fill-rule="evenodd" fill="#CC0001"/>
+<path d="M0 16V6H16V16H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 16V8H16V16H0Z" fill-rule="evenodd" fill="#CC0001"/>
+<path d="M0 16V10H16V16H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 16V12H16V16H0Z" fill-rule="evenodd" fill="#CC0001"/>
+<path d="M0 16V14H16V16H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 10V0H8V10H0Z" fill-rule="evenodd" fill="#010066"/>
+<path d="M0.365997 5C0.365997 2.929 2.045 1.25 4.116 1.25C4.655 1.25 5.168 1.364 5.631 1.569C3.895 1.749 2.541 3.216 2.541 5C2.541 6.784 3.895 8.251 5.631 8.431C5.168 8.636 4.655 8.75 4.116 8.75C2.045 8.75 0.365997 7.071 0.365997 5Z" fill-rule="evenodd" fill="#FFCC00"/>
+<path d="M5.66599 1.875L6.26399 3.556L7.87599 2.79L7.10999 4.402L8.79099 5L7.10999 5.598L7.87599 7.21L6.26399 6.444L5.66599 8.125L5.06799 6.444L3.45599 7.21L4.22299 5.598L2.54099 5L4.22299 4.402L3.45599 2.79L5.06799 3.556L5.66599 1.875Z" fill-rule="evenodd" fill="#FFCC00"/>
 </svg>

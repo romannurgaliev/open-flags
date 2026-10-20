@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <title>Switzerland</title>
-<path fill="#FF0000" fill-rule="evenodd" d="M0 24L0 0L24 0L24 24Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M10 19L10 14L5 14L5 10L10 10L10 5L14 5L14 10L19 10L19 14L14 14L14 19Z"/>
+<path d="M0 24V0H24V24H0Z" fill-rule="evenodd" fill="#FF0000"/>
+<path d="M10 19V14H5V10H10V5H14V10H19V14H14V19H10Z" fill-rule="evenodd" fill="#FFFFFF"/>
 </svg>

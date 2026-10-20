@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16">
+<svg width="24" height="16" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg">
 <title>Bangladesh</title>
-<path fill="#006A52" fill-rule="evenodd" d="M0 16L0 0L24 0L24 16Z"/>
-<path fill="#F4364C" fill-rule="evenodd" d="M6 8C6 5.239 8.239 3 11 3C13.761 3 16 5.239 16 8C16 10.761 13.761 13 11 13C8.239 13 6 10.761 6 8Z"/>
+<path d="M0 16V0H24V16H0Z" fill-rule="evenodd" fill="#006A52"/>
+<path d="M6 8C6 5.239 8.239 3 11 3C13.761 3 16 5.239 16 8C16 10.761 13.761 13 11 13C8.239 13 6 10.761 6 8Z" fill-rule="evenodd" fill="#F4364C"/>
 </svg>

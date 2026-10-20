@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
 <title>Turkmenistan</title>
-<path fill="#006A4E" fill-rule="evenodd" d="M0 40L0 0L40 0L40 40Z"/>
-<path fill="#D51F2A" fill-rule="evenodd" d="M5 40L5 0L12 0L12 40Z"/>
-<path fill="#FF9A00" fill-rule="evenodd" d="M8.5 1.8L10.48 4L8.5 6.2L6.52 4Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M8 5L8 4L9 4L9 5Z"/>
-<path fill="#FF9A00" fill-rule="evenodd" d="M8.5 9.8L10.48 12L8.5 14.2L6.52 12Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M8 13L8 12L9 12L9 13Z"/>
-<path fill="#FF9A00" fill-rule="evenodd" d="M8.5 17.8L10.48 20L8.5 22.2L6.52 20Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M8 21L8 20L9 20L9 21Z"/>
-<path fill="#FF9A00" fill-rule="evenodd" d="M8.5 25.8L10.48 28L8.5 30.2L6.52 28Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M8 29L8 28L9 28L9 29Z"/>
-<path fill="#FF9A00" fill-rule="evenodd" d="M8.5 33.8L10.48 36L8.5 38.2L6.52 36Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M8 37L8 36L9 36L9 37Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M12 8C12 5.791 13.791 4 16 4C16.729 4 17.412 4.195 18.001 4.535C17.895 4.525 17.788 4.52 17.68 4.52C15.869 4.52 14.4 5.989 14.4 7.8C14.4 9.611 15.869 11.08 17.68 11.08C18.057 11.08 18.418 11.017 18.755 10.9C18.038 11.582 17.068 12 16 12C13.791 12 12 10.209 12 8Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M22 1.9L22.292 2.798L23.236 2.798L22.472 3.353L22.764 4.252L22 3.697L21.236 4.252L21.528 3.353L20.764 2.798L21.708 2.798Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M24.4 4.5L24.692 5.398L25.636 5.398L24.872 5.953L25.164 6.852L24.4 6.297L23.636 6.852L23.928 5.953L23.164 5.398L24.108 5.398Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M25.2 7.5L25.492 8.398L26.436 8.398L25.672 8.953L25.964 9.852L25.2 9.297L24.436 9.852L24.728 8.953L23.964 8.398L24.908 8.398Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M24.2 10.5L24.492 11.398L25.436 11.398L24.672 11.953L24.964 12.852L24.2 12.297L23.436 12.852L23.728 11.953L22.964 11.398L23.908 11.398Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M21.8 12.3L22.092 13.198L23.036 13.198L22.272 13.753L22.564 14.652L21.8 14.097L21.036 14.652L21.328 13.753L20.564 13.198L21.508 13.198Z"/>
+<path d="M0 40V0H40V40H0Z" fill-rule="evenodd" fill="#006A4E"/>
+<path d="M5 40V0H12V40H5Z" fill-rule="evenodd" fill="#D51F2A"/>
+<path d="M8.50002 1.8L10.48 4L8.50002 6.2L6.52002 4L8.50002 1.8Z" fill-rule="evenodd" fill="#FF9A00"/>
+<path d="M8 5V4H9V5H8Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M8.50002 9.8L10.48 12L8.50002 14.2L6.52002 12L8.50002 9.8Z" fill-rule="evenodd" fill="#FF9A00"/>
+<path d="M8 13V12H9V13H8Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M8.50002 17.8L10.48 20L8.50002 22.2L6.52002 20L8.50002 17.8Z" fill-rule="evenodd" fill="#FF9A00"/>
+<path d="M8 21V20H9V21H8Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M8.50002 25.8L10.48 28L8.50002 30.2L6.52002 28L8.50002 25.8Z" fill-rule="evenodd" fill="#FF9A00"/>
+<path d="M8 29V28H9V29H8Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M8.50002 33.8L10.48 36L8.50002 38.2L6.52002 36L8.50002 33.8Z" fill-rule="evenodd" fill="#FF9A00"/>
+<path d="M8 37V36H9V37H8Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M12 8C12 5.791 13.791 4 16 4C16.729 4 17.412 4.195 18.001 4.535C17.895 4.525 17.788 4.52 17.68 4.52C15.869 4.52 14.4 5.989 14.4 7.8C14.4 9.611 15.869 11.08 17.68 11.08C18.057 11.08 18.418 11.017 18.755 10.9C18.038 11.582 17.068 12 16 12C13.791 12 12 10.209 12 8Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M22 1.89999L22.292 2.79799H23.236L22.472 3.35299L22.764 4.25199L22 3.69699L21.236 4.25199L21.528 3.35299L20.764 2.79799H21.708L22 1.89999Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M24.3999 4.5L24.6919 5.398H25.6359L24.8719 5.953L25.1639 6.852L24.3999 6.297L23.6359 6.852L23.9279 5.953L23.1639 5.398H24.1079L24.3999 4.5Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M25.2 7.5L25.492 8.398H26.436L25.672 8.953L25.964 9.852L25.2 9.297L24.436 9.852L24.728 8.953L23.964 8.398H24.908L25.2 7.5Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M24.2 10.5L24.492 11.398H25.436L24.672 11.953L24.964 12.852L24.2 12.297L23.436 12.852L23.728 11.953L22.964 11.398H23.908L24.2 10.5Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M21.8 12.3L22.092 13.198H23.036L22.272 13.753L22.564 14.652L21.8 14.097L21.036 14.652L21.328 13.753L20.564 13.198H21.508L21.8 12.3Z" fill-rule="evenodd" fill="#FFFFFF"/>
 </svg>

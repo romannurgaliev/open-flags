@@ -1,20 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
 <title>Malaysia</title>
-<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 0L600 0L600 600Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 42.86L600 42.86L600 600Z"/>
-<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 85.71L600 85.71L600 600Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 128.57L600 128.57L600 600Z"/>
-<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 171.43L600 171.43L600 600Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 214.29L600 214.29L600 600Z"/>
-<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 257.14L600 257.14L600 600Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 300L600 300L600 600Z"/>
-<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 342.86L600 342.86L600 600Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 385.71L600 385.71L600 600Z"/>
-<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 428.57L600 428.57L600 600Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 471.43L600 471.43L600 600Z"/>
-<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 514.29L600 514.29L600 600Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 557.14L600 557.14L600 600Z"/>
-<path fill="#010066" fill-rule="evenodd" d="M300 342.86L0 342.86L0 0L300 0Z"/>
-<path fill="#FFCC00" fill-rule="evenodd" d="M26.79 171.43C26.79 100.42 84.35 42.86 155.36 42.86C173.67 42.86 191.09 46.69 206.86 53.59C142.73 54.69 91.07 107.03 91.07 171.43C91.07 235.83 142.73 288.17 206.86 289.27C191.09 296.17 173.67 300 155.36 300C84.35 300 26.79 242.44 26.79 171.43Z"/>
-<path fill="#FFCC00" fill-rule="evenodd" d="M198.21 64.29L208.94 124.42L244.7 74.9L228.28 133.73L281.98 104.63L241.65 150.51L302.67 147.59L246.43 171.43L302.67 195.27L241.65 192.35L281.98 238.23L228.28 209.12L244.7 267.96L208.94 218.43L198.21 278.57L187.49 218.43L151.73 267.96L168.15 209.12L114.45 238.23L154.77 192.35L93.76 195.27L150 171.43L93.76 147.59L154.77 150.51L114.45 104.63L168.15 133.73L151.73 74.9L187.49 124.42Z"/>
+<path d="M0 600V0H600V600H0Z" fill-rule="evenodd" fill="#CC0001"/>
+<path d="M0 600V42.8604H600V600H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 600V85.71H600V600H0Z" fill-rule="evenodd" fill="#CC0001"/>
+<path d="M0 600V128.57H600V600H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 600V171.43H600V600H0Z" fill-rule="evenodd" fill="#CC0001"/>
+<path d="M0 600V214.29H600V600H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 600V257.14H600V600H0Z" fill-rule="evenodd" fill="#CC0001"/>
+<path d="M0 600V300H600V600H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 600V342.86H600V600H0Z" fill-rule="evenodd" fill="#CC0001"/>
+<path d="M0 600V385.71H600V600H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 600V428.57H600V600H0Z" fill-rule="evenodd" fill="#CC0001"/>
+<path d="M0 600V471.43H600V600H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 600V514.29H600V600H0Z" fill-rule="evenodd" fill="#CC0001"/>
+<path d="M0 600V557.14H600V600H0Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M0 342.86V0H300V342.86H0Z" fill-rule="evenodd" fill="#010066"/>
+<path d="M26.79 171.43C26.79 100.42 84.35 42.8604 155.36 42.8604C173.67 42.8604 191.09 46.6904 206.86 53.5904C142.73 54.6904 91.07 107.03 91.07 171.43C91.07 235.83 142.73 288.17 206.86 289.27C191.09 296.17 173.67 300 155.36 300C84.35 300 26.79 242.44 26.79 171.43Z" fill-rule="evenodd" fill="#FFCC00"/>
+<path d="M198.21 64.29L208.94 124.42L244.7 74.9L228.28 133.73L281.98 104.63L241.65 150.51L302.67 147.59L246.43 171.43L302.67 195.27L241.65 192.35L281.98 238.23L228.28 209.12L244.7 267.96L208.94 218.43L198.21 278.57L187.49 218.43L151.73 267.96L168.15 209.12L114.45 238.23L154.77 192.35L93.76 195.27L150 171.43L93.76 147.59L154.77 150.51L114.45 104.63L168.15 133.73L151.73 74.9L187.49 124.42L198.21 64.29Z" fill-rule="evenodd" fill="#FFCC00"/>
 </svg>

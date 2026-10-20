@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="60" height="40" viewBox="0 0 60 40">
+<svg width="60" height="40" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
 <title>New Zealand</title>
-<path fill="#00267F" fill-rule="evenodd" d="M0 40L0 0L60 0L60 40Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M15 7.596L26.394 0L30 0L30 2.404L18.606 10L30 17.596L30 20L26.394 20L15 12.404L3.606 20L0 20L0 17.596L11.394 10L0 2.404L0 0L3.606 0Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M15 10L13.197 10L0 1.202L0 0Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M15 10L15 11.202L1.803 20L0 20Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M15 10L15 8.798L28.197 0L30 0Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M15 10L16.803 10L30 18.798L30 20Z"/>
-<path fill="#FFFFFF" fill-rule="evenodd" d="M12 20L12 13L0 13L0 7L12 7L12 0L18 0L18 7L30 7L30 13L18 13L18 20Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M13 20L13 12L0 12L0 8L13 8L13 0L17 0L17 8L30 8L30 12L17 12L17 20Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M45 8.1L45.449 9.482L46.902 9.482L45.727 10.336L46.176 11.718L45 10.864L43.824 11.718L44.273 10.336L43.098 9.482L44.551 9.482Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M45 27.566L45.524 29.179L47.22 29.179L45.848 30.176L46.372 31.788L45 30.792L43.628 31.788L44.152 30.176L42.78 29.179L44.476 29.179Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M37.374 15.773L37.823 17.154L39.276 17.154L38.1 18.009L38.549 19.391L37.374 18.537L36.198 19.391L36.647 18.009L35.472 17.154L36.925 17.154Z"/>
-<path fill="#D21034" fill-rule="evenodd" d="M51 17L51 15L53 15L53 17Z"/>
+<path d="M0 40V0H60V40H0Z" fill-rule="evenodd" fill="#00267F"/>
+<path d="M15 7.596L26.394 0H30V2.404L18.606 10L30 17.596V20H26.394L15 12.404L3.606 20H0V17.596L11.394 10L0 2.404V0H3.606L15 7.596Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M15 10H13.197L0 1.202V0L15 10Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M15 10V11.202L1.803 20H0L15 10Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M15 10V8.798L28.197 0H30L15 10Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M15 10H16.803L30 18.798V20L15 10Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M12 20V13H0V7H12V0H18V7H30V13H18V20H12Z" fill-rule="evenodd" fill="#FFFFFF"/>
+<path d="M13 20V12H0V8H13V0H17V8H30V12H17V20H13Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M45 8.09998L45.449 9.48198H46.902L45.727 10.336L46.176 11.718L45 10.864L43.824 11.718L44.273 10.336L43.098 9.48198H44.551L45 8.09998Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M45 27.566L45.524 29.179H47.22L45.848 30.176L46.372 31.788L45 30.792L43.628 31.788L44.152 30.176L42.78 29.179H44.476L45 27.566Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M37.374 15.773L37.823 17.154H39.276L38.1 18.009L38.549 19.391L37.374 18.537L36.198 19.391L36.647 18.009L35.472 17.154H36.925L37.374 15.773Z" fill-rule="evenodd" fill="#D21034"/>
+<path d="M51 17V15H53V17H51Z" fill-rule="evenodd" fill="#D21034"/>
 </svg>

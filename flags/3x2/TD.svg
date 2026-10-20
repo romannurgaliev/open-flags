@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
 <title>Chad</title>
-<path fill="#002569" fill-rule="evenodd" d="M0 600L0 0L900 0L900 600Z"/>
-<path fill="#FFDE00" fill-rule="evenodd" d="M300 600L300 0L900 0L900 600Z"/>
-<path fill="#DE2F2D" fill-rule="evenodd" d="M600 600L600 0L900 0L900 600Z"/>
+<path d="M0 600V0H900V600H0Z" fill-rule="evenodd" fill="#002569"/>
+<path d="M300 600V0H900V600H300Z" fill-rule="evenodd" fill="#FFDE00"/>
+<path d="M600 600V0H900V600H600Z" fill-rule="evenodd" fill="#DE2F2D"/>
 </svg>

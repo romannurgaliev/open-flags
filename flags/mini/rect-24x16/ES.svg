@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16">
+<svg width="24" height="16" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg">
 <title>Spain</title>
-<path fill="#AD1519" fill-rule="evenodd" d="M0 16L0 0L24 0L24 16Z"/>
-<path fill="#FABD00" fill-rule="evenodd" d="M0 16L0 4L24 4L24 16Z"/>
-<path fill="#AD1519" fill-rule="evenodd" d="M0 16L0 12L24 12L24 16Z"/>
+<path d="M0 16V0H24V16H0Z" fill-rule="evenodd" fill="#AD1519"/>
+<path d="M0 16V4H24V16H0Z" fill-rule="evenodd" fill="#FABD00"/>
+<path d="M0 16V12H24V16H0Z" fill-rule="evenodd" fill="#AD1519"/>
 </svg>
