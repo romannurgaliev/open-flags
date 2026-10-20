@@ -24,7 +24,7 @@ jobs:
 
       - run: npm ci
 
-      - name: Checks C01–C15
+      - name: Checks C01–C16
         run: node scripts/check.mjs --report "$GITHUB_STEP_SUMMARY"
 
       - name: Negative tests (each check must fail on a broken copy)
