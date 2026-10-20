@@ -1,0 +1,162 @@
+{
+  "code": "JP",
+  "iso": {
+    "alpha2": "JP",
+    "alpha3": "JPN",
+    "numeric": "392",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Japan",
+    "ru": "Япония"
+  },
+  "classes": [
+    "disc"
+  ],
+  "ratio": {
+    "h": 2,
+    "w": 3,
+    "source": "jp-law"
+  },
+  "adopted": {
+    "value": "1999",
+    "source": "jp-law",
+    "note": "Закон 1999 года; сам рисунок восходит к указу № 651 1870 года (FOTW)."
+  },
+  "sources": {
+    "jp-law": {
+      "level": 1,
+      "title": "国旗及び国歌に関する法律（平成11年法律第127号）別記第1「日章旗の制式」",
+      "url": "https://www8.cao.go.jp/chosei/kokkikokka/kokkikokka.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    },
+    "jp-fotw": {
+      "level": 4,
+      "title": "FOTW: Japan",
+      "url": "https://crwflags.com/fotw/flags/jp.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": [
+        {
+          "src": "jp-law",
+          "value": "白色 (только название)"
+        }
+      ]
+    },
+    "red": {
+      "srgb": "#D21034",
+      "status": "provisional",
+      "rule": "C-PANTONE-MAP",
+      "specs": [
+        {
+          "src": "jp-law",
+          "value": "紅色 (только название, числа нет)"
+        },
+        {
+          "src": "album2000",
+          "value": "Pantone 186C",
+          "via": "fotw"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 032",
+          "via": "fotw"
+        },
+        {
+          "src": "jp-fotw",
+          "value": "Pantone 193C (Southworth, по образцу ткани)"
+        }
+      ],
+      "note": "Уровень 1 даёт только название. Pantone 186C из Album 2000 переведена в RGB по таблице Album 2023 (#D21034). Три источника называют три разных Pantone."
+    }
+  },
+  "construction": {
+    "disc": {
+      "d_h": 0.6,
+      "cx_l": 0.5,
+      "cy_h": 0.5,
+      "source": "jp-law",
+      "text": "直径 縦の五分の三; 中心 旗の中心"
+    }
+  },
+  "probes": [
+    {
+      "at": [
+        0.5,
+        0.5
+      ],
+      "color": "red",
+      "why": "центр диска"
+    },
+    {
+      "at": [
+        0.5,
+        0.21
+      ],
+      "color": "red",
+      "why": "внутри диска у верхнего края (край на 0.2)"
+    },
+    {
+      "at": [
+        0.5,
+        0.19
+      ],
+      "color": "white",
+      "why": "снаружи диска у верхнего края"
+    },
+    {
+      "at": [
+        0.31,
+        0.5
+      ],
+      "color": "red",
+      "why": "внутри у левого края (край на 0.3 длины)"
+    },
+    {
+      "at": [
+        0.29,
+        0.5
+      ],
+      "color": "white",
+      "why": "снаружи у левого края"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-DISC",
+        "change": "Диаметр 0.6H → 10 px на 16 (чётный, центр без полупикселя)."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-DISC",
+        "change": "14 px на 24."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-DISC",
+        "change": "24 px на 40."
+      }
+    ]
+  },
+  "confusable": [],
+  "gaps": [
+    "Числового цвета красного на уровне 1 нет. Нужен ответ правительства или физический эталон."
+  ],
+  "review": [],
+  "status": {
+    "full": "ok",
+    "mini": "ok"
+  }
+}

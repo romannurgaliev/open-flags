@@ -1,0 +1,157 @@
+{
+  "code": "QA",
+  "iso": {
+    "alpha2": "QA",
+    "alpha3": "QAT",
+    "numeric": "634",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Qatar",
+    "ru": "Катар"
+  },
+  "classes": [
+    "serrated",
+    "extreme-ratio"
+  ],
+  "ratio": {
+    "h": 11,
+    "w": 28,
+    "source": "qa-law"
+  },
+  "adopted": {
+    "value": "1971-07-09",
+    "source": "qa-fotw"
+  },
+  "sources": {
+    "qa-law": {
+      "level": 1,
+      "title": "Law No. 14 of 2012 on the Flag of Qatar",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/qa.html",
+      "accessed": "2026-10-21",
+      "note": "Текст закона не прочитан; пропорция и Pantone — по FOTW."
+    },
+    "qa-fotw": {
+      "level": 4,
+      "title": "FOTW: Qatar",
+      "url": "https://crwflags.com/fotw/flags/qa.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "maroon": {
+      "srgb": "#8A1538",
+      "status": "provisional",
+      "rule": "C-PROVISIONAL",
+      "specs": [
+        {
+          "src": "qa-law",
+          "value": "Pantone 1955 C (по Harden на FOTW)",
+          "via": "fotw"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 222c; RGB 108-25-63",
+          "via": "fotw"
+        },
+        {
+          "src": "comparison",
+          "value": "#8A1538 (Википедия, flagcolorcodes; заявлено как 1955 C)"
+        }
+      ],
+      "note": "Уровень 1 даёт Pantone 1955 C, но в таблице Album 2023 этой Pantone нет. Берём значение уровня 5, которое заявлено как та же Pantone, и помечаем provisional. Album 2023 даёт другую Pantone (222c): ΔE большой."
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": []
+    }
+  },
+  "construction": {
+    "serration": {
+      "band_l": 0.2857,
+      "depth_l": 0.0714,
+      "points": 9,
+      "source": "album2000",
+      "text": "Album: 11:(8+2+18) — белая полоса 8/28 длины, зубцы глубиной 2/28, 9 белых зубцов."
+    }
+  },
+  "probes": [
+    {
+      "at": [
+        0.1,
+        0.5
+      ],
+      "color": "white",
+      "why": "белая полоса у древка"
+    },
+    {
+      "at": [
+        0.8,
+        0.5
+      ],
+      "color": "maroon",
+      "why": "поле"
+    },
+    {
+      "at": [
+        0.34,
+        0.5
+      ],
+      "color": "white",
+      "why": "внутри среднего зубца (вершина на 10/28 = 0.357)"
+    },
+    {
+      "at": [
+        0.375,
+        0.5
+      ],
+      "color": "maroon",
+      "why": "за вершиной среднего зубца"
+    },
+    {
+      "at": [
+        0.3,
+        0.111
+      ],
+      "color": "maroon",
+      "why": "впадина между 1-м и 2-м зубцом (x 8/28 = 0.286)"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-REPEAT",
+        "change": "9 зубцов → 5 (шаг не меньше 3 px), глубина 2 px."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-REPEAT",
+        "change": "9 → 7 зубцов."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-REPEAT",
+        "change": "9 зубцов, глубина 3 px."
+      }
+    ]
+  },
+  "confusable": [
+    "BH"
+  ],
+  "gaps": [
+    "Текст закона 14/2012 не прочитан; геометрия зубцов — по Album 2000.",
+    "sRGB для Pantone 1955 C не получен из источников уровня 1–2."
+  ],
+  "review": [],
+  "status": {
+    "full": "ok",
+    "mini": "ok"
+  }
+}

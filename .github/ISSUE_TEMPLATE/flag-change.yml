@@ -1,0 +1,38 @@
+name: Флаг неточный или изменился
+description: Сообщить об ошибке в геометрии, цвете или о новом флаге страны. Нужна ссылка на первичный источник.
+title: "[XX] "
+labels: [flag-change]
+body:
+  - type: input
+    id: code
+    attributes:
+      label: Код страны (ISO 3166-1 alpha-2)
+      placeholder: KZ
+    validations:
+      required: true
+  - type: dropdown
+    id: what
+    attributes:
+      label: Что не так
+      options:
+        - Геометрия (пропорция, размер или место элемента)
+        - Цвет
+        - Страна приняла новый флаг
+        - Миниатюра читается плохо или путается с другим флагом
+        - Другое
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Подробности
+      description: Какой формат и ступень (например, circle-16), что видно сейчас и как должно быть.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Первичный источник
+      description: Ссылка на закон, указ, стандарт или Album des pavillons; страница или пункт. Википедия и наборы флагов источником не считаются.
+    validations:
+      required: true

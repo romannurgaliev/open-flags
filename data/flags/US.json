@@ -1,0 +1,253 @@
+{
+  "code": "US",
+  "iso": {
+    "alpha2": "US",
+    "alpha3": "USA",
+    "numeric": "840",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "US",
+    "ru": "США"
+  },
+  "classes": [
+    "fine-stripes",
+    "canton",
+    "repeated-charges"
+  ],
+  "ratio": {
+    "h": 10,
+    "w": 19,
+    "source": "us-eo"
+  },
+  "adopted": {
+    "value": "1960-07-04",
+    "source": "us-fotw"
+  },
+  "sources": {
+    "us-eo": {
+      "level": 1,
+      "title": "Executive Order 10834 (1959), Attachment: Standard proportions",
+      "url": "https://ushistory.org/betSy/more/10834.htm",
+      "via": "transcription",
+      "accessed": "2026-10-21",
+      "note": "Таблица прочитана в транскрипции ushistory.org; текст EO на archives.gov ссылается на приложение в 3 CFR 1959–1963, p. 368, которое не прочитано."
+    },
+    "us-beca": {
+      "level": "1g",
+      "title": "U.S. Department of State, Bureau of Educational and Cultural Affairs, 2017 (RGB цветов флага)",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/us.html",
+      "accessed": "2026-10-21"
+    },
+    "us-spec": {
+      "level": 1,
+      "title": "Federal Specification DD-F-416F (2005): кабельные номера 70180, 70001, 70075",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/us.html",
+      "accessed": "2026-10-21"
+    },
+    "us-fotw": {
+      "level": 4,
+      "title": "FOTW: United States",
+      "url": "https://crwflags.com/fotw/flags/us.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "red": {
+      "srgb": "#B31942",
+      "status": "ok",
+      "rule": "C-L1-RGB",
+      "specs": [
+        {
+          "src": "us-spec",
+          "value": "Cable 70180 Old Glory Red (без RGB)"
+        },
+        {
+          "src": "us-beca",
+          "value": "RGB 179-25-66; CMYK 0-100-66-13; Pantone 193C"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 193",
+          "via": "fotw"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 7636c",
+          "via": "fotw"
+        }
+      ]
+    },
+    "blue": {
+      "srgb": "#0A3161",
+      "status": "ok",
+      "rule": "C-L1-RGB",
+      "specs": [
+        {
+          "src": "us-spec",
+          "value": "Cable 70075 Old Glory Blue (без RGB)"
+        },
+        {
+          "src": "us-beca",
+          "value": "RGB 10-49-97; CMYK 100-68-0-54; Pantone 282C"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 281",
+          "via": "fotw"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 2768c",
+          "via": "fotw"
+        }
+      ]
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": [
+        {
+          "src": "us-spec",
+          "value": "Cable 70001"
+        }
+      ]
+    }
+  },
+  "construction": {
+    "eo10834": {
+      "A": 1,
+      "B": 1.9,
+      "C": 0.5385,
+      "D": 0.76,
+      "E": 0.054,
+      "F": 0.054,
+      "G": 0.063,
+      "H": 0.063,
+      "K": 0.0616,
+      "L": 0.0769,
+      "source": "us-eo",
+      "text": "Звёзды: 9 рядов (6 и 5 поочерёдно) на сетке G + kH по горизонтали, E + jF по вертикали, в шахматном порядке; диаметр K."
+    }
+  },
+  "probes": [
+    {
+      "at": [
+        0.003,
+        0.005
+      ],
+      "color": "blue",
+      "why": "угол кантона"
+    },
+    {
+      "at": [
+        0.0332,
+        0.054
+      ],
+      "color": "white",
+      "why": "центр первой звезды (G, E)"
+    },
+    {
+      "at": [
+        0.39,
+        0.53
+      ],
+      "color": "blue",
+      "why": "кантон у правого нижнего угла (D = 0.76 → 0.4 длины; C = 0.5385)"
+    },
+    {
+      "at": [
+        0.41,
+        0.53
+      ],
+      "color": "red",
+      "why": "7-я полоса справа от кантона"
+    },
+    {
+      "at": [
+        0.39,
+        0.546
+      ],
+      "color": "white",
+      "why": "8-я полоса под кантоном"
+    },
+    {
+      "at": [
+        0.7,
+        0.0385
+      ],
+      "color": "red",
+      "why": "1-я полоса"
+    },
+    {
+      "at": [
+        0.7,
+        0.115
+      ],
+      "color": "white",
+      "why": "2-я полоса"
+    },
+    {
+      "at": [
+        0.7,
+        0.96
+      ],
+      "color": "red",
+      "why": "13-я полоса"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-STRIPES",
+        "change": "13 полос → 7 (каждая не тоньше 2 px, красные по краям)."
+      },
+      {
+        "rule": "S-REPEAT",
+        "change": "50 звёзд → шахматное поле точек 1 px с шагом 2 px."
+      },
+      {
+        "rule": "S-CANTON",
+        "change": "Нижний край кантона — на ближайшей границе полос к 7/13 высоты."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-STRIPES",
+        "change": "13 → 11 полос."
+      },
+      {
+        "rule": "S-REPEAT",
+        "change": "Звёзды — точки 1 px."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-STRIPES",
+        "change": "13 полос сохранены."
+      },
+      {
+        "rule": "S-REPEAT",
+        "change": "Звёзды — точки 1 px."
+      }
+    ]
+  },
+  "confusable": [
+    "LR",
+    "MY"
+  ],
+  "gaps": [
+    "Приложение EO 10834 прочитано во вторичной транскрипции.",
+    "Кабельные цвета не имеют колориметрии в прочитанных источниках; RGB взят из руководства Госдепартамента (1g)."
+  ],
+  "review": [],
+  "status": {
+    "full": "ok",
+    "mini": "ok"
+  }
+}

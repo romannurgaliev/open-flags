@@ -1,0 +1,95 @@
+{
+  "$comment": "Общие источники. Уровни: 1 — закон, указ, конституция или официальный документ правительства (1g — правительственное руководство без силы закона); 2 — Album des pavillons (SHOM); 3 — Flags and Anthems Manual London 2012; 4 — FOTW и другие вексиллологические вторичные источники; 5 — Wikipedia, Wikimedia Commons, hampusborgos, catamphetamine и прочие наборы: только для сравнения, геометрию и цвет из них не берём. Поле via говорит, как источник был прочитан в этой сессии: direct — сам документ, fotw — по транскрипции на FOTW, wikipedia — по цитате в Википедии со ссылкой на документ. accessed — дата чтения.",
+  "album2023": {
+    "level": 2,
+    "title": "Album des pavillons nationaux et des marques distinctives, SHOM, издание 2023 (и 2025)",
+    "url": "https://diffusion.shom.fr/ouvrages/ouvrages-generaux/album-des-pavillons-nationaux-et-marques-distinctives.html",
+    "access": "Платное издание. В пилоте прочитано только через цитаты на FOTW (via: fotw). Издание 2025 не прочитано — пробел.",
+    "accessed": "2026-10-21"
+  },
+  "album2000": {
+    "level": 2,
+    "title": "Album des pavillons nationaux et des marques distinctives, SHOM, издание 2000 с исправлениями",
+    "url": "https://www.worldcat.org/oclc/468544080",
+    "access": "Через цитаты на FOTW.",
+    "accessed": "2026-10-21"
+  },
+  "london2012": {
+    "level": 3,
+    "title": "LOCOG, Flags and Anthems Manual London 2012",
+    "url": "https://armedforcessports.defense.gov/Portals/19/Documents/LOC2012_ITR1201_Flags_Manual_Supplement.pdf",
+    "access": "PDF доступен. Значения Pantone в пилоте взяты через цитаты на FOTW. Все флаги в нём даны в 2:3 — это рекомендации НОК, а не правительственные спецификации.",
+    "accessed": "2026-10-21"
+  },
+  "beijing2008": {
+    "level": 3,
+    "title": "Flag Manual, Beijing 2008",
+    "access": "Только через цитаты на FOTW.",
+    "accessed": "2026-10-21"
+  },
+  "fotw": {
+    "level": 4,
+    "title": "Flags of the World (crwflags.com)",
+    "url": "https://www.crwflags.com/fotw/flags/",
+    "access": "Читается через WebFetch. Из shell рабочей среды сайт закрыт прокси.",
+    "accessed": "2026-10-21"
+  },
+  "flaginstitute-uj": {
+    "level": 4,
+    "title": "Flag Institute, Union Flag Specification",
+    "url": "https://www.flaginstitute.org/wp/uk-flags/union-flag-specification/",
+    "access": "direct",
+    "accessed": "2026-10-21"
+  },
+  "naturalearth": {
+    "level": 4,
+    "title": "Natural Earth 1:50m admin-0 (public domain), через npm-пакет world-atlas 2.0.2",
+    "url": "https://www.naturalearthdata.com/",
+    "access": "Геоданные для силуэтов карт на флагах CY и XK. Это реальная география, а не официальный рисунок карты на флаге.",
+    "accessed": "2026-10-21"
+  },
+  "cldr": {
+    "level": 1,
+    "title": "Unicode CLDR 45 (cldr-core, cldr-localenames-modern): коды alpha-3, numeric и названия",
+    "url": "https://cldr.unicode.org/",
+    "access": "npm-пакеты cldr-core 45.0.0 и cldr-localenames-modern 45.0.0.",
+    "accessed": "2026-10-21"
+  },
+  "comparison": {
+    "level": 5,
+    "title": "Wikipedia, Wikimedia Commons, hampusborgos/country-flags, catamphetamine/country-flag-icons, flagcolorcodes.com",
+    "access": "Только для сравнения и как временный (provisional) цвет, если уровни 1–4 не дают числового значения. Каждый такой цвет помечен provisional.",
+    "accessed": "2026-10-21"
+  },
+  "album2023-pantone-map": {
+    "level": 2,
+    "title": "Таблица Pantone → RGB, как её даёт Album 2023 (собрана из записей разных стран на FOTW)",
+    "map": {
+      "186c": "#D21034",
+      "280c": "#00267F",
+      "281c": "#002569",
+      "116c": "#FFCE00",
+      "299c": "#00A0E2",
+      "101c": "#F5EC62",
+      "1795c": "#D51F2A",
+      "3298c": "#006A52",
+      "1787c": "#F4364C",
+      "298c": "#42B4E6",
+      "286c": "#0033A0",
+      "7408c": "#F8C100",
+      "355c": "#009530",
+      "2350c": "#AD1519",
+      "7484c": "#005430",
+      "3425c": "#006644",
+      "2738c": "#000091",
+      "2347c": "#E1000F",
+      "222c": "#6C193F",
+      "716c": "#ED8000",
+      "Yellow C": "#FFFF00"
+    },
+    "conflicts": [
+      "287c: для NZ дано 0-53-152 (#003598), для BR — 0-53-128 (#003580). Внутри одного издания одна и та же Pantone даёт два RGB.",
+      "186c: для FJ дано 200-16-46 (#C8102E), для MC, VA, NZ, RO — 210-16-52 (#D21034)."
+    ]
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "code": "KZ",
+  "iso": {
+    "alpha2": "KZ",
+    "alpha3": "KAZ",
+    "numeric": "398",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Kazakhstan",
+    "ru": "Казахстан"
+  },
+  "classes": [
+    "emblem",
+    "ornament"
+  ],
+  "ratio": {
+    "h": 1,
+    "w": 2,
+    "source": "kz-law"
+  },
+  "adopted": {
+    "value": "1992-06-04",
+    "source": "kz-fotw"
+  },
+  "sources": {
+    "kz-law": {
+      "level": 1,
+      "title": "Конституционный закон РК «О государственных символах» № 258 (2007); указ 1996 г. (пропорция 1:2)",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/kz.html",
+      "accessed": "2026-10-21"
+    },
+    "kz-strk": {
+      "level": 1,
+      "title": "СТ РК 988-2007 «Государственный флаг Республики Казахстан. Общие технические условия»",
+      "via": "fotw",
+      "accessed": "2026-10-21",
+      "note": "Сам стандарт не прочитан; Pantone — по цитате на FOTW (Ломанцов, Диксон). Чертёж солнца, орла и орнамента — пробел."
+    },
+    "kz-fotw": {
+      "level": 4,
+      "title": "FOTW: Kazakhstan",
+      "url": "https://crwflags.com/fotw/flags/kz.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "blue": {
+      "srgb": "#00B5CC",
+      "status": "provisional",
+      "rule": "C-PROVISIONAL",
+      "specs": [
+        {
+          "src": "kz-strk",
+          "value": "Pantone 3125U (текстиль), 3125C/U (нетекстиль)",
+          "via": "fotw"
+        },
+        {
+          "src": "kz-fotw",
+          "value": "Ellis: 3125U = #00B5CC"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 3125",
+          "via": "fotw"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 298c; RGB 66-180-230",
+          "via": "fotw"
+        }
+      ]
+    },
+    "yellow": {
+      "srgb": "#FFF203",
+      "status": "provisional",
+      "rule": "C-PROVISIONAL",
+      "specs": [
+        {
+          "src": "kz-strk",
+          "value": "Pantone 102U (текстиль), 810C/U (нетекстиль)",
+          "via": "fotw"
+        },
+        {
+          "src": "kz-fotw",
+          "value": "Ellis: 102U = #FFF203; 810 = #FFE3AD; Geraldika: 109U"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone Yellow C; RGB 255-255-0",
+          "via": "fotw"
+        },
+        {
+          "src": "comparison",
+          "value": "#FEC50C (flagcolorcodes), #FFEC2D (Википедия)"
+        }
+      ],
+      "note": "Уровень 1 (СТ РК 988-2007) называет Pantone 102U для ткани и 810C/U для прочего, без RGB; в таблице Album 2023 их нет. По правилу C-PROVISIONAL взято значение уровня 4, заявленное как 102U (#FFF203). Источники расходятся сильно (лимонный и золотистый) — нужен сам стандарт."
+    }
+  },
+  "construction": {
+    "estimate": {
+      "sun_cx_l": 0.5,
+      "sun_cy_h": 0.38,
+      "sun_disc_d_h": 0.24,
+      "sun_rays_r_h": 0.21,
+      "eagle_cy_h": 0.68,
+      "eagle_span_h": 0.62,
+      "ornament_x_l": 0.04
+    },
+    "source": "estimate",
+    "text": "Все размеры — оценка по изображениям: СТ РК 988-2007 не прочитан. Используются только на миниатюрах."
+  },
+  "probes": [
+    {
+      "at": [
+        0.95,
+        0.5
+      ],
+      "color": "blue",
+      "why": "поле у края"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-REPEAT",
+        "change": "32 луча → 8."
+      },
+      {
+        "rule": "S-EMBLEM",
+        "change": "Орёл → дуга крыльев 1 px."
+      },
+      {
+        "rule": "S-LINE",
+        "change": "Орнамент → столбец 1 px с зубцами: опознавательный элемент, отличает от PW."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-REPEAT",
+        "change": "32 → 16 лучей."
+      },
+      {
+        "rule": "S-EMBLEM",
+        "change": "Крылья 2 px + тело."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-EMBLEM",
+        "change": "32 луча, крылья, орнамент 3 px."
+      }
+    ]
+  },
+  "confusable": [
+    "PW"
+  ],
+  "gaps": [
+    "СТ РК 988-2007 не прочитан: нет чертежа солнца, орла, орнамента и выбора жёлтого.",
+    "Полные форматы нарисованы без эмблемы."
+  ],
+  "review": [
+    "Проверить у владельцев стандарта (Казахстан) выбор жёлтого и рисунок орнамента на S."
+  ],
+  "status": {
+    "full": "draft",
+    "mini": "draft"
+  }
+}

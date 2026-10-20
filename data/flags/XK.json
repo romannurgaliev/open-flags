@@ -1,0 +1,138 @@
+{
+  "code": "XK",
+  "iso": {
+    "alpha2": "XK",
+    "alpha3": "XKK",
+    "numeric": "983",
+    "status": "user-assigned",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Kosovo",
+    "ru": "Косово"
+  },
+  "classes": [
+    "map",
+    "repeated-charges"
+  ],
+  "ratio": {
+    "h": 2,
+    "w": 3,
+    "source": "xk-fotw",
+    "note": "В прочитанных источниках официальная пропорция не названа; 2:3 — практика. Пробел."
+  },
+  "adopted": {
+    "value": "2008-02-17",
+    "source": "xk-fotw"
+  },
+  "iso_note": "XK — код, назначаемый пользователем (user-assigned) в ISO 3166-1, не официальный. Включение — по правилу I-2 (docs/01-inclusion-and-releases.md).",
+  "sources": {
+    "xk-fotw": {
+      "level": 4,
+      "title": "FOTW: Kosovo",
+      "url": "https://crwflags.com/fotw/flags/ks.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    },
+    "naturalearth": {
+      "level": 4,
+      "ref": "data/sources.json"
+    }
+  },
+  "colors": {
+    "blue": {
+      "srgb": "#244AA5",
+      "status": "provisional",
+      "rule": "C-PROVISIONAL",
+      "specs": [
+        {
+          "src": "comparison",
+          "value": "#244AA5; CMYK 100-80-0-0 (Википедия со ссылкой на PDF канцелярии премьер-министра)"
+        },
+        {
+          "src": "xk-fotw",
+          "value": "KosovaThanksYou: #183884 (неофициально)"
+        }
+      ]
+    },
+    "gold": {
+      "srgb": "#D0A650",
+      "status": "provisional",
+      "rule": "C-PROVISIONAL",
+      "specs": [
+        {
+          "src": "comparison",
+          "value": "#D0A650; CMYK 0-20-60-20 (там же)"
+        },
+        {
+          "src": "xk-fotw",
+          "value": "KosovaThanksYou: #DBBB5B"
+        }
+      ]
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": []
+    }
+  },
+  "construction": {
+    "estimate": {
+      "map_h_h": 0.5,
+      "map_cy_h": 0.58,
+      "stars_arc_r_h": 0.42,
+      "stars_arc_cy_h": 0.68,
+      "stars_arc_deg": 70
+    },
+    "source": "naturalearth",
+    "text": "Силуэт — Natural Earth 1:50m (Kosovo). Звёзды дугой над картой. Размеры — оценка."
+  },
+  "probes": [
+    {
+      "at": [
+        0.05,
+        0.05
+      ],
+      "color": "blue",
+      "why": "поле"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-POINT",
+        "change": "6 звёзд → 6 точек 1 px."
+      },
+      {
+        "rule": "S-MAP",
+        "change": "Силуэт упрощён на 0.45 px."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-POINT",
+        "change": "Точки 2 px."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-POINT",
+        "change": "Звёзды 5 лучей, 3 px."
+      }
+    ]
+  },
+  "confusable": [
+    "CY",
+    "BA"
+  ],
+  "gaps": [
+    "Закон о символах и правительственный PDF с цветами не прочитаны.",
+    "Звёзды в полных форматах не нарисованы."
+  ],
+  "review": [],
+  "status": {
+    "full": "draft",
+    "mini": "draft"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "code": "TD",
+  "iso": {
+    "alpha2": "TD",
+    "alpha3": "TCD",
+    "numeric": "148",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Chad",
+    "ru": "Чад"
+  },
+  "classes": [
+    "tricolour-v"
+  ],
+  "ratio": {
+    "h": 2,
+    "w": 3,
+    "source": "td-fotw",
+    "note": "Конституция пропорцию не задаёт; 2:3 — практика (FOTW). Пробел."
+  },
+  "adopted": {
+    "value": "1959-11-06",
+    "source": "td-fotw"
+  },
+  "sources": {
+    "td-const": {
+      "level": 1,
+      "title": "Constitution 1996, art. 8 (без цветов и пропорций)",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/td.html",
+      "accessed": "2026-10-21"
+    },
+    "td-fotw": {
+      "level": 4,
+      "title": "FOTW: Chad",
+      "url": "https://crwflags.com/fotw/flags/td.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "blue": {
+      "srgb": "#002569",
+      "status": "ok",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "album2023",
+          "value": "PMS 281c; RGB 0-37-105",
+          "via": "fotw"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 281",
+          "via": "fotw"
+        }
+      ]
+    },
+    "yellow": {
+      "srgb": "#FFDE00",
+      "status": "provisional",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "album2023",
+          "value": "RGB 255-222-0 (Pantone указан как 281c — вероятно, ошибка Album)",
+          "via": "fotw"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 116",
+          "via": "fotw"
+        }
+      ]
+    },
+    "red": {
+      "srgb": "#DE2F2D",
+      "status": "provisional",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "album2023",
+          "value": "PMS 115c (так у FOTW); RGB 222-47-45",
+          "via": "fotw"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 186",
+          "via": "fotw"
+        }
+      ]
+    }
+  },
+  "construction": {
+    "bands": [
+      {
+        "c": "blue",
+        "w": 1
+      },
+      {
+        "c": "yellow",
+        "w": 1
+      },
+      {
+        "c": "red",
+        "w": 1
+      }
+    ],
+    "source": "td-const",
+    "text": "Синяя, золотая, красная вертикальные полосы равной ширины, синяя у древка."
+  },
+  "probes": [
+    {
+      "at": [
+        0.16,
+        0.5
+      ],
+      "color": "blue",
+      "why": "синяя полоса"
+    },
+    {
+      "at": [
+        0.5,
+        0.5
+      ],
+      "color": "yellow",
+      "why": "жёлтая полоса"
+    },
+    {
+      "at": [
+        0.84,
+        0.5
+      ],
+      "color": "red",
+      "why": "красная полоса"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-STRIPES",
+        "change": "5/6/5 px."
+      }
+    ],
+    "M": [],
+    "L": []
+  },
+  "confusable": [
+    "RO"
+  ],
+  "gaps": [
+    "Ни цвет, ни пропорция не заданы на уровне 1.",
+    "Запись Album 2023 в транскрипции FOTW содержит ошибку Pantone у жёлтого."
+  ],
+  "review": [],
+  "status": {
+    "full": "ok",
+    "mini": "ok"
+  }
+}

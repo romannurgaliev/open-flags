@@ -1,0 +1,33 @@
+{
+  "name": "open-flags",
+  "version": "0.1.0-pilot",
+  "description": "Флаги стран: оригинальные пропорции, 3:2, 1:1 и миниатюры 16/24/40 с правилами упрощения. Пилот на 25 флагах.",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "check": "node scripts/check.mjs",
+    "test:negative": "node scripts/negative.mjs",
+    "test": "node scripts/check.mjs && node scripts/negative.mjs",
+    "sheet": "node scripts/sheet.mjs preview/contact-sheet.png",
+    "baseline": "node scripts/baseline.mjs",
+    "sync:cldr": "node tools/sync-cldr.mjs",
+    "export:figma": "node scripts/export-figma.mjs"
+  },
+  "license": "MIT AND CC0-1.0",
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "cldr-core": "^45.0.0",
+    "cldr-localenames-modern": "^45.0.0",
+    "fast-xml-parser": "^5.11.2",
+    "paper": "^0.14.0",
+    "paper-jsdom": "^0.14.0",
+    "pixelmatch": "^8.0.0",
+    "pngjs": "^7.0.0",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}

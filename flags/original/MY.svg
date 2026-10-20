@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+<title>Malaysia</title>
+<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 0L1200 0L1200 600Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 42.86L1200 42.86L1200 600Z"/>
+<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 85.71L1200 85.71L1200 600Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 128.57L1200 128.57L1200 600Z"/>
+<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 171.43L1200 171.43L1200 600Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 214.29L1200 214.29L1200 600Z"/>
+<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 257.14L1200 257.14L1200 600Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 300L1200 300L1200 600Z"/>
+<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 342.86L1200 342.86L1200 600Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 385.71L1200 385.71L1200 600Z"/>
+<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 428.57L1200 428.57L1200 600Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 471.43L1200 471.43L1200 600Z"/>
+<path fill="#CC0001" fill-rule="evenodd" d="M0 600L0 514.29L1200 514.29L1200 600Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M0 600L0 557.14L1200 557.14L1200 600Z"/>
+<path fill="#010066" fill-rule="evenodd" d="M600 342.86L0 342.86L0 0L600 0Z"/>
+<path fill="#FFCC00" fill-rule="evenodd" d="M192.86 171.43C192.86 100.42 250.42 42.86 321.43 42.86C339.74 42.86 357.16 46.69 372.93 53.59C308.8 54.69 257.14 107.03 257.14 171.43C257.14 235.83 308.8 288.17 372.93 289.27C357.16 296.17 339.74 300 321.43 300C250.42 300 192.86 242.44 192.86 171.43Z"/>
+<path fill="#FFCC00" fill-rule="evenodd" d="M364.29 64.29L375.01 124.42L410.77 74.9L394.35 133.73L448.05 104.63L407.73 150.51L468.74 147.59L412.5 171.43L468.74 195.27L407.73 192.35L448.05 238.23L394.35 209.12L410.77 267.96L375.01 218.43L364.29 278.57L353.56 218.43L317.8 267.96L334.22 209.12L280.52 238.23L320.85 192.35L259.83 195.27L316.07 171.43L259.83 147.59L320.85 150.51L280.52 104.63L334.22 133.73L317.8 74.9L353.56 124.42Z"/>
+</svg>

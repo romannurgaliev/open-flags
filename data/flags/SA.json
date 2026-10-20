@@ -1,0 +1,132 @@
+{
+  "code": "SA",
+  "iso": {
+    "alpha2": "SA",
+    "alpha3": "SAU",
+    "numeric": "682",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Saudi Arabia",
+    "ru": "Саудовская Аравия"
+  },
+  "classes": [
+    "text",
+    "sacred-text"
+  ],
+  "ratio": {
+    "h": 2,
+    "w": 3,
+    "source": "sa-basic"
+  },
+  "adopted": {
+    "value": "1973-03-15",
+    "source": "sa-fotw"
+  },
+  "sources": {
+    "sa-basic": {
+      "level": 1,
+      "title": "Basic Law of Governance (Royal Decree A/90, 1992), art. 3",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/sa.html",
+      "accessed": "2026-10-21"
+    },
+    "sa-guide": {
+      "level": "1g",
+      "title": "Правительственное руководство 2023 г. (цвета)",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/sa.html",
+      "accessed": "2026-10-21"
+    },
+    "sa-saso": {
+      "level": 1,
+      "title": "SASO Mandatory Standards (1984–85), fig. 2 и табл. 8 — геометрия меча",
+      "via": "fotw",
+      "accessed": "2026-10-21",
+      "note": "Не прочитан — пробел."
+    },
+    "sa-fotw": {
+      "level": 4,
+      "title": "FOTW: Saudi Arabia",
+      "url": "https://crwflags.com/fotw/flags/sa.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "green": {
+      "srgb": "#005430",
+      "status": "ok",
+      "rule": "C-L1-RGB",
+      "specs": [
+        {
+          "src": "sa-guide",
+          "value": "Pantone 3425C / 19-6026TCX; CMYK 89-15-97-56; RGB 0-84-48"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 7484c; RGB 0-84-48",
+          "via": "fotw"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 355",
+          "via": "fotw"
+        }
+      ]
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": []
+    }
+  },
+  "construction": {
+    "source": "sa-basic",
+    "text": "Шахада по центру, под ней обнажённый меч; рукоять справа под началом надписи, клинок к древку. Ширина — 2/3 длины."
+  },
+  "probes": [
+    {
+      "at": [
+        0.05,
+        0.05
+      ],
+      "color": "green",
+      "why": "поле"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-TEXT",
+        "change": "Надпись → одна белая строка 2 px и короткая строка 1 px; меч — линия 1 px с рукоятью справа."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-TEXT",
+        "change": "Надпись → две строки разной длины."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-TEXT",
+        "change": "Надпись → три строки из отрезков разной длины."
+      }
+    ]
+  },
+  "confusable": [],
+  "gaps": [
+    "Шахада и меч в полных форматах не нарисованы: нужен официальный рисунок SASO.",
+    "Геометрия меча (SASO, fig. 2) не прочитана."
+  ],
+  "review": [
+    "Схематичная замена шахады требует решения носителей языка до релиза (docs/phase2/native-review.md). До решения миниатюры SA в релиз не идут."
+  ],
+  "status": {
+    "full": "draft",
+    "mini": "blocked-review"
+  }
+}

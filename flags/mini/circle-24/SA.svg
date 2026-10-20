@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<title>Saudi Arabia</title>
+<path fill="#005430" fill-rule="evenodd" d="M0 12C0 5.373 5.373 0 12 0C18.627 0 24 5.373 24 12C24 18.627 18.627 24 12 24C5.373 24 0 18.627 0 12Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M6.5 8C6.224 8 6 7.776 6 7.5C6 7.224 6.224 7 6.5 7L17.5 7C17.776 7 18 7.224 18 7.5C18 7.776 17.776 8 17.5 8Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M5.5 11C5.224 11 5 10.776 5 10.5C5 10.224 5.224 10 5.5 10L18.5 10C18.776 10 19 10.224 19 10.5C19 10.776 18.776 11 18.5 11Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M5 18L5 17L20 17L20 18Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M17 20L17 15L18 15L18 20Z"/>
+</svg>

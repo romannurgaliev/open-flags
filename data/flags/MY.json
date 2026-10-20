@@ -1,0 +1,226 @@
+{
+  "code": "MY",
+  "iso": {
+    "alpha2": "MY",
+    "alpha3": "MYS",
+    "numeric": "458",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Malaysia",
+    "ru": "Малайзия"
+  },
+  "classes": [
+    "fine-stripes",
+    "canton",
+    "crescent-star"
+  ],
+  "ratio": {
+    "h": 1,
+    "w": 2,
+    "source": "my-asean"
+  },
+  "adopted": {
+    "value": "1963-09-16",
+    "source": "my-fotw"
+  },
+  "sources": {
+    "my-asean": {
+      "level": "1g",
+      "title": "Flag specification: Malaysia (документ на сайте ASEAN)",
+      "url": "https://asean.org/wp-content/uploads/2020/10/flagspec_malaysia.pdf",
+      "via": "direct",
+      "accessed": "2026-10-21",
+      "note": "Даёт пропорцию 1:2 и Pantone; размеров кантона, полумесяца и звезды нет."
+    },
+    "my-fotw": {
+      "level": 4,
+      "title": "FOTW: Malaysia, construction sheet",
+      "url": "https://crwflags.com/fotw/flags/my'.html",
+      "via": "direct",
+      "accessed": "2026-10-21",
+      "note": "Размеры звезды и полумесяца — ручные измерения участников FOTW, помечены как оценки."
+    }
+  },
+  "colors": {
+    "red": {
+      "srgb": "#CC0001",
+      "status": "provisional",
+      "rule": "C-PROVISIONAL",
+      "specs": [
+        {
+          "src": "my-asean",
+          "value": "PMS 199"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 485",
+          "via": "fotw"
+        },
+        {
+          "src": "comparison",
+          "value": "#CC0001 (Википедия)"
+        }
+      ]
+    },
+    "blue": {
+      "srgb": "#010066",
+      "status": "provisional",
+      "rule": "C-PROVISIONAL",
+      "specs": [
+        {
+          "src": "my-asean",
+          "value": "PMS 2768"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 286",
+          "via": "fotw"
+        },
+        {
+          "src": "comparison",
+          "value": "#010066 (Википедия)"
+        }
+      ]
+    },
+    "yellow": {
+      "srgb": "#FFCC00",
+      "status": "provisional",
+      "rule": "C-PROVISIONAL",
+      "specs": [
+        {
+          "src": "my-asean",
+          "value": "PMS 108"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 109",
+          "via": "fotw"
+        },
+        {
+          "src": "comparison",
+          "value": "#FFCC00 (Википедия)"
+        }
+      ]
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": []
+    }
+  },
+  "construction": {
+    "stripes": 14,
+    "canton": {
+      "h_stripes": 8,
+      "w_l": 0.5,
+      "units_h": 8,
+      "units_w": 14,
+      "source": "estimate",
+      "text": "Кантон на 8 полос и половину длины — по рисунку, не по документу. Пробел."
+    },
+    "symbol": {
+      "group_cx_u": 7.75,
+      "crescent": {
+        "outer_cx_u": 7.5,
+        "inner_cx_u": 8.75,
+        "cy_u": 4,
+        "outer_d_u": 6,
+        "inner_d_u": 5.5
+      },
+      "star": {
+        "cx_u": 8.5,
+        "cy_u": 4,
+        "d_u": 5,
+        "inner_ratio": 0.45
+      },
+      "source": "my-fotw",
+      "text": "Внутренний круг полумесяца d 5.5, внешний d 6, звезда в круге d 5, её центр в 5.5 ед. от края кантона (FOTW). Положение внешнего круга и острота звезды — оценки."
+    }
+  },
+  "probes": [
+    {
+      "at": [
+        0.75,
+        0.0357
+      ],
+      "color": "red",
+      "why": "1-я полоса"
+    },
+    {
+      "at": [
+        0.75,
+        0.107
+      ],
+      "color": "white",
+      "why": "2-я полоса"
+    },
+    {
+      "at": [
+        0.75,
+        0.964
+      ],
+      "color": "white",
+      "why": "14-я полоса (белая)"
+    },
+    {
+      "at": [
+        0.02,
+        0.02
+      ],
+      "color": "blue",
+      "why": "угол кантона"
+    },
+    {
+      "at": [
+        0.3036,
+        0.2857
+      ],
+      "color": "yellow",
+      "why": "центр звезды (8.5/28, 4/14)"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-STRIPES",
+        "change": "14 → 8 полос по 2 px (красная сверху, белая снизу)."
+      },
+      {
+        "rule": "S-POINTS",
+        "change": "Звезда 14 лучей → 8 лучей; полумесяц не тоньше 1.5 px."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-STRIPES",
+        "change": "14 → 12 полос."
+      },
+      {
+        "rule": "S-POINTS",
+        "change": "Звезда 8 лучей."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-STRIPES",
+        "change": "14 полос."
+      }
+    ]
+  },
+  "confusable": [
+    "US",
+    "LR"
+  ],
+  "gaps": [
+    "Размеры кантона не подтверждены первичным источником.",
+    "Цвета: Pantone 199/2768/108 из ASEAN без RGB; в таблице Album 2023 этих Pantone нет."
+  ],
+  "review": [],
+  "status": {
+    "full": "ok-estimate",
+    "mini": "ok"
+  }
+}

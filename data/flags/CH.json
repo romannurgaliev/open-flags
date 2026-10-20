@@ -1,0 +1,148 @@
+{
+  "code": "CH",
+  "iso": {
+    "alpha2": "CH",
+    "alpha3": "CHE",
+    "numeric": "756",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Switzerland",
+    "ru": "Швейцария"
+  },
+  "classes": [
+    "cross",
+    "square"
+  ],
+  "ratio": {
+    "h": 1,
+    "w": 1,
+    "source": "ch-law"
+  },
+  "adopted": {
+    "value": "1889",
+    "source": "ch-fotw"
+  },
+  "sources": {
+    "ch-law": {
+      "level": 1,
+      "title": "Wappenschutzgesetz, SR 232.21 (Bundesgesetz über den Schutz des Schweizerwappens), Anhang",
+      "url": "https://www.fedlex.admin.ch/eli/cc/2015/613/de",
+      "via": "fotw",
+      "accessed": "2026-10-21"
+    },
+    "ch-fotw": {
+      "level": 4,
+      "title": "FOTW: Switzerland",
+      "url": "https://crwflags.com/fotw/flags/ch.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "red": {
+      "srgb": "#FF0000",
+      "status": "ok",
+      "rule": "C-L1-RGB",
+      "specs": [
+        {
+          "src": "ch-law",
+          "value": "RGB 255-0-0; HEX #FF0000; Pantone 485 C; CMYK 0-100-100-0; RAL 3020; NCS S 1085-Y90R",
+          "via": "fotw"
+        },
+        {
+          "src": "comparison",
+          "value": "#DA291C (неофициальные таблицы)"
+        }
+      ]
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": []
+    }
+  },
+  "construction": {
+    "cross": {
+      "grid": 32,
+      "margin": 6,
+      "arm_w": 6,
+      "arm_l": 7,
+      "source": "ch-law",
+      "text": "Плечи на 1/6 длиннее своей ширины; по приложению поле до креста равно ширине плеча: 6 + 7 + 6 + 7 + 6 = 32."
+    }
+  },
+  "probes": [
+    {
+      "at": [
+        0.5,
+        0.5
+      ],
+      "color": "white",
+      "why": "центр креста"
+    },
+    {
+      "at": [
+        0.2,
+        0.5
+      ],
+      "color": "white",
+      "why": "левое плечо (начинается на 6/32 = 0.1875)"
+    },
+    {
+      "at": [
+        0.17,
+        0.5
+      ],
+      "color": "red",
+      "why": "поле слева от плеча"
+    },
+    {
+      "at": [
+        0.38,
+        0.38
+      ],
+      "color": "red",
+      "why": "угол между плечами (плечо шириной 13/32…19/32)"
+    },
+    {
+      "at": [
+        0.42,
+        0.3
+      ],
+      "color": "white",
+      "why": "верхнее плечо"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-RATIO",
+        "change": "Плечо 4 px, длина плеча 4 px: соотношение 1.0 вместо 7/6 (отклонение 14%), поле 2 px."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-RATIO",
+        "change": "Плечо 4 px, длина 5 px: 1.25 вместо 7/6 (+7%)."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-RATIO",
+        "change": "Плечо 8 px, длина 9 px: 1.125 (−4%)."
+      }
+    ]
+  },
+  "confusable": [],
+  "gaps": [
+    "Текст приложения прочитан через FOTW, не напрямую на fedlex."
+  ],
+  "review": [],
+  "status": {
+    "full": "ok",
+    "mini": "ok"
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "code": "MX",
+  "iso": {
+    "alpha2": "MX",
+    "alpha3": "MEX",
+    "numeric": "484",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Mexico",
+    "ru": "Мексика"
+  },
+  "classes": [
+    "tricolour-v",
+    "arms"
+  ],
+  "ratio": {
+    "h": 4,
+    "w": 7,
+    "source": "mx-law"
+  },
+  "adopted": {
+    "value": "1968-09-16",
+    "source": "mx-fotw"
+  },
+  "sources": {
+    "mx-law": {
+      "level": 1,
+      "title": "Ley sobre el Escudo, la Bandera y el Himno Nacionales (1984), art. 3",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/mx.html",
+      "accessed": "2026-10-21"
+    },
+    "mx-fotw": {
+      "level": 4,
+      "title": "FOTW: Mexico",
+      "url": "https://crwflags.com/fotw/flags/mx.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "green": {
+      "srgb": "#006644",
+      "status": "ok",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "mx-law",
+          "value": "verde (только название)"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 3425c; RGB 0-102-68",
+          "via": "fotw"
+        },
+        {
+          "src": "mx-fotw",
+          "value": "SEGOB (личное сообщение): 3425 C; RGB 0-107-71"
+        }
+      ]
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": []
+    },
+    "red": {
+      "srgb": "#D21034",
+      "status": "ok",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "album2023",
+          "value": "Pantone 186c; RGB 210-16-52",
+          "via": "fotw"
+        },
+        {
+          "src": "mx-fotw",
+          "value": "SEGOB: 186 C; RGB 206-17-38"
+        }
+      ]
+    },
+    "brown": {
+      "srgb": "#7A4B1E",
+      "status": "provisional",
+      "rule": "C-DESIGN",
+      "specs": [],
+      "note": "Цвет орла на миниатюрах — дизайнерский, источника нет."
+    },
+    "blue": {
+      "srgb": "#0072BB",
+      "status": "provisional",
+      "rule": "C-DESIGN",
+      "specs": [],
+      "note": "Вода под кактусом на ступени L — дизайнерский."
+    }
+  },
+  "construction": {
+    "bands": [
+      {
+        "c": "green",
+        "w": 1
+      },
+      {
+        "c": "white",
+        "w": 1
+      },
+      {
+        "c": "red",
+        "w": 1
+      }
+    ],
+    "emblem": {
+      "d_of_white": 0.75
+    },
+    "source": "mx-law",
+    "text": "Три равные вертикальные полосы; герб в центре белой полосы, диаметр — 3/4 её ширины."
+  },
+  "probes": [
+    {
+      "at": [
+        0.1,
+        0.5
+      ],
+      "color": "green",
+      "why": "зелёная полоса"
+    },
+    {
+      "at": [
+        0.9,
+        0.5
+      ],
+      "color": "red",
+      "why": "красная полоса"
+    },
+    {
+      "at": [
+        0.5,
+        0.1
+      ],
+      "color": "white",
+      "why": "белая полоса над гербом (герб с 0.28 высоты)"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-EMBLEM",
+        "change": "Герб → коричневое пятно орла + зелёная черта 1 px (кактус, венок). Два цвета."
+      },
+      {
+        "rule": "S-NODROP",
+        "change": "Герб не снимается: без него флаг похож на IT."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-EMBLEM",
+        "change": "Орёл (тело, крыло, голова), кактус, дуга венка."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-EMBLEM",
+        "change": "+ вода под кактусом."
+      }
+    ]
+  },
+  "confusable": [
+    "IT"
+  ],
+  "gaps": [
+    "Герб в полных форматах не нарисован: нужен официальный рисунок (art. 2)."
+  ],
+  "review": [],
+  "status": {
+    "full": "draft",
+    "mini": "draft"
+  }
+}

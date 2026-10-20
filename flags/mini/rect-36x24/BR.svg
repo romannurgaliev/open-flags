@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24">
+<title>Brazil</title>
+<path fill="#009530" fill-rule="evenodd" d="M0 24L0 0L36 0L36 24Z"/>
+<path fill="#F8C100" fill-rule="evenodd" d="M3 12L18 3L33 12L18 21Z"/>
+<path fill="#00267F" fill-rule="evenodd" d="M12 12C12 8.686 14.686 6 18 6C21.314 6 24 8.686 24 12C24 15.314 21.314 18 18 18C14.686 18 12 15.314 12 12Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M14.571 9.186C18.142 9.186 21.417 10.449 23.975 12.552C23.936 12.98 23.852 13.394 23.728 13.79C21.3 11.611 18.091 10.286 14.571 10.286C13.76 10.286 12.964 10.356 12.191 10.492C12.298 10.079 12.448 9.684 12.635 9.311C13.269 9.228 13.915 9.186 14.571 9.186Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M18 15L18 14L19 14L19 15ZM15 14L15 13L16 13L16 14ZM20 14L20 13L21 13L21 14Z"/>
+</svg>

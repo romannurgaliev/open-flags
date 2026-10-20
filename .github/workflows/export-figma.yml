@@ -1,0 +1,87 @@
+# Выгружает флаги из Figma и, если что-то поменялось, открывает PR с проверками и контактным листом.
+# Запуск: Actions → «Export flags from Figma» → Run workflow; плюс сам раз в неделю.
+# Нужен секрет FIGMA_TOKEN (Settings → Secrets and variables → Actions), scope File content → Read-only.
+# Порядок настройки: сначала секрет и галочка для PR, потом первый запуск.
+name: Export flags from Figma
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 * * 1' # понедельник, 08:17 по Алматы
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: export-figma
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Check that the secret exists
+        env:
+          FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+        run: |
+          if [ -z "$FIGMA_TOKEN" ]; then
+            echo "::error::Нет секрета FIGMA_TOKEN. Settings → Secrets and variables → Actions → New repository secret."
+            exit 1
+          fi
+
+      - name: Export from Figma
+        env:
+          FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+        run: node scripts/export-figma.mjs
+
+      - name: Detect changes
+        id: diff
+        run: |
+          if [ -n "$(git status --porcelain -- flags)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git status --short -- flags
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "В Figma ничего не поменялось, PR не нужен."
+          fi
+
+      - name: Checks and contact sheet
+        id: check
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          set +e
+          node scripts/check.mjs --report "$RUNNER_TEMP/report.md"
+          code=$?
+          node scripts/sheet.mjs preview/contact-sheet.png
+          [ -f "$RUNNER_TEMP/report.md" ] || echo "Проверка упала до отчёта, подробности в логе." > "$RUNNER_TEMP/report.md"
+          cat "$RUNNER_TEMP/report.md" >> "$GITHUB_STEP_SUMMARY"
+          if [ $code -eq 0 ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "ok=false" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Open pull request
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: flags/figma-update
+          delete-branch: true
+          commit-message: Update flags from Figma
+          title: "${{ steps.check.outputs.ok == 'true' && 'Обновление флагов из Figma' || '⚠️ Обновление флагов из Figma: проверки не прошли' }}"
+          body-path: ${{ runner.temp }}/report.md
+          add-paths: |
+            flags/**
+            preview/contact-sheet.png
+
+      - name: Fail when checks failed
+        if: steps.check.outputs.ok == 'false'
+        run: |
+          echo "Проверки не прошли, PR открыт с пометкой ⚠️."
+          exit 1

@@ -1,0 +1,179 @@
+{
+  "code": "TM",
+  "iso": {
+    "alpha2": "TM",
+    "alpha3": "TKM",
+    "numeric": "795",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Turkmenistan",
+    "ru": "Туркменистан"
+  },
+  "classes": [
+    "ornament",
+    "crescent-star",
+    "repeated-charges"
+  ],
+  "ratio": {
+    "h": 2,
+    "w": 3,
+    "source": "tm-fotw"
+  },
+  "adopted": {
+    "value": "2001-01-24",
+    "source": "tm-fotw"
+  },
+  "sources": {
+    "tm-decree2017": {
+      "level": 1,
+      "title": "Указ Президента Туркменистана 2017 г. о цветах флага (Pantone 348C, 1795C, 123C, Black C)",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/tm.html",
+      "accessed": "2026-10-21"
+    },
+    "tm-fotw": {
+      "level": 4,
+      "title": "FOTW: Turkmenistan",
+      "url": "https://crwflags.com/fotw/flags/tm.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "green": {
+      "srgb": "#006A4E",
+      "status": "ok",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "tm-decree2017",
+          "value": "Pantone 348 C"
+        },
+        {
+          "src": "album2023",
+          "value": "RGB 0-106-78",
+          "via": "fotw"
+        }
+      ],
+      "note": "348c нет в таблице Album 2023 — взята запись Album для TM."
+    },
+    "red": {
+      "srgb": "#D51F2A",
+      "status": "ok",
+      "rule": "C-PANTONE-MAP",
+      "specs": [
+        {
+          "src": "tm-decree2017",
+          "value": "Pantone 1795 C"
+        },
+        {
+          "src": "album2023",
+          "value": "RGB 179-27-52",
+          "via": "fotw"
+        },
+        {
+          "src": "album2023-pantone-map",
+          "value": "1795c → #D51F2A"
+        }
+      ],
+      "note": "Карта Pantone: 1795c → #D51F2A. Запись Album для TM — #B31B34, ΔE2000 = 9.0 (ниже порога конфликта 10)."
+    },
+    "orange": {
+      "srgb": "#FF9A00",
+      "status": "ok",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "tm-decree2017",
+          "value": "Pantone 123 C"
+        },
+        {
+          "src": "album2023",
+          "value": "RGB 255-154-0",
+          "via": "fotw"
+        }
+      ]
+    },
+    "yellow": {
+      "srgb": "#FFC72C",
+      "status": "provisional",
+      "rule": "C-DESIGN",
+      "specs": [],
+      "note": "Точки гёлей на S — дизайнерский цвет."
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": []
+    }
+  },
+  "construction": {
+    "carpet": {
+      "x_l": 0.1212,
+      "w_l": 0.1818,
+      "source": "tm-fotw",
+      "text": "Пропорции по горизонтали 4-6-23 (FOTW, без пояснений): зелёный 4/33, ковёр 6/33, зелёный 23/33."
+    },
+    "estimate": {
+      "crescent_dx_l": 0.1,
+      "crescent_cy_h": 0.2,
+      "crescent_r_h": 0.1
+    },
+    "source": "tm-fotw"
+  },
+  "probes": [
+    {
+      "at": [
+        0.06,
+        0.5
+      ],
+      "color": "green",
+      "why": "зелёный у древка (0–0.121)"
+    },
+    {
+      "at": [
+        0.9,
+        0.9
+      ],
+      "color": "green",
+      "why": "поле"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-REPEAT",
+        "change": "5 гёлей → 5 точек 1 px в красной полосе."
+      },
+      {
+        "rule": "S-POINT",
+        "change": "5 звёзд → 2 точки; полумесяц 2–3 px."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-REPEAT",
+        "change": "Гёли → ромбы 3 px с белой точкой."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-REPEAT",
+        "change": "Гёли → ромбы 4 px; 5 звёзд."
+      }
+    ]
+  },
+  "confusable": [],
+  "gaps": [
+    "Указ об утверждении флага 2001 г. не прочитан; чертёж гёлей, ветвей, полумесяца и звёзд — пробел.",
+    "Пропорции 4-6-23 даны без пояснения."
+  ],
+  "review": [],
+  "status": {
+    "full": "draft",
+    "mini": "draft"
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "code": "BD",
+  "iso": {
+    "alpha2": "BD",
+    "alpha3": "BGD",
+    "numeric": "050",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Bangladesh",
+    "ru": "Бангладеш"
+  },
+  "classes": [
+    "disc",
+    "offset-disc"
+  ],
+  "ratio": {
+    "h": 6,
+    "w": 10,
+    "source": "bd-rules"
+  },
+  "adopted": {
+    "value": "1972",
+    "source": "bd-rules"
+  },
+  "sources": {
+    "bd-rules": {
+      "level": 1,
+      "title": "People's Republic of Bangladesh Flag Rules, 1972 (revised up to May 1992), п. 1(II) и 3(I)",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/bd'.html",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "green": {
+      "srgb": "#006A52",
+      "status": "ok",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "bd-rules",
+          "value": "Procion Brilliant Green H-2RS, 50 частей на 1000 (краситель, числа цвета нет)"
+        },
+        {
+          "src": "album2000",
+          "value": "Pantone 342c; CMYK 100-0-70-40",
+          "via": "fotw"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 3298c; CMYK 88-32-71-24; RGB 0-106-82",
+          "via": "fotw"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 342",
+          "via": "fotw"
+        }
+      ]
+    },
+    "red": {
+      "srgb": "#F4364C",
+      "status": "ok",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "bd-rules",
+          "value": "Procion Brilliant Orange H-2RS, 60 частей на 1000 (краситель)"
+        },
+        {
+          "src": "album2000",
+          "value": "Pantone 485c; CMYK 0-100-80-5",
+          "via": "fotw"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 1787c; CMYK 0-88-59-0; RGB 244-54-76",
+          "via": "fotw"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 485",
+          "via": "fotw"
+        }
+      ],
+      "note": "Закон называет краситель «оранжевым»; Album 2023 сменил Pantone 485c на 1787c."
+    }
+  },
+  "construction": {
+    "disc": {
+      "d_h": 0.6667,
+      "cx_l": 0.45,
+      "cy_h": 0.5,
+      "source": "bd-rules",
+      "text": "Радиус диска — пятая часть длины; центр на перпендикуляре из точки 9/20 длины, посередине высоты."
+    }
+  },
+  "probes": [
+    {
+      "at": [
+        0.45,
+        0.5
+      ],
+      "color": "red",
+      "why": "центр диска (9/20 длины)"
+    },
+    {
+      "at": [
+        0.26,
+        0.5
+      ],
+      "color": "red",
+      "why": "внутри у края со стороны древка (край на 0.25)"
+    },
+    {
+      "at": [
+        0.24,
+        0.5
+      ],
+      "color": "green",
+      "why": "снаружи у края со стороны древка"
+    },
+    {
+      "at": [
+        0.64,
+        0.5
+      ],
+      "color": "red",
+      "why": "внутри у края к вольной части (край на 0.65)"
+    },
+    {
+      "at": [
+        0.66,
+        0.5
+      ],
+      "color": "green",
+      "why": "снаружи"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-DISC",
+        "change": "Диаметр 10 px, левый край на 2 px: смещение к древку сохранено."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-DISC",
+        "change": "Диаметр 16 px."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-DISC",
+        "change": "Диаметр 26 px."
+      }
+    ]
+  },
+  "confusable": [],
+  "gaps": [
+    "Цвет на уровне 1 задан красителями без колориметрии."
+  ],
+  "review": [],
+  "status": {
+    "full": "ok",
+    "mini": "ok"
+  }
+}

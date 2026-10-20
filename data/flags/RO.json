@@ -1,0 +1,205 @@
+{
+  "code": "RO",
+  "iso": {
+    "alpha2": "RO",
+    "alpha3": "ROU",
+    "numeric": "642",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Romania",
+    "ru": "Румыния"
+  },
+  "classes": [
+    "tricolour-v"
+  ],
+  "ratio": {
+    "h": 2,
+    "w": 3,
+    "source": "ro-law"
+  },
+  "adopted": {
+    "value": "1989-12-27",
+    "source": "ro-fotw"
+  },
+  "sources": {
+    "ro-const": {
+      "level": 1,
+      "title": "Constituția României, art. 12",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/ro.html",
+      "accessed": "2026-10-21"
+    },
+    "ro-law": {
+      "level": 1,
+      "title": "Legea nr. 75/1994, изменена Legea nr. 176 din 19.06.2023 (цвета в трёх системах)",
+      "via": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Flag_of_Romania",
+      "accessed": "2026-10-21",
+      "note": "Значения закона прочитаны через Википедию; сам Monitorul Oficial не прочитан."
+    },
+    "ro-fotw": {
+      "level": 4,
+      "title": "FOTW: Romania",
+      "url": "https://crwflags.com/fotw/flags/ro.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "blue": {
+      "srgb": "#002B7F",
+      "status": "ok",
+      "rule": "C-L1-RGB",
+      "specs": [
+        {
+          "src": "ro-law",
+          "value": "Pantone 280c; CMYK 100-70-0-10; RGB 0-43-127",
+          "via": "wikipedia"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 280c; RGB 0-38-127",
+          "via": "fotw"
+        }
+      ]
+    },
+    "yellow": {
+      "srgb": "#FCD116",
+      "status": "ok",
+      "rule": "C-L1-RGB",
+      "specs": [
+        {
+          "src": "ro-law",
+          "value": "Pantone 116c; CMYK 0-10-95-0; RGB 252-209-22",
+          "via": "wikipedia"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 106c; RGB 246-231-97",
+          "via": "fotw"
+        }
+      ]
+    },
+    "red": {
+      "srgb": "#CE1126",
+      "status": "ok",
+      "rule": "C-L1-RGB",
+      "specs": [
+        {
+          "src": "ro-law",
+          "value": "Pantone 186c; CMYK 0-90-80-5; RGB 206-17-38",
+          "via": "wikipedia"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 186c; RGB 210-16-52",
+          "via": "fotw"
+        }
+      ]
+    }
+  },
+  "construction": {
+    "bands": [
+      {
+        "c": "blue",
+        "w": 1
+      },
+      {
+        "c": "yellow",
+        "w": 1
+      },
+      {
+        "c": "red",
+        "w": 1
+      }
+    ],
+    "source": "ro-const",
+    "text": "Вертикальные полосы синяя, жёлтая, красная от древка; ширина — две трети длины."
+  },
+  "probes": [
+    {
+      "at": [
+        0.16,
+        0.5
+      ],
+      "color": "blue",
+      "why": "синяя полоса"
+    },
+    {
+      "at": [
+        0.5,
+        0.5
+      ],
+      "color": "yellow",
+      "why": "жёлтая полоса"
+    },
+    {
+      "at": [
+        0.84,
+        0.5
+      ],
+      "color": "red",
+      "why": "красная полоса"
+    },
+    {
+      "at": [
+        0.32,
+        0.5
+      ],
+      "color": "blue",
+      "why": "у границы 1/3"
+    },
+    {
+      "at": [
+        0.35,
+        0.5
+      ],
+      "color": "yellow",
+      "why": "у границы 1/3"
+    },
+    {
+      "at": [
+        0.65,
+        0.5
+      ],
+      "color": "yellow",
+      "why": "у границы 2/3"
+    },
+    {
+      "at": [
+        0.68,
+        0.5
+      ],
+      "color": "red",
+      "why": "у границы 2/3"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-STRIPES",
+        "change": "5/6/5 px: остаток пикселя — средней полосе."
+      }
+    ],
+    "M": [],
+    "L": [
+      {
+        "rule": "S-STRIPES",
+        "change": "13/14/13 px."
+      }
+    ]
+  },
+  "confusable": [
+    "TD"
+  ],
+  "gaps": [],
+  "review": [
+    "Круг: равные полосы или средняя шире (как в durev-flags 11/14/11) — проверить A/B в тесте узнаваемости."
+  ],
+  "status": {
+    "full": "ok",
+    "mini": "ok"
+  }
+}

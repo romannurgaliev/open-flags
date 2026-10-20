@@ -1,0 +1,195 @@
+{
+  "code": "NZ",
+  "iso": {
+    "alpha2": "NZ",
+    "alpha3": "NZL",
+    "numeric": "554",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "New Zealand",
+    "ru": "Новая Зеландия"
+  },
+  "classes": [
+    "canton",
+    "union-jack",
+    "repeated-charges"
+  ],
+  "ratio": {
+    "h": 1,
+    "w": 2,
+    "source": "nz-act"
+  },
+  "adopted": {
+    "value": "1902-06-12",
+    "source": "nz-fotw"
+  },
+  "sources": {
+    "nz-act": {
+      "level": 1,
+      "title": "Flags, Emblems, and Names Protection Act 1981; описание на сайте правительства NZ",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/nz.html",
+      "accessed": "2026-10-21"
+    },
+    "nz-fotw": {
+      "level": 4,
+      "title": "FOTW: New Zealand",
+      "url": "https://crwflags.com/fotw/flags/nz.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "blue": {
+      "srgb": "#00267F",
+      "status": "ok",
+      "rule": "C-PANTONE-MAP",
+      "specs": [
+        {
+          "src": "nz-act",
+          "value": "Pantone 280 C (правительство)"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 287c; RGB 0-53-152",
+          "via": "fotw"
+        }
+      ],
+      "note": "Pantone 280c по таблице Album 2023 = #00267F. Сам Album для NZ даёт другую Pantone (287c)."
+    },
+    "red": {
+      "srgb": "#D21034",
+      "status": "ok",
+      "rule": "C-PANTONE-MAP",
+      "specs": [
+        {
+          "src": "nz-act",
+          "value": "Pantone 186 C (правительство)"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 186c; RGB 210-16-52",
+          "via": "fotw"
+        }
+      ]
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": []
+    }
+  },
+  "construction": {
+    "inner_ratio": 0.382,
+    "cross_center": {
+      "cx_l": 0.75,
+      "cy_h": 0.5
+    },
+    "stars": [
+      {
+        "name": "top",
+        "dx_h": 0,
+        "dy_h": -0.3,
+        "d_h": 0.1
+      },
+      {
+        "name": "bottom",
+        "dx_h": 0,
+        "dy_h": 0.3,
+        "d_h": 0.1167
+      },
+      {
+        "name": "hoist",
+        "dx_h": -0.2311,
+        "dy_h": -0.0675,
+        "d_h": 0.1
+      },
+      {
+        "name": "fly",
+        "dx_h": 0.198,
+        "dy_h": -0.1278,
+        "d_h": 0.0833
+      }
+    ],
+    "border_h": 0.00833,
+    "mini_spread": {
+      "S": 1.25,
+      "M": 1.15,
+      "L": 1.1
+    },
+    "source": "nz-fotw",
+    "text": "Центры верхней и нижней звёзд на вертикали посередине между кантоном и краем, 36/60 высоты друг от друга. Короткая ось пересекает длинную под 82° в 12/60 ниже верхней звезды; до звезды у края 12/60, до звезды у кантона 14/60. Диаметры 6, 7, 6, 5 шестидесятых; белая кайма 1/120. Положение длинной оси по высоте (центр на середине) — оценка."
+  },
+  "probes": [
+    {
+      "at": [
+        0.25,
+        0.25
+      ],
+      "color": "red",
+      "why": "центр креста Union Jack"
+    },
+    {
+      "at": [
+        0.75,
+        0.2
+      ],
+      "color": "red",
+      "why": "центр верхней звезды"
+    },
+    {
+      "at": [
+        0.75,
+        0.8
+      ],
+      "color": "red",
+      "why": "центр нижней звезды"
+    },
+    {
+      "at": [
+        0.6,
+        0.92
+      ],
+      "color": "blue",
+      "why": "поле"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-POINT",
+        "change": "Звёзды — красная точка 2 px в белой рамке 1 px."
+      },
+      {
+        "rule": "S-UJ",
+        "change": "Без красного косого креста."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-UJ",
+        "change": "Без красного косого креста."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-UJ",
+        "change": "Красный косой крест 1 px."
+      }
+    ]
+  },
+  "confusable": [
+    "AU"
+  ],
+  "gaps": [
+    "Вертикальное положение созвездия — оценка (центр длинной оси на середине высоты)."
+  ],
+  "review": [],
+  "status": {
+    "full": "ok-estimate",
+    "mini": "ok"
+  }
+}

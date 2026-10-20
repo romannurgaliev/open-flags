@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+<title>Fiji</title>
+<path fill="#42B4E6" fill-rule="evenodd" d="M0 600L0 0L600 0L600 600Z"/>
+<path fill="#0033A0" fill-rule="evenodd" d="M300 300L0 300L0 0L300 0Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M150 107.57L257.57 0L300 0L300 42.43L192.43 150L300 257.57L300 300L257.57 300L150 192.43L42.43 300L0 300L0 257.57L107.57 150L0 42.43L0 0L42.43 0Z"/>
+<path fill="#C8102E" fill-rule="evenodd" d="M150 150L121.72 150L0 28.28L0 0Z"/>
+<path fill="#C8102E" fill-rule="evenodd" d="M150 150L150 178.28L28.28 300L0 300Z"/>
+<path fill="#C8102E" fill-rule="evenodd" d="M150 150L150 121.72L271.72 0L300 0Z"/>
+<path fill="#C8102E" fill-rule="evenodd" d="M150 150L178.28 150L300 271.72L300 300Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M100 300L100 200L0 200L0 100L100 100L100 0L200 0L200 100L300 100L300 200L200 200L200 300Z"/>
+<path fill="#C8102E" fill-rule="evenodd" d="M120 300L120 180L0 180L0 120L120 120L120 0L180 0L180 120L300 120L300 180L180 180L180 300Z"/>
+</svg>

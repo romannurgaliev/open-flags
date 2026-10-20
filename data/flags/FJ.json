@@ -1,0 +1,161 @@
+{
+  "code": "FJ",
+  "iso": {
+    "alpha2": "FJ",
+    "alpha3": "FJI",
+    "numeric": "242",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Fiji",
+    "ru": "Фиджи"
+  },
+  "classes": [
+    "canton",
+    "union-jack",
+    "arms"
+  ],
+  "ratio": {
+    "h": 1,
+    "w": 2,
+    "source": "fj-fotw"
+  },
+  "adopted": {
+    "value": "1970-10-10",
+    "source": "fj-fotw"
+  },
+  "sources": {
+    "fj-fotw": {
+      "level": 4,
+      "title": "FOTW: Fiji",
+      "url": "https://crwflags.com/fotw/flags/fj.html",
+      "via": "direct",
+      "accessed": "2026-10-21",
+      "note": "Официальных оттенков и чертежа нет (по FOTW)."
+    }
+  },
+  "colors": {
+    "lightblue": {
+      "srgb": "#42B4E6",
+      "status": "ok",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "album2023",
+          "value": "Pantone 298c; RGB 66-180-230",
+          "via": "fotw"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 2915",
+          "via": "fotw"
+        }
+      ]
+    },
+    "darkblue": {
+      "srgb": "#0033A0",
+      "status": "ok",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "album2023",
+          "value": "Pantone 286c; RGB 0-51-160",
+          "via": "fotw"
+        }
+      ]
+    },
+    "red": {
+      "srgb": "#C8102E",
+      "status": "ok",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "album2023",
+          "value": "Pantone 186C; RGB 200-16-46",
+          "via": "fotw"
+        }
+      ]
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": []
+    },
+    "yellow": {
+      "srgb": "#FFD100",
+      "status": "provisional",
+      "rule": "C-PROVISIONAL",
+      "specs": [
+        {
+          "src": "london2012",
+          "value": "PMS 109",
+          "via": "fotw"
+        },
+        {
+          "src": "comparison",
+          "value": "#FFD100 — sRGB-эквивалент PMS 109 не получен из уровня 1–2"
+        }
+      ]
+    }
+  },
+  "construction": {
+    "shield": {
+      "cx_l": 0.75,
+      "cy_h": 0.5,
+      "h_h": 0.5,
+      "aspect": 0.8,
+      "source": "estimate",
+      "text": "Положение и размер щита — оценка по рисунку: в FOTW чертежа нет."
+    }
+  },
+  "probes": [
+    {
+      "at": [
+        0.25,
+        0.25
+      ],
+      "color": "red",
+      "why": "центр креста Union Jack"
+    },
+    {
+      "at": [
+        0.6,
+        0.92
+      ],
+      "color": "lightblue",
+      "why": "поле"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-EMBLEM",
+        "change": "Щит: белый с красным крестом и красной главой, без фигур."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-EMBLEM",
+        "change": "+ жёлтая точка льва на главе."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-EMBLEM",
+        "change": "Как M."
+      }
+    ]
+  },
+  "confusable": [],
+  "gaps": [
+    "Щит в полных форматах не нарисован: нужен рисунок по королевской грамоте 1908 г.",
+    "Размер и место щита — оценка."
+  ],
+  "review": [],
+  "status": {
+    "full": "draft",
+    "mini": "draft"
+  }
+}

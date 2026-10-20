@@ -1,0 +1,137 @@
+{
+  "code": "VA",
+  "iso": {
+    "alpha2": "VA",
+    "alpha3": "VAT",
+    "numeric": "336",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Vatican City",
+    "ru": "Ватикан"
+  },
+  "classes": [
+    "square",
+    "arms"
+  ],
+  "ratio": {
+    "h": 1,
+    "w": 1,
+    "source": "va-law"
+  },
+  "adopted": {
+    "value": "1929-06-08",
+    "source": "va-fotw"
+  },
+  "sources": {
+    "va-law": {
+      "level": 1,
+      "title": "Legge fondamentale dello Stato della Città del Vaticano (13.05.2023), allegato A",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/va.html",
+      "accessed": "2026-10-21",
+      "note": "Пропорция 1:1 — по рисунку приложения; FOTW отмечает, что в тексте пропорция не названа."
+    },
+    "va-fotw": {
+      "level": 4,
+      "title": "FOTW: Vatican",
+      "url": "https://crwflags.com/fotw/flags/va.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "yellow": {
+      "srgb": "#FFCE00",
+      "status": "ok",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "album2023",
+          "value": "Pantone 116 C; CMYK 0-19-93-0; RGB 255-206-0",
+          "via": "fotw"
+        }
+      ]
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": []
+    },
+    "gold": {
+      "srgb": "#C8A040",
+      "status": "provisional",
+      "rule": "C-DESIGN",
+      "specs": [
+        {
+          "src": "va-fotw",
+          "value": "Vexilla Mundi: PMS 118 C (золото)"
+        }
+      ]
+    },
+    "silver": {
+      "srgb": "#9EA3A8",
+      "status": "provisional",
+      "rule": "C-DESIGN",
+      "specs": [
+        {
+          "src": "va-fotw",
+          "value": "Vexilla Mundi: PMS 428 C (серебро)"
+        }
+      ]
+    }
+  },
+  "construction": {
+    "source": "va-law",
+    "text": "Два вертикальных поля: жёлтое у древка, белое. В белом — скрещённые ключи и тиара; по Album 2000 высота эмблемы — половина высоты флага."
+  },
+  "probes": [
+    {
+      "at": [
+        0.25,
+        0.5
+      ],
+      "color": "yellow",
+      "why": "жёлтая половина"
+    },
+    {
+      "at": [
+        0.95,
+        0.05
+      ],
+      "color": "white",
+      "why": "белая половина, угол"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-EMBLEM",
+        "change": "Ключи → две диагонали 1 px (золото и серебро); тиара — золотое пятно."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-EMBLEM",
+        "change": "Диагонали 1.4 px."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-EMBLEM",
+        "change": "Диагонали 2 px, тиара с белым поясом."
+      }
+    ]
+  },
+  "confusable": [],
+  "gaps": [
+    "Ключи и тиара в полных форматах не нарисованы: нужен рисунок allegato A."
+  ],
+  "review": [],
+  "status": {
+    "full": "draft",
+    "mini": "draft"
+  }
+}

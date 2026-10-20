@@ -1,0 +1,237 @@
+{
+  "code": "AU",
+  "iso": {
+    "alpha2": "AU",
+    "alpha3": "AUS",
+    "numeric": "036",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Australia",
+    "ru": "Австралия"
+  },
+  "classes": [
+    "canton",
+    "union-jack",
+    "repeated-charges"
+  ],
+  "ratio": {
+    "h": 1,
+    "w": 2,
+    "source": "au-gov"
+  },
+  "adopted": {
+    "value": "1903-02-20",
+    "source": "au-fotw"
+  },
+  "sources": {
+    "au-act": {
+      "level": 1,
+      "title": "Flags Act 1953; Commonwealth Gazette No. 18, 23 March 1934 (описание)",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/au.html",
+      "accessed": "2026-10-21"
+    },
+    "au-gov": {
+      "level": "1g",
+      "title": "Australian Government, PMC: Australian National Flag (Pantone 280, 185); Style Manual 2002 (RGB)",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/au.html",
+      "accessed": "2026-10-21"
+    },
+    "au-fotw": {
+      "level": 4,
+      "title": "FOTW: Australia, construction",
+      "url": "https://crwflags.com/fotw/flags/au'.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    },
+    "flaginstitute-uj": {
+      "level": 4,
+      "ref": "data/sources.json"
+    }
+  },
+  "colors": {
+    "blue": {
+      "srgb": "#00008B",
+      "status": "ok",
+      "rule": "C-L1-RGB",
+      "specs": [
+        {
+          "src": "au-gov",
+          "value": "Pantone 280 C; RGB 0-0-139 (Style Manual 2002)"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 2738c; RGB 0-0-145",
+          "via": "fotw"
+        }
+      ]
+    },
+    "red": {
+      "srgb": "#FF0000",
+      "status": "ok",
+      "rule": "C-L1-RGB",
+      "specs": [
+        {
+          "src": "au-gov",
+          "value": "Pantone 185 C; RGB 255-0-0 (Style Manual 2002)"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 2347c; RGB 225-0-15",
+          "via": "fotw"
+        }
+      ]
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": []
+    }
+  },
+  "construction": {
+    "inner_ratio": 0.4444,
+    "commonwealth": {
+      "cx_l": 0.25,
+      "cy_h": 0.75,
+      "d_h": 0.3,
+      "points": 7
+    },
+    "cross_center": {
+      "cx_l": 0.75,
+      "cy_h": 0.5
+    },
+    "southern_cross": [
+      {
+        "name": "Alpha",
+        "dx_h": 0,
+        "dy_h": 0.3333,
+        "d_h": 0.1429,
+        "points": 7
+      },
+      {
+        "name": "Beta",
+        "dx_h": -0.25,
+        "dy_h": -0.0625,
+        "d_h": 0.1429,
+        "points": 7
+      },
+      {
+        "name": "Gamma",
+        "dx_h": 0,
+        "dy_h": -0.3333,
+        "d_h": 0.1429,
+        "points": 7
+      },
+      {
+        "name": "Delta",
+        "dx_h": 0.2222,
+        "dy_h": -0.1292,
+        "d_h": 0.1429,
+        "points": 7
+      },
+      {
+        "name": "Epsilon",
+        "dx_h": 0.1,
+        "dy_h": 0.0417,
+        "d_h": 0.0833,
+        "points": 5
+      }
+    ],
+    "mini_spread": {
+      "S": 1.25,
+      "M": 1.15,
+      "L": 1.1
+    },
+    "source": "au-fotw",
+    "text": "Звезда Содружества: центр нижней четверти у древка, внешний диаметр 3/10 высоты. Южный Крест: смещения от центра вольной половины в долях высоты; внешние диаметры 1/7 и 1/12; внутренний радиус 4/9 внешнего."
+  },
+  "probes": [
+    {
+      "at": [
+        0.25,
+        0.25
+      ],
+      "color": "red",
+      "why": "центр креста Union Jack"
+    },
+    {
+      "at": [
+        0.25,
+        0.75
+      ],
+      "color": "white",
+      "why": "центр звезды Содружества"
+    },
+    {
+      "at": [
+        0.75,
+        0.1667
+      ],
+      "color": "white",
+      "why": "центр Гаммы"
+    },
+    {
+      "at": [
+        0.75,
+        0.8333
+      ],
+      "color": "white",
+      "why": "центр Альфы"
+    },
+    {
+      "at": [
+        0.6,
+        0.92
+      ],
+      "color": "blue",
+      "why": "поле"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "U4",
+        "change": "Кантон — квадрат в четверти поля."
+      },
+      {
+        "rule": "S-UJ",
+        "change": "Union Jack без красного косого креста."
+      },
+      {
+        "rule": "S-POINT",
+        "change": "Звёзды Южного Креста — точки 2 px, Эпсилон — 1 px."
+      },
+      {
+        "rule": "S-CIRCLE",
+        "change": "В круге заряды притянуты внутрь, поле не меньше 1 px."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-UJ",
+        "change": "Без красного косого креста."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-UJ",
+        "change": "Красный косой крест 1 px со смещением."
+      }
+    ]
+  },
+  "confusable": [
+    "NZ"
+  ],
+  "gaps": [
+    "Схема из Flags Act 1953 и Gazette 1934 первично не прочитана; числа — по FOTW."
+  ],
+  "review": [],
+  "status": {
+    "full": "ok",
+    "mini": "ok"
+  }
+}

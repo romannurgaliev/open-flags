@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+<title>Romania</title>
+<path fill="#002B7F" fill-rule="evenodd" d="M0 20C0 8.954 8.954 0 20 0C31.046 0 40 8.954 40 20C40 31.046 31.046 40 20 40C8.954 40 0 31.046 0 20Z"/>
+<path fill="#FCD116" fill-rule="evenodd" d="M20 0C31.046 0 40 8.954 40 20C40 31.046 31.046 40 20 40C17.537 40 15.179 39.555 13 38.741L13 1.259C15.179 0.445 17.537 0 20 0Z"/>
+<path fill="#CE1126" fill-rule="evenodd" d="M40 20C40 28.583 34.593 35.903 27 38.741L27 1.259C34.593 4.097 40 11.417 40 20Z"/>
+</svg>

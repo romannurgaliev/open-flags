@@ -1,0 +1,141 @@
+{
+  "code": "ID",
+  "iso": {
+    "alpha2": "ID",
+    "alpha3": "IDN",
+    "numeric": "360",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Indonesia",
+    "ru": "Индонезия"
+  },
+  "classes": [
+    "bicolour-h"
+  ],
+  "ratio": {
+    "h": 2,
+    "w": 3,
+    "source": "id-law"
+  },
+  "adopted": {
+    "value": "1945-08-17",
+    "source": "id-fotw"
+  },
+  "sources": {
+    "id-const": {
+      "level": 1,
+      "title": "UUD 1945, Pasal 35",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/id.html",
+      "accessed": "2026-10-21"
+    },
+    "id-law": {
+      "level": 1,
+      "title": "UU No. 24 Tahun 2009, пояснение к ст. 4 (по FOTW пояснение не обязательно)",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/id.html",
+      "accessed": "2026-10-21"
+    },
+    "id-fotw": {
+      "level": 4,
+      "title": "FOTW: Indonesia",
+      "url": "https://crwflags.com/fotw/flags/id.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "red": {
+      "srgb": "#FF0000",
+      "status": "ok",
+      "rule": "C-L1-RGB",
+      "specs": [
+        {
+          "src": "id-law",
+          "value": "RGB 255-0-0 (пояснение к ст. 4)"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 032",
+          "via": "fotw"
+        }
+      ]
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": [
+        {
+          "src": "id-law",
+          "value": "RGB 255-255-255"
+        }
+      ]
+    }
+  },
+  "construction": {
+    "bands": [
+      {
+        "c": "red",
+        "w": 1
+      },
+      {
+        "c": "white",
+        "w": 1
+      }
+    ],
+    "source": "id-const",
+    "text": "Красный над белым, ширина — две трети длины."
+  },
+  "probes": [
+    {
+      "at": [
+        0.5,
+        0.25
+      ],
+      "color": "red",
+      "why": "верхняя полоса"
+    },
+    {
+      "at": [
+        0.5,
+        0.75
+      ],
+      "color": "white",
+      "why": "нижняя полоса"
+    },
+    {
+      "at": [
+        0.5,
+        0.48
+      ],
+      "color": "red",
+      "why": "у границы"
+    },
+    {
+      "at": [
+        0.5,
+        0.52
+      ],
+      "color": "white",
+      "why": "у границы"
+    }
+  ],
+  "simplification": {
+    "S": [],
+    "M": [],
+    "L": []
+  },
+  "confusable": [
+    "MC",
+    "PL"
+  ],
+  "gaps": [],
+  "review": [],
+  "status": {
+    "full": "ok",
+    "mini": "ok"
+  }
+}

@@ -1,0 +1,44 @@
+# Проверки на каждый PR и push в main: метаданные, SVG, пиксели, пробные точки, сетка,
+# негативные тесты. Контактный лист и отчёт — в артефактах и в Summary запуска.
+name: Check flags
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Checks C01–C15
+        run: node scripts/check.mjs --report "$GITHUB_STEP_SUMMARY"
+
+      - name: Negative tests (each check must fail on a broken copy)
+        run: node scripts/negative.mjs >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Contact sheet
+        if: always()
+        run: node scripts/sheet.mjs "$RUNNER_TEMP/contact-sheet.png" --scale 2
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: contact-sheet
+          path: |
+            ${{ runner.temp }}/contact-sheet.png
+            tests/broken/
+          if-no-files-found: ignore

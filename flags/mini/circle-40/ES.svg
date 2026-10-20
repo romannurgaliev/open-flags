@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+<title>Spain</title>
+<path fill="#AD1519" fill-rule="evenodd" d="M0 20C0 8.954 8.954 0 20 0C31.046 0 40 8.954 40 20C40 31.046 31.046 40 20 40C8.954 40 0 31.046 0 20Z"/>
+<path fill="#FABD00" fill-rule="evenodd" d="M0 20C0 16.357 0.974 12.942 2.676 10L37.324 10C39.026 12.942 40 16.357 40 20C40 31.046 31.046 40 20 40C8.954 40 0 31.046 0 20Z"/>
+<path fill="#AD1519" fill-rule="evenodd" d="M20 40C12.597 40 6.134 35.978 2.676 30L37.324 30C33.866 35.978 27.403 40 20 40Z"/>
+<path fill="#AD1519" fill-rule="evenodd" d="M15 16L25 16L25 22.6C25 25.84 21.2 27.4 20 28C18.8 27.4 15 25.84 15 22.6Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M20 22L20 16L25 16L25 22Z"/>
+<path fill="#FABD00" fill-rule="evenodd" d="M20 22L20 28C18.8 27.4 15 25.84 15 22.6L15 22Z"/>
+<path fill="#AD1519" fill-rule="evenodd" d="M15 16L15 12L25 12L25 16Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M12 28L12 16L14 16L14 28Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M26 28L26 16L28 16L28 28Z"/>
+</svg>

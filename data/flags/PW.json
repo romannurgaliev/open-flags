@@ -1,0 +1,164 @@
+{
+  "code": "PW",
+  "iso": {
+    "alpha2": "PW",
+    "alpha3": "PLW",
+    "numeric": "585",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Palau",
+    "ru": "Палау"
+  },
+  "classes": [
+    "disc",
+    "offset-disc"
+  ],
+  "ratio": {
+    "h": 5,
+    "w": 8,
+    "source": "pw-law"
+  },
+  "adopted": {
+    "value": "1981-01-01",
+    "source": "pw-law",
+    "note": "Закон утверждён 22.10.1980, флаг поднят 01.01.1981."
+  },
+  "sources": {
+    "pw-law": {
+      "level": 1,
+      "title": "Public Law No. 7-6-2 (Bill 7-230, D7), Seventh Palau Legislature, Section One",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/pw.html",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "blue": {
+      "srgb": "#00A0E2",
+      "status": "ok",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "pw-law",
+          "value": "sky blue (только название)"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 299c; RGB 0-160-226",
+          "via": "fotw"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS Process Blue",
+          "via": "fotw"
+        }
+      ]
+    },
+    "yellow": {
+      "srgb": "#F5EC62",
+      "status": "ok",
+      "rule": "C-ALBUM-FLAG",
+      "specs": [
+        {
+          "src": "pw-law",
+          "value": "golden yellow (только название)"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 101c; RGB 245-236-98",
+          "via": "fotw"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 109",
+          "via": "fotw"
+        }
+      ],
+      "note": "Album даёт лимонный 101c, London 2012 — золотистый 109. Закон говорит «golden yellow». Конфликт для ревью."
+    }
+  },
+  "construction": {
+    "disc": {
+      "d_h": 0.6,
+      "cx_l": 0.4375,
+      "cy_h": 0.5,
+      "source": "pw-law",
+      "text": "Диаметр 0.6 высоты; касательная к диску со стороны древка на 1/4 длины; центр по высоте посередине."
+    }
+  },
+  "probes": [
+    {
+      "at": [
+        0.4375,
+        0.5
+      ],
+      "color": "yellow",
+      "why": "центр диска"
+    },
+    {
+      "at": [
+        0.26,
+        0.5
+      ],
+      "color": "yellow",
+      "why": "внутри у касательной (1/4 длины)"
+    },
+    {
+      "at": [
+        0.24,
+        0.5
+      ],
+      "color": "blue",
+      "why": "снаружи у касательной"
+    },
+    {
+      "at": [
+        0.4375,
+        0.21
+      ],
+      "color": "yellow",
+      "why": "внутри у верхнего края"
+    },
+    {
+      "at": [
+        0.4375,
+        0.19
+      ],
+      "color": "blue",
+      "why": "снаружи у верхнего края"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-DISC",
+        "change": "Диаметр 10 px, смещение к древку сохранено."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-DISC",
+        "change": "Диаметр 14 px."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-DISC",
+        "change": "Диаметр 24 px."
+      }
+    ]
+  },
+  "confusable": [
+    "KZ"
+  ],
+  "gaps": [],
+  "review": [
+    "Оттенок жёлтого: лимонный (Album 2023) или золотистый (London 2012, текст закона)."
+  ],
+  "status": {
+    "full": "ok",
+    "mini": "ok"
+  }
+}

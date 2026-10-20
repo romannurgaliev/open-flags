@@ -1,0 +1,163 @@
+{
+  "code": "PL",
+  "iso": {
+    "alpha2": "PL",
+    "alpha3": "POL",
+    "numeric": "616",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Poland",
+    "ru": "Польша"
+  },
+  "classes": [
+    "bicolour-h",
+    "white-edge"
+  ],
+  "ratio": {
+    "h": 5,
+    "w": 8,
+    "source": "pl-act"
+  },
+  "adopted": {
+    "value": "1919-08-01",
+    "source": "pl-fotw"
+  },
+  "sources": {
+    "pl-act": {
+      "level": 1,
+      "title": "Ustawa z dnia 31 stycznia 1980 r. o godle, barwach i hymnie Rzeczypospolitej Polskiej oraz o pieczęciach państwowych, art. 4, art. 6, załącznik nr 2",
+      "url": "https://en.wikipedia.org/wiki/Flag_of_Poland",
+      "via": "wikipedia",
+      "accessed": "2026-10-21",
+      "note": "Текст ст. 4 прочитан на standardyprawa.pl; координаты цвета из приложения № 2 — через цитату в Википедии. Сам Dziennik Ustaw не прочитан."
+    },
+    "pl-fotw": {
+      "level": 4,
+      "title": "FOTW: Poland",
+      "url": "https://crwflags.com/fotw/flags/pl.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": [
+        {
+          "src": "pl-act",
+          "value": "CIE xyY 0.315, 0.320, 82.0 (осветитель C, d/0), допуск ΔE*uv 4.0"
+        }
+      ],
+      "computed": {
+        "value": "#EDE9E5",
+        "method": "xyY → XYZ (C) → Bradford → D65 → sRGB, относительно идеального рассеивателя"
+      },
+      "note": "Закон задаёт белый как отражающую ткань (Y 82). Для экрана белый поля выводим как #FFFFFF (правило C-WHITE), расчётное значение хранится здесь."
+    },
+    "red": {
+      "srgb": "#D7213E",
+      "status": "ok",
+      "rule": "C-L1-CIE",
+      "specs": [
+        {
+          "src": "pl-act",
+          "value": "CIE xyY 0.570, 0.305, 16.0 (осветитель C, d/0), допуск ΔE*uv 8.0"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 1795c; RGB 213-31-42",
+          "via": "fotw"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 1795",
+          "via": "fotw"
+        },
+        {
+          "src": "comparison",
+          "value": "#DC143C (Википедия, flagcolorcodes)"
+        }
+      ],
+      "computed": {
+        "value": "#D7213E",
+        "method": "xyY → XYZ (C) → Bradford → D65 → sRGB"
+      }
+    }
+  },
+  "construction": {
+    "bands": [
+      {
+        "c": "white",
+        "w": 1
+      },
+      {
+        "c": "red",
+        "w": 1
+      }
+    ],
+    "source": "pl-act",
+    "text": "Две горизонтальные полосы равной ширины, белая сверху; пропорция 5:8."
+  },
+  "probes": [
+    {
+      "at": [
+        0.5,
+        0.25
+      ],
+      "color": "white",
+      "why": "верхняя полоса"
+    },
+    {
+      "at": [
+        0.5,
+        0.75
+      ],
+      "color": "red",
+      "why": "нижняя полоса"
+    },
+    {
+      "at": [
+        0.5,
+        0.48
+      ],
+      "color": "white",
+      "why": "у границы, сверху"
+    },
+    {
+      "at": [
+        0.5,
+        0.52
+      ],
+      "color": "red",
+      "why": "у границы, снизу"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-STRIPES",
+        "change": "8 + 8 px."
+      }
+    ],
+    "M": [],
+    "L": []
+  },
+  "confusable": [
+    "ID",
+    "MC"
+  ],
+  "gaps": [
+    "Приложение № 2 прочитано через вторичную цитату."
+  ],
+  "review": [
+    "Белое поле сливается с белым фоном интерфейса: нужен оверлей-контур (overlays/)."
+  ],
+  "status": {
+    "full": "ok",
+    "mini": "ok"
+  }
+}

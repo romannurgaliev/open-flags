@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24">
+<title>Vatican City</title>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M0 24L0 0L36 0L36 24Z"/>
+<path fill="#FFCE00" fill-rule="evenodd" d="M0 24L0 0L18 0L18 24Z"/>
+<path fill="#C8A040" fill-rule="evenodd" d="M18.825 20.625L34.185 5.265L35.175 6.255L19.815 21.615Z"/>
+<path fill="#9EA3A8" fill-rule="evenodd" d="M19.815 5.265L35.175 20.625L34.185 21.615L18.825 6.255Z"/>
+<path fill="#C8A040" fill-rule="evenodd" d="M24.8 3.56C24.8 2.163 25.785 1.03 27 1.03C28.215 1.03 29.2 2.163 29.2 3.56C29.2 4.957 28.215 6.09 27 6.09C25.785 6.09 24.8 4.957 24.8 3.56Z"/>
+</svg>

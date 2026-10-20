@@ -1,0 +1,208 @@
+{
+  "code": "ES",
+  "iso": {
+    "alpha2": "ES",
+    "alpha3": "ESP",
+    "numeric": "724",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Spain",
+    "ru": "Испания"
+  },
+  "classes": [
+    "arms"
+  ],
+  "ratio": {
+    "h": 2,
+    "w": 3,
+    "source": "es-rd2964"
+  },
+  "adopted": {
+    "value": "1981-12-19",
+    "source": "es-fotw"
+  },
+  "sources": {
+    "es-const": {
+      "level": 1,
+      "title": "Constitución Española, art. 4.1",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/es.html",
+      "accessed": "2026-10-21"
+    },
+    "es-law39": {
+      "level": 1,
+      "title": "Ley 39/1981, art. 2.2",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/es.html",
+      "accessed": "2026-10-21"
+    },
+    "es-rd2964": {
+      "level": 1,
+      "title": "Real Decreto 2964/1981, art. 3",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/es.html",
+      "accessed": "2026-10-21"
+    },
+    "es-rd481": {
+      "level": 1,
+      "title": "Real Decreto 481/1981 (цвета в CIELAB и CIE 1931)",
+      "via": "fotw",
+      "url": "https://crwflags.com/fotw/flags/es.html",
+      "accessed": "2026-10-21"
+    },
+    "es-fotw": {
+      "level": 4,
+      "title": "FOTW: Spain",
+      "url": "https://crwflags.com/fotw/flags/es.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "red": {
+      "srgb": "#AD1519",
+      "status": "ok",
+      "rule": "C-L1-CIE",
+      "specs": [
+        {
+          "src": "es-rd481",
+          "value": "CIELAB L* 37, C* 70, h 35; CIE 1931 Y 9.5, x 0.614, y 0.320; допуск 5"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 2350c; RGB 173-21-25",
+          "via": "fotw"
+        }
+      ],
+      "computed": {
+        "value": "#AD1519",
+        "method": "L*C*h (D65) → Lab → XYZ → sRGB; через xyY (D65) получается #B0081C"
+      }
+    },
+    "yellow": {
+      "srgb": "#FABD00",
+      "status": "ok",
+      "rule": "C-L1-CIE",
+      "specs": [
+        {
+          "src": "es-rd481",
+          "value": "CIELAB L* 80, C* 95, h 85; CIE 1931 Y 56.7, x 0.488, y 0.469; допуск 5"
+        },
+        {
+          "src": "album2023",
+          "value": "Pantone 7408c; RGB 248-193-0",
+          "via": "fotw"
+        }
+      ],
+      "computed": {
+        "value": "#FABD00",
+        "method": "L*C*h (D65) → sRGB; цвет вне охвата sRGB, обрезан"
+      },
+      "note": "Жёлтый закона вне охвата sRGB — на экране точно не воспроизводится."
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": []
+    }
+  },
+  "construction": {
+    "bands": [
+      {
+        "c": "red",
+        "w": 1
+      },
+      {
+        "c": "yellow",
+        "w": 2
+      },
+      {
+        "c": "red",
+        "w": 1
+      }
+    ],
+    "arms": {
+      "h_h": 0.4,
+      "cx_h": 0.5,
+      "square_rule": "centre"
+    },
+    "source": "es-rd2964",
+    "text": "Полосы 1:2:1. Герб высотой 2/5 высоты, ось на расстоянии половины высоты от древка; на квадратных и малых флагах — по центру."
+  },
+  "probes": [
+    {
+      "at": [
+        0.5,
+        0.1
+      ],
+      "color": "red",
+      "why": "верхняя полоса"
+    },
+    {
+      "at": [
+        0.5,
+        0.9
+      ],
+      "color": "red",
+      "why": "нижняя полоса"
+    },
+    {
+      "at": [
+        0.85,
+        0.5
+      ],
+      "color": "yellow",
+      "why": "жёлтая полоса вне герба"
+    },
+    {
+      "at": [
+        0.85,
+        0.24
+      ],
+      "color": "red",
+      "why": "у границы (1/4 высоты)"
+    },
+    {
+      "at": [
+        0.85,
+        0.26
+      ],
+      "color": "yellow",
+      "why": "у границы"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "S-EMBLEM-DROP",
+        "change": "Герб снят: Конституция допускает гражданский флаг без герба, и без герба флаг ни с кем не совпадает."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-EMBLEM",
+        "change": "Щит из 4 полей (красный, белый, жёлтый, красный) и корона красным блоком, без колонн."
+      }
+    ],
+    "L": [
+      {
+        "rule": "S-EMBLEM",
+        "change": "+ колонны белыми полосами по бокам."
+      }
+    ]
+  },
+  "confusable": [],
+  "gaps": [
+    "Герб в полных форматах не нарисован: нужен рисунок по RD 2964/1981."
+  ],
+  "review": [
+    "Решить, показывать ли герб на S по умолчанию или давать два варианта (с гербом и без)."
+  ],
+  "status": {
+    "full": "draft",
+    "mini": "draft"
+  }
+}

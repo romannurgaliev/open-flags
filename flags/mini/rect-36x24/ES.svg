@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24">
+<title>Spain</title>
+<path fill="#AD1519" fill-rule="evenodd" d="M0 24L0 0L36 0L36 24Z"/>
+<path fill="#FABD00" fill-rule="evenodd" d="M0 24L0 6L36 6L36 24Z"/>
+<path fill="#AD1519" fill-rule="evenodd" d="M0 24L0 18L36 18L36 24Z"/>
+<path fill="#AD1519" fill-rule="evenodd" d="M9 10L15 10L15 13.85C15 15.74 12.72 16.65 12 17C11.28 16.65 9 15.74 9 13.85Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M12 13.5L12 10L15 10L15 13.5Z"/>
+<path fill="#FABD00" fill-rule="evenodd" d="M12 13.5L12 17C11.28 16.65 9 15.74 9 13.85L9 13.5Z"/>
+<path fill="#AD1519" fill-rule="evenodd" d="M9 10L9 7L15 7L15 10Z"/>
+</svg>

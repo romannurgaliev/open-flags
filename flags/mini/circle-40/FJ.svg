@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+<title>Fiji</title>
+<path fill="#42B4E6" fill-rule="evenodd" d="M0 20C0 8.954 8.954 0 20 0C31.046 0 40 8.954 40 20C40 31.046 31.046 40 20 40C8.954 40 0 31.046 0 20Z"/>
+<path fill="#0033A0" fill-rule="evenodd" d="M20 20L0 20C0 8.954 8.954 0 20 0Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M10 7.172L16.939 0.233C17.937 0.08 18.959 0 20 0L20 2.828L12.828 10L20 17.172L20 20L17.172 20L10 12.828L2.828 20L0 20C0 18.959 0.08 17.937 0.233 16.939L7.172 10L4.514 7.343C5.36 6.308 6.308 5.36 7.343 4.514Z"/>
+<path fill="#C8102E" fill-rule="evenodd" d="M10 10L8.586 10L5.168 6.583C5.392 6.335 5.622 6.094 5.858 5.858Z"/>
+<path fill="#C8102E" fill-rule="evenodd" d="M10 10L10 11.414L1.414 20L0 20Z"/>
+<path fill="#C8102E" fill-rule="evenodd" d="M10 10L10 8.586L18.533 0.053C19.017 0.018 19.507 0 20 0Z"/>
+<path fill="#C8102E" fill-rule="evenodd" d="M10 10L11.414 10L20 18.586L20 20Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M7 20L7 13L1.259 13C2.086 10.788 3.293 8.761 4.801 7L7 7L7 4.801C8.761 3.293 10.788 2.086 13 1.259L13 7L20 7L20 13L13 13L13 20Z"/>
+<path fill="#C8102E" fill-rule="evenodd" d="M8 20L8 12L1.664 12C2.288 10.572 3.074 9.231 3.999 8L8 8L8 3.999C9.231 3.074 10.572 2.288 12 1.664L12 8L20 8L20 12L12 12L12 20Z"/>
+<path fill="#FFFFFF" fill-rule="evenodd" d="M21 10L37 10L37 21C37 26.4 30.92 29 29 30C27.08 29 21 26.4 21 21Z"/>
+<path fill="#C8102E" fill-rule="evenodd" d="M28 24L21.689 24C21.26 23.113 21 22.116 21 21L21 21L28 21L28 14L31 14L31 21L37 21C37 22.116 36.74 23.113 36.311 24L31 24L31 28.965C30.185 29.417 29.469 29.756 29 30C28.736 29.863 28.394 29.695 28 29.494Z"/>
+<path fill="#C8102E" fill-rule="evenodd" d="M21 14L21 10L37 10L37 14Z"/>
+<path fill="#FFD100" fill-rule="evenodd" d="M28 13L28 10L30 10L30 13Z"/>
+</svg>

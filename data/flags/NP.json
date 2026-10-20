@@ -1,0 +1,164 @@
+{
+  "code": "NP",
+  "iso": {
+    "alpha2": "NP",
+    "alpha3": "NPL",
+    "numeric": "524",
+    "status": "official",
+    "source": "cldr 45.0.0"
+  },
+  "names": {
+    "en": "Nepal",
+    "ru": "Непал"
+  },
+  "classes": [
+    "non-rectangular",
+    "geometric"
+  ],
+  "ratio": {
+    "shape": "pennant",
+    "w_over_h": 0.8203,
+    "source": "np-const"
+  },
+  "adopted": {
+    "value": "1962-12-16",
+    "source": "np-fotw"
+  },
+  "sources": {
+    "np-const": {
+      "level": 1,
+      "title": "Constitution of Nepal 2015, art. 8, Schedule 1 (шаги 1–24)",
+      "url": "https://crwflags.com/fotw/flags/np-law.html",
+      "via": "fotw",
+      "accessed": "2026-10-21",
+      "note": "Шаги построения прочитаны в транскрипции FOTW. Реализация — src/np.mjs."
+    },
+    "np-fotw": {
+      "level": 4,
+      "title": "FOTW: Nepal",
+      "url": "https://crwflags.com/fotw/flags/np.html",
+      "via": "direct",
+      "accessed": "2026-10-21"
+    }
+  },
+  "colors": {
+    "crimson": {
+      "srgb": "#D21034",
+      "status": "ok",
+      "rule": "C-PANTONE-MAP",
+      "specs": [
+        {
+          "src": "np-const",
+          "value": "crimson (только название)"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 186",
+          "via": "fotw"
+        }
+      ]
+    },
+    "blue": {
+      "srgb": "#003598",
+      "status": "provisional",
+      "rule": "C-PANTONE-MAP",
+      "specs": [
+        {
+          "src": "np-const",
+          "value": "deep blue (только название)"
+        },
+        {
+          "src": "london2012",
+          "value": "PMS 287",
+          "via": "fotw"
+        }
+      ],
+      "note": "287c в Album 2023 имеет два RGB (#003598 для NZ, #003580 для BR); взят первый."
+    },
+    "white": {
+      "srgb": "#FFFFFF",
+      "status": "ok",
+      "rule": "C-WHITE",
+      "specs": []
+    }
+  },
+  "construction": {
+    "source": "np-const",
+    "text": "Построение полностью по шагам Приложения 1: src/np.mjs. Габарит каймы даёт W/H = 0.8203."
+  },
+  "probes": [
+    {
+      "at": [
+        0.2457,
+        0.7273
+      ],
+      "color": "white",
+      "why": "центр солнца W (шаг 20)"
+    },
+    {
+      "at": [
+        0.2457,
+        0.356
+      ],
+      "color": "white",
+      "why": "полудиск луны чуть выше точки T (шаг 16–17); T — середина нижнего края, на краю пробу не ставим"
+    },
+    {
+      "at": [
+        0.4,
+        0.93
+      ],
+      "color": "crimson",
+      "why": "нижний вымпел"
+    },
+    {
+      "at": [
+        0.5,
+        0.995
+      ],
+      "color": "blue",
+      "why": "кайма внизу"
+    },
+    {
+      "at": [
+        0.95,
+        0.4
+      ],
+      "color": "transparent",
+      "why": "вне формы справа от верхнего вымпела"
+    }
+  ],
+  "simplification": {
+    "S": [
+      {
+        "rule": "U-SHAPE",
+        "change": "Форма вписана, фон прозрачный; кайма не тоньше 1 px."
+      },
+      {
+        "rule": "S-POINT",
+        "change": "Лучи солнца и луны сняты: луна — чаша и полудиск, солнце — диск."
+      }
+    ],
+    "M": [
+      {
+        "rule": "S-POINT",
+        "change": "Как S."
+      }
+    ],
+    "L": [
+      {
+        "rule": "U-SHAPE",
+        "change": "Полное построение, кайма 1 px."
+      }
+    ]
+  },
+  "confusable": [],
+  "gaps": [
+    "Цвета на уровне 1 только названы."
+  ],
+  "review": [],
+  "status": {
+    "full": "ok",
+    "mini": "ok"
+  }
+}
