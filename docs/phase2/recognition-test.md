@@ -13,7 +13,7 @@ Are our miniatures at 16 and 24 px recognized better than the alternatives, and 
 | C: hampusborgos | original ratios, scaled to 16 and 24 high |
 | D: Noto Color Emoji | flag glyphs at 16 and 24 high (open license; system emoji depend on the OS, and Windows shows letters instead of flags) |
 
-All 25 pilot flags. The rectangle is used because that is how pickers show flags (see [04](../04-unified-and-miniature.md)). Circles at 16 and 24 get a separate short block for group A only: an A/B of equal stripes vs. a wider middle stripe.
+All 25 pilot flags. The rectangle is used because that is how pickers show flags (see [04](../04-unified-and-miniature.md)). Circles at 24 and 40 get a separate short block for group A only: an A/B of equal stripes vs. a wider middle stripe.
 
 ## Participant task
 

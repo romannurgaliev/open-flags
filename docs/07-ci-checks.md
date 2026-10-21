@@ -33,7 +33,7 @@ C10 is reserved for checking construction numbers against outlines (probe points
 | N01 | C01 | file deleted |
 | N02 | C01 | extra file |
 | N03 | C02 | closing tag cut off |
-| N04 | C03 | viewBox 17×16 instead of 16×16 |
+| N04 | C03 | viewBox 25×24 instead of 24×24 |
 | N05 | C04 | text in the SVG |
 | N06 | C04 | raster image |
 | N07 | C04 | circle relies on clip-path |
@@ -46,7 +46,7 @@ C10 is reserved for checking construction numbers against outlines (probe points
 | N14 | C04 | invisible fill via fill-opacity |
 | N15 | C08 | hole: the base layer is missing |
 | N16 | C09 | Japan's disc 10% larger than the law |
-| N17 | C11 | stripes off the pixel grid |
+| N17 | C11 | US stripes off the pixel grid |
 | N18 | C12 | file over budget |
 | N19 | C14 | ratio 2:3 instead of 5:8 |
 | N20 | C13 | color has no srgb |
@@ -58,6 +58,8 @@ All 22 breakages are caught.
 ## Figma comparison
 
 Figma is the master ([08](08-contributing.md)), so the pilot checked that Figma does not alter the artwork:
+
+The pilot ran these checks while it had 12 formats (300 files); the six that remain were part of it.
 
 1. **Plugin export.** All 300 variants were exported from Figma as SVG and checked: no clipPath, mask, g or transform; evenodd on every path; all subpaths closed; viewBox matches the size. Two findings were fixed in the generator: the fractional original width (Figma rounds the viewBox) and the VA geometry outside the canvas.
 2. **Normalization.** The Figma export always adds `fill="none"` to the root and `clip-rule` to paths, and writes white as `white`. `scripts/normalize.mjs` removes this without touching geometry. On two real Figma exports (`tests/figma-export/`) the normalized file passes every check and the raw one does not (C04, C05).

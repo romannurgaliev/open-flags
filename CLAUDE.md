@@ -1,6 +1,6 @@
 # open-flags — notes for agents
 
-Country flag library: full formats from each country's law, plus 16/24/40 px miniatures with written simplification rules. Pilot of 25 flags. The spec is in `docs/` (start with `docs/README.md`); read the relevant doc before changing rules, metadata or checks.
+Country flag library: full formats from each country's law, plus 3:2 and circular miniatures with written simplification rules. Six formats: `original`, `3x2`, `rect-24x16`, `rect-36x24`, `circle-24`, `circle-40` (`docs/04`). Adding a format is a minor version, removing one is major, so don't add formats without a concrete use. Pilot of 25 flags. The spec is in `docs/` (start with `docs/README.md`); read the relevant doc before changing rules, metadata or checks.
 
 ## Language
 

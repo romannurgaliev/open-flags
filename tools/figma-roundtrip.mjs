@@ -6,7 +6,7 @@
 // color. At edges the Figma and resvg rasterizers antialias differently.
 //
 //   node tools/figma-roundtrip.mjs <directory with PNGs>
-// PNG names: square-16.png … rect-60x40.png, original.png, 3x2.png, 1x1.png.
+// PNG names: rect-24x16.png, rect-36x24.png, circle-24.png, circle-40.png, original.png, 3x2.png.
 // Set layout as in the pilot Figma file: miniatures in a row (padding 16, step size+16),
 // full formats in a 5-column grid (padding 60, step max size+60).
 

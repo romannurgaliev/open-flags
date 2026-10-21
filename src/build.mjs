@@ -6,10 +6,10 @@
 // Formats:
 //   flags/original/CODE.svg      original aspect ratio, height near 600
 //   flags/3x2/CODE.svg           900×600
-//   flags/1x1/CODE.svg           600×600
-//   flags/mini/square-{16,24,40}/CODE.svg
-//   flags/mini/circle-{16,24,40}/CODE.svg
-//   flags/mini/rect-{24x16,36x24,60x40}/CODE.svg
+//   flags/mini/rect-24x16/CODE.svg    tier S
+//   flags/mini/rect-36x24/CODE.svg    tier M
+//   flags/mini/circle-24/CODE.svg     tier M
+//   flags/mini/circle-40/CODE.svg     tier L
 // Plus overlays/: outlines for flags with white edges, kept separate from the flags.
 
 import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
@@ -23,11 +23,27 @@ export const TIERS = { S: 16, M: 24, L: 40 };
 export const FORMATS = [
   { fmt: 'original', dir: 'original' },
   { fmt: '3x2', dir: '3x2', W: 900, H: 600 },
-  { fmt: '1x1', dir: '1x1', W: 600, H: 600 },
-  ...Object.entries(TIERS).map(([tier, s]) => ({ fmt: 'square', tier, dir: `mini/square-${s}`, W: s, H: s })),
-  ...Object.entries(TIERS).map(([tier, s]) => ({ fmt: 'circle', tier, dir: `mini/circle-${s}`, W: s, H: s })),
-  ...Object.entries(TIERS).map(([tier, s]) => ({ fmt: 'rect', tier, dir: `mini/rect-${s * 1.5}x${s}`, W: s * 1.5, H: s })),
+  rectSpec('S'),
+  rectSpec('M'),
+  circleSpec('M'),
+  circleSpec('L'),
 ];
+
+// Specs for any shape and tier. Only the ones in FORMATS are published; the rest are kept
+// for tests (a square stands in for "a circle exported without its clip") and for adding
+// a format later.
+export function rectSpec(tier) {
+  const s = TIERS[tier];
+  return { fmt: 'rect', tier, dir: `mini/rect-${s * 1.5}x${s}`, W: s * 1.5, H: s };
+}
+export function circleSpec(tier) {
+  const s = TIERS[tier];
+  return { fmt: 'circle', tier, dir: `mini/circle-${s}`, W: s, H: s };
+}
+export function squareSpec(tier) {
+  const s = TIERS[tier];
+  return { fmt: 'square', tier, dir: `mini/square-${s}`, W: s, H: s };
+}
 
 export function loadMeta(code) {
   return JSON.parse(readFileSync(new URL(`data/flags/${code}.json`, root), 'utf8'));
@@ -85,15 +101,14 @@ function overlays() {
   // A 1 px inner outline for flags with a white edge: laid on top, not baked into the flag.
   const out = new URL('overlays/', root);
   mkdirSync(out, { recursive: true });
-  for (const [tier, s] of Object.entries(TIERS)) {
-    const ring = `M0 0H${s}V${s}H0Z M1 1V${s - 1}H${s - 1}V1Z`;
+  for (const spec of FORMATS.filter((f) => f.tier)) {
+    const s = spec.H;
     const ringC = `M${s / 2} 0A${s / 2} ${s / 2} 0 1 1 ${s / 2} ${s}A${s / 2} ${s / 2} 0 1 1 ${s / 2} 0Z M${s / 2} 1A${s / 2 - 1} ${s / 2 - 1} 0 1 0 ${s / 2} ${s - 1}A${s / 2 - 1} ${s / 2 - 1} 0 1 0 ${s / 2} 1Z`;
-    const w = s * 1.5;
+    const w = spec.W;
     const ringR = `M0 0H${w}V${s}H0Z M1 1V${s - 1}H${w - 1}V1Z`;
     const svg = (W, H, d) => `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><path fill="#000" fill-opacity="0.12" fill-rule="evenodd" d="${d}"/></svg>\n`;
-    writeFileSync(new URL(`square-${s}.svg`, out), svg(s, s, ring));
-    writeFileSync(new URL(`circle-${s}.svg`, out), svg(s, s, ringC));
-    writeFileSync(new URL(`rect-${w}x${s}.svg`, out), svg(w, s, ringR));
+    const name = spec.dir.replace('mini/', '');
+    writeFileSync(new URL(`${name}.svg`, out), svg(w, s, spec.fmt === 'circle' ? ringC : ringR));
   }
 }
 

@@ -5,15 +5,9 @@
   "sets": {
     "original": "3:2013",
     "3x2": "3:2039",
-    "1x1": "3:2065",
-    "mini/square-16": "3:2091",
-    "mini/square-24": "3:2117",
-    "mini/square-40": "3:2143",
-    "mini/circle-16": "3:2169",
     "mini/circle-24": "3:2195",
     "mini/circle-40": "3:2221",
     "mini/rect-24x16": "3:2247",
-    "mini/rect-36x24": "3:2273",
-    "mini/rect-60x40": "3:2299"
+    "mini/rect-36x24": "3:2273"
   }
 }
