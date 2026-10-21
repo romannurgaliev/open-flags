@@ -225,6 +225,22 @@ function dp(pts, eps) {
   return [a, b];
 }
 
+// Douglas–Peucker on a closed ring (first point = last): split at the point farthest from the
+// first one into two polylines and simplify each; otherwise Douglas–Peucker has no baseline.
+function dpRing(pts, eps) {
+  const a = pts[0];
+  let far = 1;
+  let fd = 0;
+  pts.forEach((p, i) => {
+    const d = Math.hypot(p[0] - a[0], p[1] - a[1]);
+    if (d > fd) {
+      fd = d;
+      far = i;
+    }
+  });
+  return [...dp(pts.slice(0, far + 1), eps).slice(0, -1), ...dp(pts.slice(far), eps)];
+}
+
 // Map fitted to the width or height of a frame; eps is the simplification tolerance in frame units;
 // islands smaller than minArea (in square frame units) are dropped.
 export function mapShape(names, box, { eps = 0, minArea = 0, fit = 'contain' } = {}) {
@@ -243,21 +259,33 @@ export function mapShape(names, box, { eps = 0, minArea = 0, fit = 'contain' } =
   let shape = null;
   for (const r of proj) {
     let pts = r.map(([px, py]) => [ox + (px - minX) * s, oy + (py - minY) * s]);
-    if (eps) {
-      // The ring is closed (first point = last): split it at the farthest point into two
-      // polylines and simplify each; otherwise Douglas–Peucker has no baseline.
-      const a = pts[0];
-      let far = 1;
-      let fd = 0;
-      pts.forEach((p, i) => {
-        const d = Math.hypot(p[0] - a[0], p[1] - a[1]);
-        if (d > fd) {
-          fd = d;
-          far = i;
-        }
-      });
-      pts = [...dp(pts.slice(0, far + 1), eps).slice(0, -1), ...dp(pts.slice(far), eps)];
-    }
+    if (eps) pts = dpRing(pts, eps);
+    if (pts.length < 3) continue;
+    const p = poly(pts);
+    if (Math.abs(p.area) < minArea) continue;
+    shape = shape ? unite(shape, p) : p;
+  }
+  return shape;
+}
+
+// ---------------------------------------------------------------------------------------------
+// Artwork traced from official drawings (data/artwork/<CODE>.json)
+
+// A shape from SVG path data.
+export const fromPathData = (d) => new P.CompoundPath({ pathData: d, ...opt });
+
+// Curves flattened to a polyline, then each ring simplified with Douglas–Peucker (eps in canvas
+// units); rings smaller than minArea are dropped (rule S-MAP for maps from official drawings).
+export function simplifyOutline(item, eps, minArea = 0) {
+  const src = item.clone(opt);
+  const rings = src.className === 'CompoundPath' ? src.children : [src];
+  let shape = null;
+  for (const r of rings) {
+    r.flatten(Math.min(0.05, eps / 4));
+    let pts = r.segments.map((g) => [g.point.x, g.point.y]);
+    pts.push(pts[0]);
+    if (eps) pts = dpRing(pts, eps);
+    if (pts.length > 1 && pts[0][0] === pts.at(-1)[0] && pts[0][1] === pts.at(-1)[1]) pts.pop();
     if (pts.length < 3) continue;
     const p = poly(pts);
     if (Math.abs(p.area) < minArea) continue;

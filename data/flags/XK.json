@@ -16,10 +16,10 @@
     "repeated-charges"
   ],
   "ratio": {
-    "h": 2,
-    "w": 3,
-    "source": "xk-fotw",
-    "note": "No official ratio is stated in the sources read; 2:3 is practice. Gap."
+    "h": 5,
+    "w": 7,
+    "source": "xk-protocol",
+    "note": "Law No. 03/L-132 on State Protocol, art. 15(1): ratio 1:1.4. The government drawing (xk-opm) is labeled 2:3 and drawn at 1:1.48."
   },
   "adopted": {
     "value": "2008-02-17",
@@ -37,6 +37,13 @@
     "naturalearth": {
       "level": 4,
       "ref": "data/sources.json"
+    },
+    "xk-protocol": {
+      "level": 1,
+      "title": "Law No. 03/L-132 on the State Protocol of the Republic of Kosovo (2009), art. 15(1)",
+      "url": "https://gzk.rks-gov.net/ActDocumentDetail.aspx?ActID=2638",
+      "via": "direct",
+      "accessed": "2026-10-21"
     }
   },
   "colors": {

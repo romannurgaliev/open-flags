@@ -13,10 +13,19 @@
 import {
   rect, circle, poly, ellipse, unite, sub, inter, star, star5, band, distribute, sameParity,
   reduceStripes, stripes, unionJack, mapShape, shield, crescent, roundedBar, pullInside, paper,
+  fromPathData, simplifyOutline,
 } from './kit.mjs';
+import { readFileSync } from 'node:fs';
 import { nepalFrame } from './np.mjs';
 
 const L = (fill, item) => ({ fill, item });
+
+// Artwork traced from an official drawing: data/artwork/<CODE>.json. Coordinates are in flag heights,
+// origin at the center of the field (see the file's $comment).
+const artCache = {};
+const artwork = (code) => (artCache[code] ??= JSON.parse(readFileSync(new URL(`../data/artwork/${code}.json`, import.meta.url), 'utf8')));
+// Places artwork in a format: scaled with the height (U2), centered on the field (U3).
+const placeArt = (ctx, item) => item.transform(new paper.Matrix(ctx.H, 0, 0, ctx.H, ctx.W / 2, ctx.H / 2));
 const field = (ctx, fill) => L(fill, rect(0, 0, ctx.W, ctx.H));
 
 // Disc: on the grid, an integer diameter with the same parity as the canvas along the centering axis.
@@ -38,6 +47,19 @@ function dot(x, y, size = 1) {
 
 function inCircle(ctx, item, margin = 1) {
   if (ctx.circle) pullInside(item, ctx.W / 2, ctx.H / 2, ctx.W / 2, margin);
+  return item;
+}
+
+// S-CIRCLE for pixel dots: every corner of the dot at least margin px inside the circle. The dot moves
+// in whole pixels toward the center, vertically first, so its column (and the spacing of a row) is kept.
+function dotInCircle(ctx, item, margin = 1) {
+  const R = ctx.W / 2;
+  const fits = (b) => [[b.left, b.top], [b.right, b.top], [b.left, b.bottom], [b.right, b.bottom]]
+    .every(([x, y]) => Math.hypot(x - R, y - R) <= R - margin + 1e-9);
+  for (let i = 0; i < R && !fits(item.bounds); i++) {
+    const c = item.bounds.center;
+    item.translate([0, Math.sign(R - c.y)]);
+  }
   return item;
 }
 
@@ -534,25 +556,51 @@ const builders = {
   },
 
   XK(ctx) {
-    const k = ctx.k.estimate;
+    // Map and six stars from the official drawing (data/artwork/XK.json). Together they are one charge:
+    // scaled with the height and centered on the field, as in the drawing (U2, U3).
+    const art = artwork('XK');
     const W = ctx.W;
     const H = ctx.H;
     const layers = [field(ctx, 'blue')];
-    const mh = H * k.map_h_h;
-    const box = { x: W / 2 - mh, y: H * k.map_cy_h - mh / 2, w: mh * 2, h: mh };
-    const eps = ctx.px ? (ctx.tier === 'S' ? 0.45 : 0.35) : 0;
-    layers.push(L('gold', mapShape(['Kosovo'], box, { eps })));
-    if (!ctx.px) return layers; // stars: not drawn yet
-    const n = 6;
-    const arcR = H * k.stars_arc_r_h;
-    const acx = W / 2;
-    const acy = H * k.stars_arc_cy_h;
-    for (let i = 0; i < n; i++) {
-      const a = (-90 - k.stars_arc_deg / 2 + (i * k.stars_arc_deg) / (n - 1)) * (Math.PI / 180);
-      const x = acx + arcR * Math.cos(a);
-      const y = acy + arcR * Math.sin(a);
-      layers.push(L('white', ctx.tier === 'L' ? star5(x, y, 1.6) : dot(x, y, ctx.tier === 'M' ? 2 : 1)));
+    const map = placeArt(ctx, fromPathData(art.map));
+    const stars = art.stars.map((d) => placeArt(ctx, fromPathData(d)));
+    if (!ctx.px || ctx.tier === 'L') {
+      // Full formats: the drawing's paths. L: map simplified (S-MAP), stars kept as polygons (over 4 px).
+      layers.push(L('gold', ctx.px ? simplifyOutline(map, 0.35) : map));
+      layers.push(L('white', stars.reduce((a, b) => unite(a, b))));
+      return layers;
     }
+    layers.push(L('gold', simplifyOutline(map, ctx.tier === 'S' ? 0.45 : 0.35)));
+    // Stars under 4 px become pixel dots (S-POINT): 1 px at S, 2 px at M.
+    const size = ctx.tier === 'S' ? 1 : 2;
+    // Star centers (mean of the vertices), averaged left/right: the drawing's arc is 1.2% of the height
+    // lower on the hoist side, which whole-pixel rounding would turn into a 1 px tilt.
+    const raw = stars.map((s) => {
+      const p = (s.children ?? [s]).flatMap((c) => c.segments.map((g) => g.point));
+      return [p.reduce((a, q) => a + q.x, 0) / p.length, p.reduce((a, q) => a + q.y, 0) / p.length];
+    });
+    let centers = raw.map(([x, y], i) => {
+      const [mx, my] = raw[raw.length - 1 - i];
+      return [W / 2 + (x - mx) / 2, (y + my) / 2];
+    });
+    if (ctx.tier === 'S') {
+      // S-REPEAT: six dots in 16 px would sit 2 px apart (minimum step 3 px); four dots on the same arc.
+      const n = 4;
+      const [x0, x1] = [centers[0][0], centers.at(-1)[0]];
+      const yAt = (x) => {
+        // the arc through the drawing's star centers, interpolated linearly between neighbors
+        const i = Math.max(0, centers.findIndex((c, k) => k < centers.length - 1 && x <= centers[k + 1][0]));
+        const [a, b] = [centers[i], centers[i + 1]];
+        return a[1] + ((b[1] - a[1]) * (x - a[0])) / (b[0] - a[0]);
+      };
+      centers = Array.from({ length: n }, (_, i) => {
+        const x = x0 + ((x1 - x0) * i) / (n - 1);
+        return [x, yAt(x)];
+      });
+    }
+    let dots = centers.map(([x, y]) => dot(x, y, size));
+    if (ctx.circle) dots = dots.map((d) => dotInCircle(ctx, d, 1));
+    layers.push(L('white', dots.reduce((a, b) => unite(a, b))));
     return layers;
   },
 
