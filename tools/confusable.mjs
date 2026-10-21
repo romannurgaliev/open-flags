@@ -8,13 +8,13 @@ import { rgbToLab, deltaE2000 } from '../src/color.mjs';
 
 const root = new URL('../', import.meta.url);
 const PAIRS = [['TD', 'RO'], ['ID', 'MC'], ['AU', 'NZ'], ['PW', 'KZ'], ['CY', 'XK'], ['PL', 'ID']];
-const DIRS = ['mini/square-16', 'mini/circle-16', 'mini/rect-24x16', 'mini/square-24', 'mini/square-40', '1x1'];
+const DIRS = ['mini/rect-24x16', 'mini/rect-36x24', 'mini/circle-24', 'mini/circle-40', '3x2'];
 
 function px(dir, code) {
   const f = new URL(`flags/${dir}/${code}.svg`, root);
   if (!existsSync(f)) return null;
   const svg = readFileSync(f, 'utf8');
-  const scale = dir === '1x1' ? 40 / 600 : 1;
+  const scale = dir === '3x2' ? 40 / 600 : 1;
   const img = new Resvg(svg, { fitTo: { mode: 'zoom', value: scale }, background: '#FFFFFF', font: { loadSystemFonts: false } }).render();
   return { w: img.width, h: img.height, p: img.pixels };
 }
@@ -42,4 +42,4 @@ for (const [a, b] of PAIRS) {
 console.log(`| Pair | ${DIRS.map((d) => d.replace('mini/', '')).join(' | ')} |`);
 console.log(`|---|${DIRS.map(() => '---').join('|')}|`);
 console.log(rows.join('\n'));
-console.log('\nEach cell: share of pixels differing by more than ΔE2000 10 / mean ΔE2000 over the frame. 1x1 is rendered at 40 px.');
+console.log('\nEach cell: share of pixels differing by more than ΔE2000 10 / mean ΔE2000 over the frame. 3x2 is rendered at 60×40 px.');

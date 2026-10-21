@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Formats cut from 12 to 6: `original`, `3x2`, `rect-24x16`, `rect-36x24`, `circle-24`, `circle-40`. Removed: `1x1`, all `square-*`, `circle-16`, `rect-60x40`. Reasons are in `docs/04`.
+
 ## 0.1.0-pilot — 2026-10-21
 
 A pilot, not a release.

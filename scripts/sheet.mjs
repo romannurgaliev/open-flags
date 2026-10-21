@@ -3,7 +3,7 @@
 //   node scripts/sheet.mjs preview/contact-sheet.png [--scale 2] [--dir flags] [--codes JP,BD]
 //
 // Columns: full formats (48 CSS px high), miniatures at actual size, and a "pixel view"
-// of the S tier: rendered at 1x and enlarged 4× without smoothing, so the grid is visible.
+// of the two smallest miniatures: rendered at 1x and enlarged 4× without smoothing, so the grid is visible.
 // Drafts (status draft / blocked-review in the metadata) are marked with a red corner.
 
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from 'node:fs';
@@ -26,19 +26,12 @@ const FULL_H = 48;
 const cols = [
   { dir: 'original', label: 'original', h: FULL_H },
   { dir: '3x2', label: '3:2', h: FULL_H },
-  { dir: '1x1', label: '1:1', h: FULL_H },
-  { dir: 'mini/square-16', label: '□ 16' },
-  { dir: 'mini/square-24', label: '□ 24' },
-  { dir: 'mini/square-40', label: '□ 40' },
-  { dir: 'mini/circle-16', label: '○ 16' },
+  { dir: 'mini/rect-24x16', label: '24×16' },
+  { dir: 'mini/rect-36x24', label: '36×24' },
   { dir: 'mini/circle-24', label: '○ 24' },
   { dir: 'mini/circle-40', label: '○ 40' },
-  { dir: 'mini/rect-24x16', label: '3:2 · 16' },
-  { dir: 'mini/rect-36x24', label: '3:2 · 24' },
-  { dir: 'mini/rect-60x40', label: '3:2 · 40' },
-  { dir: 'mini/square-16', label: '□ 16 ×4', zoom: 4 },
-  { dir: 'mini/circle-16', label: '○ 16 ×4', zoom: 4 },
-  { dir: 'mini/rect-24x16', label: '3:2 · 16 ×4', zoom: 4 },
+  { dir: 'mini/rect-24x16', label: '24×16 ×4', zoom: 4 },
+  { dir: 'mini/circle-24', label: '○ 24 ×4', zoom: 4 },
 ];
 
 function render(svg, scale) {
@@ -80,7 +73,7 @@ const cells = codes.map((code) => {
     let img;
     if (c.zoom) img = zoomNearest(render(svg, 1), c.zoom * S);
     else img = render(svg, c.h ? (c.h / vbH) * S : S);
-    const full = ['original', '3x2', '1x1'].includes(c.dir);
+    const full = ['original', '3x2'].includes(c.dir);
     const draft = full ? meta.status.full.startsWith('draft') : meta.status.mini !== 'ok';
     return { img, draft, meta };
   });

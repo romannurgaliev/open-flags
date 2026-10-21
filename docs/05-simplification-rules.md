@@ -1,6 +1,6 @@
 # 05 — Miniature simplification rules
 
-A miniature is not a scaled-down flag but a separate drawing made for its size. At S and M the goal is to be recognizable and distinguishable, not to reproduce every detail. Each simplification is recorded in the flag's metadata (`simplification.S/M/L`) with its rule; the build (`src/flags.mjs`) implements the rules, and checks C08 and C11 verify the result.
+A miniature is not a scaled-down flag but a separate drawing made for its size. A tier is a size class, not a file: S is `rect-24x16`; M is `rect-36x24` and `circle-24`; L is `circle-40`. At S and M the goal is to be recognizable and distinguishable, not to reproduce every detail. Each simplification is recorded in the flag's metadata (`simplification.S/M/L`) with its rule; the build (`src/flags.mjs`) implements the rules, and checks C08 and C11 verify the result.
 
 ## Thresholds by tier
 
@@ -31,7 +31,7 @@ A miniature is not a scaled-down flag but a separate drawing made for its size. 
 | S-EMBLEM-DROP | A coat of arms may be dropped at S only if **(a)** the law allows the flag without it **and** **(b)** without it the flag does not match any other flag | ES at S: the Constitution allows the civil flag without the arms; no match |
 | S-NODROP | A coat of arms may not be dropped if the flag would then match another one | MX without arms ≈ IT |
 | S-TEXT | Inscriptions are not reproduced as letters. A motto on a band is dropped and the band stays. Sacred text is replaced by a schematic of lines only after native speakers decide; until then the miniatures stay out of releases | BR: the band without "ORDEM E PROGRESSO". SA: `blocked-review` |
-| S-MAP | A map is a Natural Earth silhouette simplified with Douglas–Peucker (0.45 px at S, 0.35 px at M and L); islands under 0.5 px² are dropped; in the square format the map is enlarged by 25% | CY, XK |
+| S-MAP | A map is a Natural Earth silhouette simplified with Douglas–Peucker (0.45 px at S, 0.35 px at M and L); islands under 0.5 px² are dropped; in the circles the map is enlarged by 25% | CY, XK |
 | S-LINE | A 1 px line is allowed if it is an identifying element and without it the flag would match another one | KZ: the hoist ornament tells it apart from PW |
 | S-CIRCLE | In a circle, charges near the edge are pulled toward the center to keep ≥ 1 px from the edge; tall elements are not pulled in but shortened to the chord | AU: the Commonwealth Star; KZ: the ornament |
 | S-MIN | A shape's border is at least 1 px | NP: the blue border of the pennants |
@@ -43,3 +43,4 @@ A miniature is not a scaled-down flag but a separate drawing made for its size. 
 - **US at S.** A checkerboard of dots vs. a solid blue canton.
 - **ES at S.** No coat of arms (per the rule) vs. a simplified coat of arms.
 - **4:3.** Whether intl-tel-input and flag-icons need that format.
+- **Square.** Whether any interface needs square miniatures (emoji slots). Not published for now.
