@@ -1,10 +1,10 @@
 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 <title>Turkmenistan</title>
 <path d="M0 12C0 5.373 5.373 0 12 0C18.627 0 24 5.373 24 12C24 18.627 18.627 24 12 24C5.373 24 0 18.627 0 12Z" fill-rule="evenodd" fill="#006A4E"/>
-<path d="M3 19.937V4.06301C4.104 2.81201 5.465 1.79301 7 1.08801V22.912C5.465 22.207 4.104 21.188 3 19.937Z" fill-rule="evenodd" fill="#D51F2A"/>
-<path d="M6.26002 2.40001L5.00002 3.80001L4.18402 2.89401C4.66002 2.48501 5.16802 2.11301 5.70402 1.78201L6.26002 2.40001Z" fill-rule="evenodd" fill="#FF9A00"/>
+<path d="M3 19.937V4.063C4.104 2.812 5.465 1.793 7 1.088V22.912C5.465 22.207 4.104 21.188 3 19.937Z" fill-rule="evenodd" fill="#D51F2A"/>
+<path d="M6.26002 2.4L5.00002 3.8L4.18402 2.894C4.66002 2.485 5.16802 2.113 5.70402 1.782L6.26002 2.4Z" fill-rule="evenodd" fill="#FF9A00"/>
 <path d="M5 3V2.252C5.12 2.166 5.241 2.082 5.364 2H6V3H5Z" fill-rule="evenodd" fill="#FFFFFF"/>
-<path d="M4.99999 5.79999L6.25999 7.19999L4.99999 8.59999L3.73999 7.19999L4.99999 5.79999Z" fill-rule="evenodd" fill="#FF9A00"/>
+<path d="M4.99999 5.8L6.25999 7.2L4.99999 8.6L3.73999 7.2L4.99999 5.8Z" fill-rule="evenodd" fill="#FF9A00"/>
 <path d="M5 8V7H6V8H5Z" fill-rule="evenodd" fill="#FFFFFF"/>
 <path d="M4.99999 10.6L6.25999 12L4.99999 13.4L3.73999 12L4.99999 10.6Z" fill-rule="evenodd" fill="#FF9A00"/>
 <path d="M5 13V12H6V13H5Z" fill-rule="evenodd" fill="#FFFFFF"/>

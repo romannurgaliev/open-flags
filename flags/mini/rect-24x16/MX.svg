@@ -3,6 +3,6 @@
 <path d="M0 16V0H24V16H0Z" fill-rule="evenodd" fill="#006644"/>
 <path d="M8 16V0H24V16H8Z" fill-rule="evenodd" fill="#FFFFFF"/>
 <path d="M16 16V0H24V16H16Z" fill-rule="evenodd" fill="#D21034"/>
-<path d="M9.48001 7.39999C9.48001 6.20699 10.608 5.23999 12 5.23999C13.392 5.23999 14.52 6.20699 14.52 7.39999C14.52 8.59299 13.392 9.55999 12 9.55999C10.608 9.55999 9.48001 8.59299 9.48001 7.39999Z" fill-rule="evenodd" fill="#7A4B1E"/>
+<path d="M9.48001 7.4C9.48001 6.207 10.608 5.24 12 5.24C13.392 5.24 14.52 6.207 14.52 7.4C14.52 8.593 13.392 9.56 12 9.56C10.608 9.56 9.48001 8.593 9.48001 7.4Z" fill-rule="evenodd" fill="#7A4B1E"/>
 <path d="M9 11V10H15V11H9Z" fill-rule="evenodd" fill="#006644"/>
 </svg>
